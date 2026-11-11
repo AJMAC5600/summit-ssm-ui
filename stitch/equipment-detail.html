@@ -1,0 +1,332 @@
+<!DOCTYPE html> <html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"error":"#ba1a1a","surface-bright":"#f7fafc","secondary":"#006972","inverse-primary":"#a3cbf2","tertiary-fixed-dim":"#b4c5ff","primary-fixed-dim":"#a3cbf2","outline-variant":"#c2c7ce","surface-tint":"#396285","on-tertiary-container":"#7f9fff","surface-variant":"#e0e3e5","on-error-container":"#93000a","surface":"#f7fafc","secondary-fixed-dim":"#67d6e4","error-container":"#ffdad6","tertiary":"#001f5d","on-primary-fixed":"#001d32","surface-dim":"#d7dadc","inverse-on-surface":"#eef1f3","on-primary-container":"#7fa7cd","on-surface":"#181c1e","on-surface-variant":"#42474e","on-tertiary-fixed-variant":"#003ea8","tertiary-fixed":"#dbe1ff","surface-container-highest":"#e0e3e5","background":"#f7fafc","secondary-fixed":"#8df2ff","on-background":"#181c1e","on-secondary":"#ffffff","tertiary-container":"#00328b","surface-container-low":"#f1f4f6","on-primary":"#ffffff","primary-fixed":"#cee5ff","on-tertiary":"#ffffff","outline":"#72777e","on-secondary-fixed-variant":"#004f56","primary-container":"#0b3c5d","inverse-surface":"#2d3133","on-secondary-container":"#006d77","surface-container-high":"#e5e9eb","secondary-container":"#82f0fe","on-tertiary-fixed":"#00174b","primary":"#00263f","surface-container":"#ebeef0","on-error":"#ffffff","on-primary-fixed-variant":"#1f4a6c","on-secondary-fixed":"#001f23","surface-container-lowest":"#ffffff"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xs":"0.25rem","gutter-desktop":"1.5rem","gutter":"1rem","margin":"1rem","space-xl":"2rem","space-sm":"0.5rem","margin-desktop":"2rem","margin-tablet":"1.5rem","space-md":"0.75rem","space-lg":"1.25rem"},fontFamily:{"headline-md":["Inter"],"headline-lg":["Inter"],"label-md":["Inter"],"label-sm":["Inter"],"body-lg":["Inter"],"body-md":["Inter"],"headline-sm":["Inter"],"display-lg":["Inter"],"metric-val":["Inter"],"body-sm":["Inter"],"headline-xl":["Inter"],"label-lg":["Inter"]},fontSize:{"headline-md":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["22px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-sm":["15px",{"lineHeight":"20px","letterSpacing":"-0.005em","fontWeight":"600"}],"display-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.025em","fontWeight":"700"}],"metric-val":["30px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.005em","fontWeight":"400"}],"headline-xl":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.005em","fontWeight":"500"}]}}}};</script><script id="stitch-theme-init">(function(){try{if(localStorage.getItem("summit-theme")==="dark"){document.documentElement.classList.add("dark");document.documentElement.style.colorScheme="dark";}}catch(e){}})();</script>
+</head>
+<body class="bg-surface font-body-md text-on-surface antialiased">
+<aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Summit Healthcare Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIUSceXT4JgT_RjOJHH1_5Ja2X8b8cCgcu9wUSzwk0VNSjfhMq1sA1WT7_ydpQbxwnUeV-CXrpwwwkfohub5ZmF90LAoo9J_xRAfBcsphpdDnANBlLUFQE1x8Cwg5PNJcrUI0KnJfafoPYwmbAQSPU0-KujPvedr8bA-85WLgQkq--x_kTit3_bZTDYSo8eZRspVxZMCBWMn-Ll67g4Ffr_FP3s8naTY2AnLTRvvQJ"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-primary truncate leading-tight">Summit</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider truncate">Healthcare</span></div></div></div><div class="px-space-lg pb-space-md"><div class="inline-flex items-center px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container"><span class="font-label-sm text-label-sm tracking-wide uppercase font-semibold">Service Manager</span></div></div><nav class="flex flex-col gap-1 px-space-md" data-active-classes="bg-primary text-on-primary font-headline-sm rounded-lg"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="operations-dashboard.html"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-lg text-label-lg">Dashboard</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-colors bg-primary text-on-primary font-headline-sm rounded-lg" data-path="equipment" href="equipment-database.html"><span class="material-symbols-outlined text-[20px]">precision_manufacturing</span><span class="font-label-lg text-label-lg">Equipment Database</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="calls" href="service-calls-register.html"><span class="material-symbols-outlined text-[20px]">support_agent</span><span class="font-label-lg text-label-lg">Service Calls</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="contracts" href="contracts-pms-spares.html"><span class="material-symbols-outlined text-[20px]">verified</span><span class="font-label-lg text-label-lg">AMC/CMC & PMS</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="inventory" href="spares-inventory.html"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-label-lg text-label-lg">Spares Inventory</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="reports" title="Reports hub is Phase 5 - not exported from Stitch yet" href="reports-hub.html"><span class="material-symbols-outlined text-[20px]">analytics</span><span class="font-label-lg text-label-lg">Reports Hub</span></a><style>#master-nav-toggle .master-chev{transition:transform .2s ease}#master-nav-toggle.master-open .master-chev{transform:rotate(180deg)}</style><div class="flex flex-col"><button id="master-nav-toggle" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors w-full text-left" aria-expanded="false" aria-controls="master-nav-submenu"><span class="material-symbols-outlined text-[20px]">schema</span><span class="font-label-lg text-label-lg flex-1 text-left">Master Data</span><span class="material-symbols-outlined text-[18px] master-chev">expand_more</span></button><div id="master-nav-submenu" class="flex-col gap-0.5 pl-10 pt-0.5 hidden"><a href="masters.html" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">apps</span><span>All Masters Hub</span></a><a href="masters.html?tab=hospitals" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">local_hospital</span><span>Hospitals</span></a><a href="masters.html?tab=brands" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">branding_watermark</span><span>Brands</span></a><a href="masters.html?tab=types" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">category</span><span>Equipment Types</span></a><a href="masters.html?tab=models" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">precision_manufacturing</span><span>Equipment Models</span></a><a href="masters.html?tab=suppliers" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">local_shipping</span><span>Suppliers</span></a><a href="masters.html?tab=stores" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">warehouse</span><span>Stores &amp; Van Depots</span></a><a href="masters.html?tab=sla" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">timer</span><span>SLA Settings</span></a><a href="masters.html?tab=checklists" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">checklist</span><span>Checklist Templates</span></a></div></div><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="settings" title="Settings screen not exported from Stitch yet" href="admin-console.html"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-label-lg text-label-lg">Settings</span></a></nav></div><div class="p-space-lg bg-surface-container-low m-space-md rounded-lg flex items-center justify-between"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">System SLA</span><span class="font-headline-sm text-headline-sm text-primary">99.8%</span></div><div class="w-2.5 h-2.5 rounded-full bg-secondary ring-4 ring-secondary/20"></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span><input class="w-full h-10 pl-10 pr-4 bg-surface-container-lowest text-on-surface placeholder:text-outline rounded-lg text-body-md font-body-md focus:outline-none focus:ring-2 focus:ring-secondary/30 transition-all shadow-[0_1px_3px_rgba(11,60,93,0.05)]" placeholder="Search serial no, call no, hospital, part no..." type="search"/></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center p-0.5 bg-surface-container rounded-full"><button class="px-3 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow-[0_1px_3px_rgba(11,60,93,0.05)]" type="button">Manager</button><button class="px-3 py-1 rounded-full text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors" type="button">Engineer</button><button class="px-3 py-1 rounded-full text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors" type="button">Admin</button></div><button class="h-10 px-4 bg-primary text-on-primary rounded-lg font-label-lg text-label-lg flex items-center gap-space-xs hover:bg-primary-container transition-colors shadow-[0_1px_3px_rgba(11,60,93,0.05)]" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>Register Call</span></button><button class="relative w-10 h-10 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 flex h-4 min-w-4 px-1 items-center justify-center rounded-full bg-error text-on-error font-label-sm text-[10px] font-bold leading-none">10</span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="flex flex-col text-right hidden md:flex"><span class="font-label-lg text-label-lg text-on-surface font-semibold">Rahul Sharma</span><span class="font-label-sm text-label-sm text-on-surface-variant">Service Ops Manager</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header>
+<main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Equipment Detail: 7-tab asset dossier per spec MODULE 1 -->
+<div class="flex flex-col w-full">
+<div class="p-space-lg lg:p-space-xl flex flex-col gap-space-lg max-w-[1600px] mx-auto w-full">
+
+<!-- Breadcrumb -->
+<nav class="flex items-center gap-space-xs text-label-sm font-label-sm text-outline uppercase tracking-wider"><a href="equipment-database.html" class="hover:text-primary">Equipment Register</a><span>/</span><span class="text-on-surface-variant">SG-CT-20451</span></nav>
+
+<!-- Asset header strip -->
+<section class="relative overflow-hidden rounded-xl border border-outline-variant shadow-sm border-l-4 border-l-secondary bg-gradient-to-r from-primary to-primary-container text-on-primary">
+  <div class="absolute -right-10 -top-10 w-56 h-56 rounded-full bg-secondary-fixed/10 blur-3xl"></div>
+  <div class="relative flex flex-col xl:flex-row xl:items-center gap-space-lg p-space-lg">
+    <div class="flex items-start gap-space-md flex-1 min-w-0">
+      <span class="w-16 h-16 rounded-xl bg-on-primary/10 border border-on-primary/20 flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[36px] text-secondary-fixed">medical_services</span></span>
+      <div class="min-w-0">
+        <h1 class="font-headline-xl text-headline-xl text-white tracking-tight">Siemens Somatom Go.Top <span class="text-secondary-fixed">128-Slice CT</span></h1>
+        <div class="flex flex-wrap items-center gap-space-md mt-space-xs font-body-md text-body-md text-primary-fixed-dim">
+          <span>SN <span class="font-mono text-white">SG-CT-20451</span></span>
+          <span class="text-white/30">|</span><span>Asset <span class="font-mono text-white">SHA-RAD-CT-014</span></span>
+          <span class="text-white/30">|</span><span>Sahyadri Hospital - Radiology, CT Suite 2</span>
+          <span class="text-white/30">|</span><span>Installed 14 Mar 2024</span>
+        </div>
+        <div class="flex flex-wrap items-center gap-space-xs mt-space-sm">
+          <span class="px-2.5 py-1 rounded-full bg-[#ECFDF5] text-[#059669] border border-[#A7F3D0] font-label-sm text-label-sm uppercase font-semibold">In Warranty</span>
+          <span class="px-2.5 py-1 rounded-full font-label-sm text-label-sm uppercase font-semibold" style="background:#E6F6F8;color:#006972;border:1px solid #67d6e4">AMC-2026-0007   Active</span>
+          <span class="px-2.5 py-1 rounded-full bg-white/10 text-primary-fixed-dim border border-white/15 font-label-sm text-label-sm uppercase">Breakdowns 3   9.6h downtime</span>
+        </div>
+      </div>
+    </div>
+    <div class="flex items-center gap-space-md shrink-0">
+      <div class="text-center">
+        <div id="qr-mini" class="w-20 h-20 bg-surface-container-lowest rounded-lg p-1.5 flex items-center justify-center" title="QR asset tag"></div>
+        <div class="font-label-sm text-label-sm text-secondary-fixed mt-1">Scan to open</div>
+      </div>
+      <div class="flex flex-col gap-space-xs">
+        <a href="qr-sticker.html" class="h-9 px-4 inline-flex items-center gap-space-xs rounded-lg bg-secondary text-on-secondary font-label-lg text-label-lg hover:bg-secondary-fixed hover:text-on-secondary-fixed"><span class="material-symbols-outlined text-[16px]">qr_code_2</span>Print QR</a>
+        <a href="service-calls-register.html" class="h-9 px-4 inline-flex items-center gap-space-xs rounded-lg bg-secondary text-on-secondary font-label-lg text-label-lg hover:bg-secondary-fixed hover:text-on-secondary-fixed"><span class="material-symbols-outlined text-[16px]">support_agent</span>Raise Call</a>
+        <a href="register-equipment.html" class="h-9 px-4 inline-flex items-center gap-space-xs rounded-lg border border-white/25 text-primary-fixed-dim font-label-lg text-label-lg hover:bg-white/10"><span class="material-symbols-outlined text-[16px]">edit</span>Edit Asset</a>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- Health metrics strip -->
+<div class="grid grid-cols-2 sm:grid-cols-4 gap-space-sm">
+  <div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-md"><span class="block font-label-sm text-label-sm text-outline uppercase">Uptime (12m)</span><span class="block font-metric-val text-metric-val text-[#059669] mt-0.5">98.2%</span></div>
+  <div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-md"><span class="block font-label-sm text-label-sm text-outline uppercase">MTBF</span><span class="block font-metric-val text-metric-val text-primary mt-0.5">412<span class="text-[16px]">h</span></span></div>
+  <div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-md"><span class="block font-label-sm text-label-sm text-outline uppercase">Breakdowns</span><span class="block font-metric-val text-metric-val text-primary mt-0.5">3 <span class="text-[12px] text-[#059669]">(0 critical)</span></span></div>
+  <div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-md"><span class="block font-label-sm text-label-sm text-outline uppercase">Total Downtime</span><span class="block font-metric-val text-metric-val text-primary mt-0.5">9.6<span class="text-[16px]">h</span></span></div>
+</div>
+
+<!-- Tabs -->
+<div class="border-b border-outline-variant/50 overflow-x-auto">
+  <div class="flex items-center gap-1 min-w-max" id="eq-tabs" role="tablist">
+    <button class="tab-on h-11 px-4 font-label-lg text-label-lg border-b-2" data-tab="overview" role="tab">Overview</button>
+    <button class="tab-off h-11 px-4 font-label-lg text-label-lg border-b-2 border-transparent" data-tab="contract" role="tab">Contract &amp; Warranty</button>
+    <button class="tab-off h-11 px-4 font-label-lg text-label-lg border-b-2 border-transparent" data-tab="service" role="tab">Service History <span class="text-label-sm bg-surface-container px-1.5 py-0.5 rounded-full text-outline">3</span></button>
+    <button class="tab-off h-11 px-4 font-label-lg text-label-lg border-b-2 border-transparent" data-tab="pms" role="tab">PMS History <span class="text-label-sm bg-surface-container px-1.5 py-0.5 rounded-full text-outline">8</span></button>
+    <button class="tab-off h-11 px-4 font-label-lg text-label-lg border-b-2 border-transparent" data-tab="spares" role="tab">Spares Used</button>
+    <button class="tab-off h-11 px-4 font-label-lg text-label-lg border-b-2 border-transparent" data-tab="docs" role="tab">Documents &amp; Photos</button>
+    <button class="tab-off h-11 px-4 font-label-lg text-label-lg border-b-2 border-transparent" data-tab="timeline" role="tab">Timeline</button>
+  </div>
+</div>
+
+<!-- PANEL: OVERVIEW -->
+<div data-eqpanel="overview" class="grid grid-cols-1 lg:grid-cols-3 gap-space-md">
+  <div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-lg space-y-space-md">
+    <h3 class="font-headline-sm text-headline-sm text-primary flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-[18px]">info</span> Installation &amp; Registration</h3>
+    <dl class="grid grid-cols-2 gap-space-md text-body-md"><dt class="text-outline font-label-md text-label-md">Installed On</dt><dd>14 Mar 2024</dd><dt class="text-outline font-label-md text-label-md">Warranty Start</dt><dd>14 Mar 2024</dd><dt class="text-outline font-label-md text-label-md">Warranty Months</dt><dd>36</dd><dt class="text-outline font-label-md text-label-md">Warranty End</dt><dd class="text-primary font-semibold">13 Mar 2027</dd><dt class="text-outline font-label-md text-label-md">Commissioned By</dt><dd>Siemens Field Eng.</dd><dt class="text-outline font-label-md text-label-md">Insurance</dt><dd>₹ 2.4 Cr declared</dd></dl>
+    <div class="pt-space-md border-t border-outline-variant/50"><div class="flex items-center justify-between mb-1"><span class="font-label-md text-label-md text-on-surface-variant">Warranty remaining</span><span class="font-mono text-label-md text-secondary">475 d</span></div><div class="h-2 rounded-full bg-surface-container overflow-hidden"><div class="h-full bg-[#059669] rounded-full" style="width:57%"></div></div></div>
+  </div>
+  <div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-lg space-y-space-md">
+    <h3 class="font-headline-sm text-headline-sm text-primary flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-[18px]">domain</span> Hospital &amp; Location</h3>
+    <dl class="grid grid-cols-2 gap-space-md text-body-md"><dt class="text-outline font-label-md text-label-md">Facility</dt><dd>Sahyadri Hospital — Pune</dd><dt class="text-outline font-label-md text-label-md">Department</dt><dd>Radiology / CT Suite 2</dd><dt class="text-outline font-label-md text-label-md">Modality</dt><dd>CT (128-slice)</dd><dt class="text-outline font-label-md text-label-md">PO Number</dt><dd>PO-2024-0117</dd><dt class="text-outline font-label-md text-label-md">Contact</dt><dd>Dr. Anand Joshi</dd><dt class="text-outline font-label-md text-label-md">Phone</dt><dd class="font-mono">+91 98220 44551</dd></dl>
+  </div>
+  <div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-lg space-y-space-md">
+    <h3 class="font-headline-sm text-headline-sm text-primary flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-[18px]">description</span> Technical Specification &amp; Notes</h3>
+    <p class="font-body-md text-body-md text-on-surface-variant leading-relaxed">128-slice CT, 80cm gantry bore, 76cm SFOV, iterative reconstruction, worklist integration with RIS/PACS (DICOM 3.0), auto-dose modulation, air-gap isolated network segment.</p>
+    <div class="pt-space-md border-t border-outline-variant/50"><span class="font-label-md text-label-md text-outline uppercase">Remarks</span><p class="font-body-md text-body-md text-on-surface-variant mt-1">Quarterly PMS mandatory per CMC terms. Not to be scanned with contrast injector unless QC log cleared. Next CT tune-up due Jan 2027.</p></div>
+  </div>
+</div>
+
+<!-- PANEL: CONTRACT & WARRANTY -->
+<div data-eqpanel="contract" style="display:none" class="grid grid-cols-1 lg:grid-cols-2 gap-space-md">
+  <div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-lg border-l-4 border-l-secondary space-y-space-md">
+    <h3 class="font-headline-sm text-headline-sm text-primary flex items-center justify-between"><span class="flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-[18px]">verified_user</span> AMC-2026-0007 — Active</span><a href="new-contract.html" class="h-8 px-3 inline-flex items-center rounded-lg border border-outline-variant font-label-md text-label-md text-primary hover:bg-surface-container-low">Renew</a></h3>
+    <div class="grid grid-cols-2 gap-space-md"><div><span class="font-label-sm text-label-sm text-outline uppercase">Type</span><div class="font-body-md text-body-md">AMC (parts chargeable)</div></div><div><span class="font-label-sm text-label-sm text-outline uppercase">PMS Frequency</span><div class="font-body-md text-body-md">Quarterly   4 visits/yr</div></div><div><span class="font-label-sm text-label-sm text-outline uppercase">Start</span><div class="font-body-md text-body-md">01 Oct 2025</div></div><div><span class="font-label-sm text-label-sm text-outline uppercase">Ends</span><div class="font-body-md text-body-md text-[#D97706] font-semibold">30 Sep 2026   305d left</div></div><div><span class="font-label-sm text-label-sm text-outline uppercase">Value</span><div class="font-headline-sm text-headline-sm text-primary">₹ 8,40,000</div></div><div><span class="font-label-sm text-label-sm text-outline uppercase">Payment</span><div class="font-body-md text-body-md">50% advance   50% on PMS sign-off</div></div></div>
+    <a href="contracts-pms-spares.html" class="inline-flex items-center gap-space-xs text-on-secondary font-label-md text-label-md" style="color:#006972">View covered equipment grid + PMS schedule <span class="material-symbols-outlined text-[16px]">arrow_forward</span></a>
+  </div>
+  <div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-lg border-l-4 border-l-[#059669] space-y-space-md">
+    <h3 class="font-headline-sm text-headline-sm text-primary flex items-center gap-space-xs"><span class="material-symbols-outlined text-secondary text-[18px]">shield</span> Manufacturer Warranty</h3>
+    <dl class="grid grid-cols-2 gap-space-md"><dt class="text-outline font-label-md text-label-md">Status</dt><dd class="text-[#059669] font-semibold">Active — 475 days remaining</dd><dt class="text-outline font-label-md text-label-md">Start</dt><dd>14 Mar 2024</dd><dt class="text-outline font-label-md text-label-md">Months</dt><dd>36 months</dd><dt class="text-outline font-label-md text-label-md">Ends</dt><dd>13 Mar 2027</dd><dt class="text-outline font-label-md text-label-md">Covers</dt><dd>All parts + labour + travel</dd><dt class="text-outline font-label-md text-label-md">Exclusions</dt><dd>Damage from misuse / power events</dd></dl>
+    <div class="pt-space-md border-t border-outline-variant/50"><span class="font-label-md text-label-md text-outline uppercase">Warranty Path</span><div class="flex items-center gap-2 mt-1 text-body-sm text-on-surface-variant flex-wrap"><span>Claim via OEM hotline 1800 419 8888</span><span class="text-outline">|</span><span>Warranty card doc. <a class="text-secondary hover:underline" href="#" onclick="return false">download</a></span></div></div>
+  </div>
+</div>
+
+<!-- PANEL: SERVICE HISTORY -->
+<div data-eqpanel="service" style="display:none" class="flex flex-col gap-space-md">
+  <div class="flex items-center justify-between flex-wrap gap-space-sm bg-surface-container-low rounded-xl px-space-lg py-space-md"><div><h3 class="font-headline-sm text-headline-sm text-primary">Service &amp; Breakdown History</h3><p class="font-body-sm text-body-sm text-on-surface-variant">All calls against serial <span class="font-mono">SG-CT-20451</span> — newest first   3 events   9.6h total downtime</p></div><a href="service-calls-register.html" class="h-9 px-4 inline-flex items-center gap-space-xs rounded-lg bg-primary text-on-primary font-label-md text-label-md hover:bg-primary-container"><span class="material-symbols-outlined text-[16px]">support_agent</span>Open Call Register</a></div>
+  <ol class="relative pl-6 border-l-2 border-outline-variant/70 ml-3 space-y-space-md" id="service-timeline"></ol>
+</div>
+
+<!-- PANEL: PMS HISTORY -->
+<div data-eqpanel="pms" style="display:none" class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden">
+  <div class="flex items-center justify-between px-space-lg py-space-md border-b border-outline-variant/60 bg-surface-container-low"><div><h3 class="font-headline-sm text-headline-sm text-primary">PMS Visit History</h3><p class="font-body-sm text-body-sm text-outline">8 visits since Mar 2024   100% on-time   next due 01 Jan 2027</p></div><a href="contracts-pms-spares.html" class="font-label-md text-label-md text-secondary hover:underline">View PMS Calendar  </a></div>
+  <div class="overflow-x-auto"><table class="w-full text-left"><thead><tr class="bg-surface-container"><th class="px-space-lg h-10 font-label-sm text-label-sm uppercase text-outline">Visit No</th><th class="px-space-lg h-10 font-label-sm text-label-sm uppercase text-outline">Planned</th><th class="px-space-lg h-10 font-label-sm text-label-sm uppercase text-outline">Completed</th><th class="px-space-lg h-10 font-label-sm text-label-sm uppercase text-outline">Engineer</th><th class="px-space-lg h-10 font-label-sm text-label-sm uppercase text-outline">Result</th></tr></thead><tbody id="pms-rows"></tbody></table></div>
+</div>
+
+<!-- PANEL: SPARES USED -->
+<div data-eqpanel="spares" style="display:none" class="bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden">
+  <div class="flex items-center justify-between px-space-lg py-space-md border-b border-outline-variant/60 bg-surface-container-low"><div><h3 class="font-headline-sm text-headline-sm text-primary">Spares Consumed</h3><p class="font-body-sm text-body-sm text-outline">Linked to calls &amp; PMS against this serial   parts chargeable under AMC</p></div><a href="spares-inventory.html" class="font-label-md text-label-md text-secondary hover:underline">Open Spare Parts  </a></div>
+  <div class="overflow-x-auto"><table class="w-full text-left"><thead><tr class="bg-surface-container"><th class="px-space-lg h-10 font-label-sm text-label-sm uppercase text-outline">Part No</th><th class="px-space-lg h-10 font-label-sm text-label-sm uppercase text-outline">Description</th><th class="px-space-lg h-10 font-label-sm text-label-sm uppercase text-outline">Call / Visit</th><th class="px-space-lg h-10 font-label-sm text-label-sm uppercase text-outline">Qty</th><th class="px-space-lg h-10 font-label-sm text-label-sm uppercase text-outline">Cost</th></tr></thead><tbody id="spares-rows"></tbody></table></div>
+  <div class="flex items-center justify-between px-space-lg py-space-md border-t border-outline-variant/60 bg-surface-container-low"><span class="font-label-lg text-label-lg text-on-surface-variant">Total parts cost (2024-2026)</span><span class="font-headline-md text-headline-md text-primary">₹ 4,62,000</span></div>
+</div>
+
+<!-- PANEL: DOCUMENTS & PHOTOS -->
+<div data-eqpanel="docs" style="display:none" class="grid grid-cols-1 xl:grid-cols-3 gap-space-md">
+  <div class="xl:col-span-2 bg-surface-container-lowest border border-outline-variant rounded-xl overflow-hidden">
+    <div class="px-space-lg py-space-md border-b border-outline-variant/60 bg-surface-container-low flex items-center justify-between"><h3 class="font-headline-sm text-headline-sm text-primary">Documents</h3><span class="font-body-sm text-outline">5 files   38.4 MB</span></div>
+    <div id="docs-list" class="divide-y divide-outline-variant/60"></div>
+  </div>
+  <div class="space-y-space-md">
+    <div class="border-2 border-dashed border-outline-variant rounded-xl p-space-lg text-center hover:border-secondary transition-colors"><span class="material-symbols-outlined text-[36px] text-outline">cloud_upload</span><p class="font-headline-sm text-headline-sm text-primary mt-1">Drop documents here</p><p class="font-body-sm text-body-sm text-outline">or click to browse — JPG, PNG, PDF, DOCX, XLSX up to 10 MB</p><button type="button" class="mt-space-sm h-9 px-4 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md admin-toast-btn" data-toast="File picker opened (demo — IFileStorage interface)">Browse Files</button></div>
+    <div class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-md"><h4 class="font-headline-sm text-headline-sm text-primary">Photos</h4><div class="grid grid-cols-3 gap-space-sm mt-space-sm" id="photo-grid"></div></div>
+  </div>
+</div>
+
+<!-- PANEL: TIMELINE -->
+<div data-eqpanel="timeline" style="display:none" class="bg-surface-container-lowest border border-outline-variant rounded-xl p-space-lg">
+  <h3 class="font-headline-sm text-headline-sm text-primary">Asset Lifecycle</h3>
+  <ol class="relative pl-6 border-l-2 border-outline-variant/70 ml-3 mt-space-md space-y-space-md" id="timeline-list"></ol>
+</div>
+
+</div>
+</div>
+
+<div id="detail-toast" class="fixed left-1/2 -translate-x-1/2 bottom-8 z-50 hidden items-center gap-space-sm bg-inverse-surface text-inverse-on-surface pl-space-md pr-space-lg py-space-sm rounded-xl shadow-2xl"><span class="material-symbols-outlined text-secondary-fixed">check_circle</span><span id="detail-toast-text" class="font-body-md text-body-md"></span></div>
+
+<script id="eq-detail-logic">
+/* ---------- Tabs ---------- */
+document.querySelectorAll('#eq-tabs [data-tab]').forEach(function (btn) {
+  btn.addEventListener('click', function () {
+    var name = btn.getAttribute('data-tab');
+    document.querySelectorAll('[data-eqpanel]').forEach(function (p) { p.style.display = (p.getAttribute('data-eqpanel') === name ? 'grid' : 'none'); });
+    document.querySelectorAll('#eq-tabs [data-tab]').forEach(function (b) {
+      var on = b === btn;
+      b.classList.toggle('tab-on', on);
+      b.classList.toggle('tab-off', !on);
+    });
+  });
+});
+
+/* ---------- Toast + doc/photo actions ---------- */
+function detailToast(msg) {
+  var t = document.getElementById('detail-toast');
+  document.getElementById('detail-toast-text').textContent = msg;
+  t.classList.remove('hidden'); t.classList.add('flex');
+  clearTimeout(t._tm); t._tm = setTimeout(function () { t.classList.add('hidden'); t.classList.remove('flex'); }, 2800);
+}
+document.querySelectorAll('.admin-toast-btn').forEach(function (b) { b.addEventListener('click', function () { detailToast(b.getAttribute('data-toast') || 'Done'); }); });
+
+/* ---------- Inline QR matrix (SVG) ---------- */
+(function () {
+  var rows = [3,5,7,9,9,7,5,3]; // deterministic pseudo-matrix bands
+  var svg = document.getElementById('qr-mini');
+  var html = '';
+  var seed = 20451;
+  function rnd() { seed = (seed * 1103515245 + 12345) & 0x7fffffff; return seed / 0x7fffffff; }
+  var n = 21;
+  for (var y = 0; y < n; y++) {
+    for (var x = 0; x < n; x++) {
+      var finder = (x < 7 && y < 7) || (x > 13 && y < 7) || (x < 7 && y > 13);
+      var fill = finder ? (((x % 6 === 0 || y % 6 === 0 || (x > 1 && x < 5 && y > 1 && y < 5)) ? '#fff' : '#0b3c5d')) : (rnd() > 0.45 ? '#0b3c5d' : 'none');
+      if (fill !== 'none') html += '<rect x="' + (x * 3) + '" y="' + (y * 3) + '" width="3" height="3" fill="' + fill + '"/>';
+    }
+  }
+  svg.innerHTML = '<svg viewBox="0 0 63 63" width="100%" height="100%">' + html + '</svg>';
+})();
+
+/* ---------- Service history ---------- */
+var SERVICE = [
+  { call: 'SC-2026-00158', date: 'Today, 11:06', type: 'Breakdown', issue: 'Gantry rotation error G-214 after power fluctuation', action: 'Drive belt tension corrected, encoder realigned, 25 kV calibration passed', eng: 'Rahul Sharma', parts: 'Detector panel 06280123', down: '3.5 h', open: true },
+  { call: 'SC-2026-00141', date: '21 Oct 2026', type: 'Breakdown', issue: 'Cooling fan failure, overtemp warning', action: 'Fan replaced, thermal paste re-applied, airflow verified', eng: 'Rahul Sharma', parts: 'Fan 60x60x21mm', down: '3.2 h', open: false },
+  { call: 'SC-2026-00108', date: '02 Sep 2026', type: 'Installation', issue: 'DICOM worklist integration failed', action: 'PACS AE-title corrected, HIS integration verified', eng: 'Siemens FE', parts: 'None', down: '2.9 h', open: false }
+];
+var sl = document.getElementById('service-timeline');
+sl.innerHTML = SERVICE.map(function (s) {
+  var initial = s.open ? '<span class="absolute -left-[29px] top-4 w-3.5 h-3.5 rounded-full bg-[#7C3AED] ring-4 ring-[#F5F3FF]"></span>' : '<span class="absolute -left-[29px] top-4 w-3.5 h-3.5 rounded-full bg-[#059669] ring-4 ring-[#ECFDF5]"></span>';
+  return '<li class="relative flex flex-col bg-surface-container-lowest border border-outline-variant rounded-xl p-space-md shadow-sm ' + (s.open ? 'border-l-4 border-l-secondary' : '') + '">' + initial +
+    '<div class="flex flex-wrap items-center justify-between gap-space-sm"><span class="font-mono font-semibold text-primary">' + s.call + '</span><span class="font-body-sm text-body-sm text-outline">' + s.date + '</span></div>' +
+    '<div class="grid md:grid-cols-2 gap-space-sm mt-space-sm"><div class="bg-surface-container-low rounded-lg p-space-sm"><div class="font-label-sm text-label-sm text-outline uppercase">Fault</div><div class="font-body-md text-body-md text-on-surface">' + s.issue + '</div></div><div class="bg-surface-container-low rounded-lg p-space-sm"><div class="font-label-sm text-label-sm text-outline uppercase">Action Taken</div><div class="font-body-md text-body-md text-on-surface">' + s.action + '</div></div></div>' +
+    '<div class="flex flex-wrap items-center gap-space-md mt-space-sm text-body-sm text-on-surface-variant"><span>Engineer: <b class="text-on-surface">' + s.eng + '</b></span><span>Parts: <b class="text-on-surface">' + s.parts + '</b></span><span>Downtime: <b class="text-on-surface">' + s.down + '</b></span></div>' +
+    '<div class="flex items-center gap-space-sm mt-space-md pt-space-sm border-t border-outline-variant/60"><a href="service-calls-register.html" class="h-8 px-3 inline-flex items-center gap-1 rounded-lg border border-outline-variant font-label-md text-label-md text-primary hover:bg-surface-container-low">Open Call <span class="material-symbols-outlined text-[14px]">arrow_forward</span></a><button type="button" class="h-8 px-3 inline-flex items-center gap-1 rounded-lg bg-primary text-on-primary font-label-md text-label-md admin-toast-btn" data-toast="FSR-' + s.call.split('SC-')[1] + '.pdf downloaded (demo)">FSR PDF <span class="material-symbols-outlined text-[14px]">picture_as_pdf</span></button></div></li>';
+}).join('');
+
+/* ---------- PMS history ---------- */
+var PMS = [
+  { v: 'PMS-2026-0245', planned: '01 Oct 2026', done: '01 Oct 2026', eng: 'Rahul Sharma', res: 'Pass' },
+  { v: 'PMS-2026-0198', planned: '01 Jul 2026', done: '02 Jul 2026', eng: 'Sneha Kulkarni', res: 'Pass' },
+  { v: 'PMS-2026-0144', planned: '01 Apr 2026', done: '01 Apr 2026', eng: 'Rahul Sharma', res: 'Pass' },
+  { v: 'PMS-2026-0091', planned: '01 Jan 2026', done: '03 Jan 2026', eng: 'Amit Patil', res: 'Pass w/ Observation' },
+  { v: 'PMS-2025-0384', planned: '01 Oct 2025', done: '01 Oct 2025', eng: 'Rahul Sharma', res: 'Pass' },
+  { v: 'PMS-2025-0331', planned: '01 Jul 2025', done: '01 Jul 2025', eng: 'Sneha Kulkarni', res: 'Pass' },
+  { v: 'PMS-2025-0278', planned: '01 Apr 2025', done: '02 Apr 2025', eng: 'Rahul Sharma', res: 'Fail - Recalibrated' },
+  { v: 'PMS-2025-0225', planned: '01 Jan 2025', done: '01 Jan 2025', eng: 'Amit Patil', res: 'Pass' }
+];
+document.getElementById('pms-rows').innerHTML = PMS.map(function (p) {
+  var color = p.res === 'Pass' ? 'color:#059669' : p.res.indexOf('Fail') === 0 ? 'color:#DC2626' : 'color:#D97706';
+  return '<tr class="hover:bg-surface-container-low border-b border-outline-variant/60 h-11"><td class="px-space-lg font-mono text-body-md text-primary">' + p.v + '</td><td class="px-space-lg font-body-md text-body-md">' + p.planned + '</td><td class="px-space-lg font-body-md text-body-md">' + p.done + '</td><td class="px-space-lg font-body-md text-body-md">' + p.eng + '</td><td class="px-space-lg font-label-md text-label-md" style="' + color + '">' + p.res + '</td></tr>';
+}).join('');
+
+/* ---------- Spares used ---------- */
+var SPARES = [
+  { no: '06280123', desc: 'Siemens Detector Panel', ref: 'SC-2026-00158', qty: 1, cost: 450000 },
+  { no: 'FAN-AS6021', desc: 'Cooling Fan 60x60x21mm', ref: 'SC-2026-00141', qty: 1, cost: 650 },
+  { no: 'HV-CABLE-75', desc: 'HV Cable 75kV', ref: 'PMS-2025-0278', qty: 1, cost: 68000 },
+  { no: 'SPO2-204', desc: 'SpO2 Sensor (BeneView)', ref: 'SC-2026-00112', qty: 2, cost: 3700 },
+  { no: 'ECG-CAB-90', desc: 'ECG 10-lead Patient Cable', ref: 'PMS-2026-0091', qty: 1, cost: 950 }
+];
+document.getElementById('spares-rows').innerHTML = SPARES.map(function (s) { return '<tr class="hover:bg-surface-container-low border-b border-outline-variant/60 h-11"><td class="px-space-lg font-mono text-body-md text-primary">' + s.no + '</td><td class="px-space-lg font-body-md text-body-md">' + s.desc + '</td><td class="px-space-lg font-body-sm text-body-sm text-on-surface-variant">' + s.ref + '</td><td class="px-space-lg font-body-md text-body-md">' + s.qty + '</td><td class="px-space-lg font-mono text-body-md text-on-surface">₹ ' + s.cost.toLocaleString('en-IN') + '</td></tr>'; }).join('');
+
+/* ---------- Documents ---------- */
+var DOCS = [
+  { tag: 'Installation Report', name: 'install_report_SG-CT-20451.pdf', size: '4.2 MB', date: '14 Mar 2024', icon: 'picture_as_pdf' },
+  { tag: 'Warranty Card', name: 'warranty_card_Siemens.pdf', size: '1.1 MB', date: '14 Mar 2024', icon: 'verified_user' },
+  { tag: 'AMC Copy', name: 'AMC-2026-0007_signed.pdf', size: '2.8 MB', date: '01 Oct 2025', icon: 'contract' },
+  { tag: 'Manual', name: 'Somatom_GoTop_ServiceManual_en.pdf', size: '18.6 MB', date: '14 Mar 2024', icon: 'menu_book' },
+  { tag: 'Photo', name: 'ct_suite_photo_2026.jpg', size: '3.2 MB', date: '12 Jan 2026', icon: 'photo_camera' }
+];
+document.getElementById('docs-list').innerHTML = DOCS.map(function (d) {
+  return '<div class="flex items-center gap-space-md px-space-lg py-space-md hover:bg-surface-container-low"><span class="w-10 h-10 rounded-lg bg-secondary-fixed/40 text-on-secondary-fixed flex items-center justify-center shrink-0"><span class="material-symbols-outlined">' + d.icon + '</span></span><div class="min-w-0 flex-1"><div class="font-body-md text-body-md text-on-surface font-medium truncate">' + d.name + '</div><div class="flex items-center gap-space-sm mt-0.5"><span class="font-label-sm text-label-sm text-outline uppercase">' + d.tag + '</span><span class="text-outline"> </span><span class="font-body-sm text-body-sm text-outline">' + d.size + '   ' + d.date + '</span></div></div><div class="flex items-center gap-1"><button type="button" class="w-9 h-9 rounded-lg text-outline hover:text-primary hover:bg-surface-container flex items-center justify-center admin-toast-btn" data-toast="Download started: ' + d.name + '" aria-label="Download"><span class="material-symbols-outlined text-[18px]">download</span></button><button type="button" class="w-9 h-9 rounded-lg text-outline hover:text-error hover:bg-[#FEF2F2] flex items-center justify-center admin-toast-btn" data-toast="Delete queued for approval (demo)" aria-label="Delete"><span class="material-symbols-outlined text-[18px]">delete</span></button></div></div>';
+}).join('');
+
+/* ---------- Photos grid ---------- */
+var PH = ['CT Suite 2 - gantry', 'Control console', 'Installation day', 'PMS Oct 2026', 'Service Aug 2026', 'Nameplate'];
+document.getElementById('photo-grid').innerHTML = PH.map(function (p, i) {
+  return '<button type="button" class="photo-thumb aspect-[4/3] rounded-lg overflow-hidden border border-outline-variant relative group" data-caption="' + p + '" aria-label="View photo"><svg viewBox="0 0 160 120" width="100%" height="100%" preserveAspectRatio="xMidYMid slice"><defs><linearGradient id="pg' + i + '" x1="0" y1="0" x2="1" y2="1"><stop offset="0" stop-color="#0B3C5D"/><stop offset="1" stop-color="#0E9AA7"/></linearGradient></defs><rect width="160" height="120" fill="url(#pg' + i + ')"/><circle cx="' + (40 + (i * 23) % 100) + '" cy="' + (30 + (i * 17) % 60) + '" r="16" fill="rgba(255,255,255,0.18)"/><circle cx="' + (110 - (i * 11) % 70) + '" cy="' + (80 - (i * 13) % 60) + '" r="24" fill="rgba(255,255,255,0.12)"/><text x="80" y="66" fill="#8df2ff" font-family="monospace" font-size="11" text-anchor="middle" opacity="0.8">' + p + '</text></svg><span class="absolute inset-0 bg-black/0 group-hover:bg-black/30 transition-colors flex items-center justify-center"><span class="material-symbols-outlined text-white opacity-0 group-hover:opacity-100">zoom_in</span></span></button>';
+}).join('');
+document.querySelectorAll('.photo-thumb').forEach(function (b) { b.addEventListener('click', function () { detailToast('Lightbox: ' + b.getAttribute('data-caption') + ' (demo)'); }); });
+
+/* ---------- Timeline ---------- */
+var TL = [
+  { d: '01 Jan 2027', t: 'Next PMS visit due', sub: 'Quarterly - scheduled, Rahul Sharma assigned', icon: 'event', tone: 'secondary' },
+  { d: 'Today', t: 'Breakdown SC-2026-00158 open', sub: 'Gantry error G-214 - awaiting detector part 06280123', icon: 'warning', tone: 'error' },
+  { d: '01 Oct 2026', t: 'PMS visit completed', sub: 'AMC-2026-0007 - pass, no findings', icon: 'task_alt', tone: 'ok' },
+  { d: '28 Sep 2026', t: 'AMC renewed', sub: 'AMC-2026-0007 executed, 01 Oct 2026 onwards', icon: 'autorenew', tone: 'ok' },
+  { d: '02 Feb 2026', t: 'First breakdown post-install', sub: 'SC-2026-00141 - cooling fan replaced', icon: 'build', tone: 'warn' },
+  { d: '14 Mar 2024', t: 'Installed & commissioned', sub: 'Asset tag SHA-RAD-CT-014 issued   QR enrolled', icon: 'rocket_launch', tone: 'ok' }
+];
+document.getElementById('timeline-list').innerHTML = TL.map(function (e) {
+  var dot = e.tone === 'error' ? 'bg-[#DC2626] ring-[#FEF2F2]' : e.tone === 'warn' ? 'bg-[#D97706] ring-[#FFFBEB]' : e.tone === 'secondary' ? 'bg-secondary ring-secondary-fixed/30' : 'bg-[#059669] ring-[#ECFDF5]';
+  return '<li class="relative flex gap-space-md"><span class="absolute -left-[31px] top-1 w-4 h-4 rounded-full ' + dot + ' ring-4"></span><span class="w-10 h-10 rounded-lg bg-surface-container text-on-surface-variant flex items-center justify-center shrink-0"><span class="material-symbols-outlined text-[20px]">' + e.icon + '</span></span><div><div class="font-headline-sm text-headline-sm text-primary">' + e.t + '</div><div class="font-body-sm text-body-sm text-outline">' + e.d + '</div><div class="font-body-md text-body-md text-on-surface-variant">' + e.sub + '</div></div></li>';
+}).join('');
+</script>
+
+</div>
+</main>
+</div>
+<script id="stitch-wire">
+(function(){
+  var routes=[['register call','register-service-call.html'],['submit & assign','service-calls-fsr.html'],['submit','service-calls-fsr.html'],['save equipment','equipment-database.html'],['save & generate pms','contracts-pms-spares.html']];
+  document.querySelectorAll('button').forEach(function(b){
+    var t=(b.textContent||'').trim().toLowerCase();
+    for(var i=0;i<routes.length;i++){if(t.indexOf(routes[i][0])!==-1){b.style.cursor='pointer';b.addEventListener('click',(function(u){return function(){window.location.href=u;};})(routes[i][1]));break;}}
+  });
+})();
+</script><script id="stitch-bell">
+document.querySelectorAll('button').forEach(function(b){if(/notifications/i.test(b.textContent||'')){b.style.cursor='pointer';b.addEventListener('click',function(){window.location.href='notifications.html';});}});
+</script>
+<style id="stitch-dark">
+html.dark body{background-color:#12161c !important}
+html.dark .bg-background,html.dark .bg-surface,html.dark .bg-surface-bright{background-color:#12161c !important}
+html.dark .bg-surface-container-lowest{background-color:#1b2129 !important}
+html.dark .bg-surface-container-low{background-color:#171d25 !important}
+html.dark .bg-surface-container{background-color:#222933 !important}
+html.dark .bg-surface-container-high{background-color:#283038 !important}
+html.dark .bg-surface-container-highest{background-color:#303945 !important}
+html.dark .bg-surface-dim{background-color:#252d36 !important}
+html.dark .bg-primary{background-color:#0b3c5d !important}
+html.dark .bg-primary-container{background-color:#164e74 !important}
+html.dark .hover\:bg-surface-container-high:hover{background-color:#283038 !important}
+html.dark .hover\:bg-surface-container-low:hover{background-color:#171d25 !important}
+html.dark .hover\:bg-surface-container:hover{background-color:#222933 !important}
+html.dark .text-on-surface{color:#e6ebf0 !important}
+html.dark .text-on-background{color:#e6ebf0 !important}
+html.dark .text-on-surface-variant{color:#a8b3bc !important}
+html.dark .text-primary{color:#a3cbf2 !important}
+html.dark .text-outline{color:#8a949d !important}
+html.dark .text-secondary{color:#67d6e4 !important}
+html.dark .text-on-secondary-container{color:#a5f3fc !important}
+html.dark .text-white{color:#ffffff !important}
+html.dark .border-outline-variant{border-color:#2e3841 !important}
+html.dark .border-outline{border-color:#39434d !important}
+html.dark .divide-outline-variant > :not([hidden]) ~ :not([hidden]){border-color:#2e3841 !important}
+html.dark .placeholder\:text-outline::placeholder{color:#6f7a84 !important}
+html.dark input,html.dark select,html.dark textarea{color-scheme:dark}
+html.dark .shadow-sm,html.dark .shadow-md{box-shadow:0 1px 3px rgba(0,0,0,0.35) !important}
+html.dark kbd{background:#222933 !important;color:#a3cbf2 !important}
+:focus-visible{outline:2px solid #0e9aa7 !important;outline-offset:2px;border-radius:4px}
+</style><button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark / light theme" style="position:fixed;right:1rem;bottom:1rem;z-index:70;width:46px;height:46px;border-radius:9999px;background:#0b3c5d;color:#8df2ff;border:1px solid #0e9aa7;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(11,60,93,0.35)"><span class="material-symbols-outlined" id="theme-toggle-icon">dark_mode</span></button>
+<script id="stitch-extras">
+(function(){
+  var btn=document.getElementById('theme-toggle');
+  var icon=document.getElementById('theme-toggle-icon');
+  function sync(){if(icon)icon.textContent=document.documentElement.classList.contains('dark')?'light_mode':'dark_mode';}
+  if(btn)btn.addEventListener('click',function(){
+    var next=!document.documentElement.classList.contains('dark');
+    document.documentElement.classList.toggle('dark',next);
+    document.documentElement.style.colorScheme=next?'dark':'light';
+    try{localStorage.setItem('summit-theme',next?'dark':'light');}catch(e){}
+    sync();
+  });
+  sync();
+  document.querySelectorAll('input[type="search"]').forEach(function(el){
+    el.addEventListener('keydown',function(e){if(e.key==='Enter'){var q=el.value.trim();window.location.href='search-results.html?q='+encodeURIComponent(q||'SG-CT-20451');}});
+  });
+  document.querySelectorAll('button').forEach(function(b){
+    var h=(b.innerHTML||'').toLowerCase();var t=(b.textContent||'').toLowerCase();
+    if(h.indexOf('qr_code_2')!==-1){b.addEventListener('click',function(){window.location.href='qr-sticker.html';});}
+    else if(t.indexOf('print qr sticker')!==-1){b.addEventListener('click',function(){window.location.href='qr-sticker.html';});}
+    else if(t.indexOf('assign engineer')!==-1){b.addEventListener('click',function(){window.location.href='assign-engineer.html';});}
+  });
+})();
+</script>
+<script id="master-nav">(function(){var b=document.getElementById("master-nav-toggle");if(!b)return;var s=document.getElementById("master-nav-submenu");var onMasters=/masters\.html/.test(location.pathname);function setOpen(v){if(!s)return;b.classList.toggle("master-open",v);s.classList.toggle("hidden",!v);b.setAttribute("aria-expanded",v?"true":"false");}b.addEventListener("click",function(){setOpen(!(b.classList.contains("master-open")));});setOpen(onMasters);if(onMasters){var m=location.search.match(/tab=([a-z]+)/);var q=m?m[1]:null;document.querySelectorAll("#master-nav-submenu a").forEach(function(a){var href=a.getAttribute("href")||"";var hit=q?href.indexOf("tab="+q)!==-1:href==="masters.html";if(hit)a.className="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg bg-primary text-on-primary transition-colors font-label-md text-label-md font-semibold";});}})();</script>
+</body></html>

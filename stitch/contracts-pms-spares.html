@@ -1,0 +1,1094 @@
+<!DOCTYPE html> <html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"error":"#ba1a1a","surface-bright":"#f7fafc","secondary":"#006972","inverse-primary":"#a3cbf2","tertiary-fixed-dim":"#b4c5ff","primary-fixed-dim":"#a3cbf2","outline-variant":"#c2c7ce","surface-tint":"#396285","on-tertiary-container":"#7f9fff","surface-variant":"#e0e3e5","on-error-container":"#93000a","surface":"#f7fafc","secondary-fixed-dim":"#67d6e4","error-container":"#ffdad6","tertiary":"#001f5d","on-primary-fixed":"#001d32","surface-dim":"#d7dadc","inverse-on-surface":"#eef1f3","on-primary-container":"#7fa7cd","on-surface":"#181c1e","on-surface-variant":"#42474e","on-tertiary-fixed-variant":"#003ea8","tertiary-fixed":"#dbe1ff","surface-container-highest":"#e0e3e5","background":"#f7fafc","secondary-fixed":"#8df2ff","on-background":"#181c1e","on-secondary":"#ffffff","tertiary-container":"#00328b","surface-container-low":"#f1f4f6","on-primary":"#ffffff","primary-fixed":"#cee5ff","on-tertiary":"#ffffff","outline":"#72777e","on-secondary-fixed-variant":"#004f56","primary-container":"#0b3c5d","inverse-surface":"#2d3133","on-secondary-container":"#006d77","surface-container-high":"#e5e9eb","secondary-container":"#82f0fe","on-tertiary-fixed":"#00174b","primary":"#00263f","surface-container":"#ebeef0","on-error":"#ffffff","on-primary-fixed-variant":"#1f4a6c","on-secondary-fixed":"#001f23","surface-container-lowest":"#ffffff"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xs":"0.25rem","gutter-desktop":"1.5rem","gutter":"1rem","margin":"1rem","space-xl":"2rem","space-sm":"0.5rem","margin-desktop":"2rem","margin-tablet":"1.5rem","space-md":"0.75rem","space-lg":"1.25rem"},fontFamily:{"headline-md":["Inter"],"headline-lg":["Inter"],"label-md":["Inter"],"label-sm":["Inter"],"body-lg":["Inter"],"body-md":["Inter"],"headline-sm":["Inter"],"display-lg":["Inter"],"metric-val":["Inter"],"body-sm":["Inter"],"headline-xl":["Inter"],"label-lg":["Inter"]},fontSize:{"headline-md":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["22px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-sm":["15px",{"lineHeight":"20px","letterSpacing":"-0.005em","fontWeight":"600"}],"display-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.025em","fontWeight":"700"}],"metric-val":["30px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.005em","fontWeight":"400"}],"headline-xl":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.005em","fontWeight":"500"}]}}}};</script><script id="stitch-theme-init">(function(){try{if(localStorage.getItem("summit-theme")==="dark"){document.documentElement.classList.add("dark");document.documentElement.style.colorScheme="dark";}}catch(e){}})();</script>
+</head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Summit Healthcare Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIUSceXT4JgT_RjOJHH1_5Ja2X8b8cCgcu9wUSzwk0VNSjfhMq1sA1WT7_ydpQbxwnUeV-CXrpwwwkfohub5ZmF90LAoo9J_xRAfBcsphpdDnANBlLUFQE1x8Cwg5PNJcrUI0KnJfafoPYwmbAQSPU0-KujPvedr8bA-85WLgQkq--x_kTit3_bZTDYSo8eZRspVxZMCBWMn-Ll67g4Ffr_FP3s8naTY2AnLTRvvQJ"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-primary truncate leading-tight">Summit</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider truncate">Healthcare</span></div></div></div><div class="px-space-lg pb-space-md"><div class="inline-flex items-center px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container"><span class="font-label-sm text-label-sm tracking-wide uppercase font-semibold">Service Manager</span></div></div><nav class="flex flex-col gap-1 px-space-md" data-active-classes="bg-primary text-on-primary font-headline-sm rounded-lg"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="operations-dashboard.html"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-lg text-label-lg">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="equipment" href="equipment-database.html"><span class="material-symbols-outlined text-[20px]">precision_manufacturing</span><span class="font-label-lg text-label-lg">Equipment Database</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="calls" href="service-calls-register.html"><span class="material-symbols-outlined text-[20px]">support_agent</span><span class="font-label-lg text-label-lg">Service Calls</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-colors bg-primary text-on-primary font-headline-sm rounded-lg" data-path="contracts" href="contracts-pms-spares.html"><span class="material-symbols-outlined text-[20px]">verified</span><span class="font-label-lg text-label-lg">AMC/CMC & PMS</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="inventory" href="spares-inventory.html"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-label-lg text-label-lg">Spares Inventory</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="reports" title="Reports hub is Phase 5 - not exported from Stitch yet" href="reports-hub.html"><span class="material-symbols-outlined text-[20px]">analytics</span><span class="font-label-lg text-label-lg">Reports Hub</span></a><style>#master-nav-toggle .master-chev{transition:transform .2s ease}#master-nav-toggle.master-open .master-chev{transform:rotate(180deg)}</style><div class="flex flex-col"><button id="master-nav-toggle" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors w-full text-left" aria-expanded="false" aria-controls="master-nav-submenu"><span class="material-symbols-outlined text-[20px]">schema</span><span class="font-label-lg text-label-lg flex-1 text-left">Master Data</span><span class="material-symbols-outlined text-[18px] master-chev">expand_more</span></button><div id="master-nav-submenu" class="flex-col gap-0.5 pl-10 pt-0.5 hidden"><a href="masters.html" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">apps</span><span>All Masters Hub</span></a><a href="masters.html?tab=hospitals" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">local_hospital</span><span>Hospitals</span></a><a href="masters.html?tab=brands" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">branding_watermark</span><span>Brands</span></a><a href="masters.html?tab=types" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">category</span><span>Equipment Types</span></a><a href="masters.html?tab=models" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">precision_manufacturing</span><span>Equipment Models</span></a><a href="masters.html?tab=suppliers" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">local_shipping</span><span>Suppliers</span></a><a href="masters.html?tab=stores" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">warehouse</span><span>Stores &amp; Van Depots</span></a><a href="masters.html?tab=sla" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">timer</span><span>SLA Settings</span></a><a href="masters.html?tab=checklists" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">checklist</span><span>Checklist Templates</span></a></div></div><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="settings" title="Settings screen not exported from Stitch yet" href="admin-console.html"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-label-lg text-label-lg">Settings</span></a></nav></div><div class="p-space-lg bg-surface-container-low m-space-md rounded-lg flex items-center justify-between"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">System SLA</span><span class="font-headline-sm text-headline-sm text-primary">99.8%</span></div><div class="w-2.5 h-2.5 rounded-full bg-secondary ring-4 ring-secondary/20"></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span><input class="w-full h-10 pl-10 pr-4 bg-surface-container-lowest text-on-surface placeholder:text-outline rounded-lg text-body-md font-body-md focus:outline-none focus:ring-2 focus:ring-secondary/30 transition-all shadow-[0_1px_3px_rgba(11,60,93,0.05)]" placeholder="Search serial no, call no, hospital, part no..." type="search"/></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center p-0.5 bg-surface-container rounded-full"><button class="px-3 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow-[0_1px_3px_rgba(11,60,93,0.05)]" type="button">Manager</button><button class="px-3 py-1 rounded-full text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors" type="button">Engineer</button><button class="px-3 py-1 rounded-full text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors" type="button">Admin</button></div><button class="h-10 px-4 bg-primary text-on-primary rounded-lg font-label-lg text-label-lg flex items-center gap-space-xs hover:bg-primary-container transition-colors shadow-[0_1px_3px_rgba(11,60,93,0.05)]" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>Register Call</span></button><button class="relative w-10 h-10 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 flex h-4 min-w-4 px-1 items-center justify-center rounded-full bg-error text-on-error font-label-sm text-[10px] font-bold leading-none">10</span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="flex flex-col text-right hidden md:flex"><span class="font-label-lg text-label-lg text-on-surface font-semibold">Rahul Sharma</span><span class="font-label-sm text-label-sm text-on-surface-variant">Service Ops Manager</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<!-- Asset Strip Component -->
+<div class="p-space-lg bg-surface-container-lowest shadow-sm flex flex-col xl:flex-row xl:items-center justify-between gap-space-md relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary"></div>
+<div class="flex items-center gap-space-md pl-space-xs">
+<div class="w-12 h-12 rounded-xl bg-primary-container text-on-primary-container flex items-center justify-center shrink-0 shadow-sm">
+<span class="material-symbols-outlined text-[26px]">medical_services</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-space-sm flex-wrap">
+<span class="font-headline-md text-headline-md text-primary tracking-tight">Biomedical Operations Engine</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary animate-pulse"></span> LIVE TELEMETRY
+</span>
+<span class="font-label-md text-label-md text-outline">SYS-REF: SUM-W884-V4</span>
+</div>
+<div class="flex items-center gap-space-md text-body-sm font-body-sm text-on-surface-variant flex-wrap mt-0.5">
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary">local_hospital</span> 42 Regional Hospitals</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary">devices</span> 318 High-Value Modalities Under SLA</span>
+<span class="flex items-center gap-1"><span class="material-symbols-outlined text-[16px] text-secondary">verified_user</span> ISO 13485 Calibration Compliant</span>
+</div>
+</div>
+</div>
+<!-- Tab Pill Switchers -->
+<div class="flex items-center bg-surface-container p-1 rounded-xl shadow-inner gap-1 shrink-0">
+<button class="tab-btn px-space-md py-2 rounded-lg font-label-lg text-label-lg transition-all flex items-center gap-2 bg-primary text-on-primary shadow-sm" id="tab-btn-contracts" onclick="switchTab('contracts')">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Contracts & Pipeline</span>
+</button>
+<button class="tab-btn px-space-md py-2 rounded-lg font-label-lg text-label-lg transition-all flex items-center gap-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest" id="tab-btn-pms" onclick="switchTab('pms')">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+<span>PMS Calendar & Visits</span>
+</button>
+<button class="tab-btn px-space-md py-2 rounded-lg font-label-lg text-label-lg transition-all flex items-center gap-2 text-on-surface-variant hover:text-on-surface hover:bg-surface-container-highest" id="tab-btn-spares" onclick="switchTab('spares')">
+<span class="material-symbols-outlined text-[18px]">inventory_2</span>
+<span>Spares & Ledger</span>
+</button>
+</div>
+</div>
+<!-- TAB 1: CONTRACTS & RENEWAL PIPELINE -->
+<div class="tab-pane flex flex-col p-space-lg space-y-space-xl" id="tab-contracts">
+<!-- KPI Summary Row -->
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-4 gap-space-lg">
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Active Contracts</span>
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">assignment_turned_in</span>
+</div>
+</div>
+<div class="my-space-md">
+<div class="font-metric-val text-metric-val text-primary flex items-baseline gap-2"> 12
+<span class="font-label-md text-label-md text-on-surface-variant font-normal">Agreements</span>
+</div>
+<div class="flex items-center gap-2 mt-1">
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">7 AMC</span>
+<span class="px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-semibold">5 Comprehensive CMC</span>
+</div>
+</div>
+<div class="text-body-sm font-body-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">trending_up</span> +2 onboarding this quarter </div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Annual Contract Value (ACV)</span>
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-[20px]">currency_rupee</span>
+</div>
+</div>
+<div class="my-space-md">
+<div class="font-metric-val text-metric-val text-primary"> —————1.48 <span class="text-headline-md font-headline-md font-normal text-on-surface">Cr</span></div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-2.5 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 78%;"></div>
+</div>
+</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant flex items-center justify-between">
+<span>78% collected YTD</span>
+<span class="text-secondary font-medium"> —————32.5L invoiced this mo.</span>
+</div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-error uppercase tracking-wider font-semibold">Expiring in 90 Days</span>
+<div class="w-9 h-9 rounded-lg bg-error-container flex items-center justify-center text-on-error-container">
+<span class="material-symbols-outlined text-[20px]">notification_important</span>
+</div>
+</div>
+<div class="my-space-md">
+<div class="font-metric-val text-metric-val text-error flex items-baseline gap-2"> 8
+<span class="font-label-md text-label-md text-on-error-container font-semibold">Critical Notices</span>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1"> —————42.8 Lakhs ACV exposed to lapse</p>
+</div>
+<div class="flex items-center gap-1.5 text-body-sm font-body-sm text-error">
+<span class="w-2 h-2 rounded-full bg-error animate-ping"></span> Action required for 3 MRI units </div>
+</div>
+<div class="p-space-lg rounded-xl bg-surface-container-lowest shadow-sm flex flex-col justify-between relative overflow-hidden group hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase tracking-wider">Renewal Conversion Rate</span>
+<div class="w-9 h-9 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[20px]">thumb_up</span>
+</div>
+</div>
+<div class="my-space-md">
+<div class="font-metric-val text-metric-val text-primary flex items-baseline gap-2"> 88.4%
+<span class="text-body-sm font-body-sm text-secondary font-medium">Target: 85%</span>
+</div>
+<div class="w-full bg-surface-container-high h-1.5 rounded-full mt-2.5 overflow-hidden">
+<div class="bg-primary-container h-full rounded-full" style="width: 88.4%;"></div>
+</div>
+</div>
+<div class="text-body-sm font-body-sm text-secondary flex items-center gap-1">
+<span class="material-symbols-outlined text-[16px]">check_circle</span> Top tier hospital retention </div>
+</div>
+</div>
+<!-- Renewal Pipeline Kanban Board Preview -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<div class="flex items-center justify-between flex-wrap gap-2">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">view_kanban</span>
+<h2 class="font-headline-sm text-headline-sm text-primary">Contract Lifecycle & Renewal Pipeline</h2>
+<span class="px-2 py-0.5 rounded-full bg-surface-container font-label-sm text-label-sm text-on-surface-variant font-medium">Active FY 24-25</span>
+</div>
+<button class="text-body-sm font-body-sm text-secondary hover:text-primary flex items-center gap-1 font-semibold">
+<span>Expand Pipeline Board</span>
+<span class="material-symbols-outlined text-[16px]">chevron_right</span>
+</button>
+</div>
+<div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Stage 1: Due -->
+<div class="bg-surface-container-low p-space-md rounded-xl space-y-3">
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-error"></span>
+<span class="font-headline-sm text-headline-sm text-primary">Due for Action</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">3</span>
+</div>
+<!-- Card 1 -->
+<div class="bg-surface-container-lowest p-3 rounded-lg shadow-sm space-y-2 hover:shadow-md transition-shadow">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-primary">CMC-2024-0012</span>
+<span class="px-1.5 py-0.5 rounded bg-error-container text-on-error-container text-[10px] font-bold">24d left</span>
+</div>
+<p class="font-headline-sm text-[13px] leading-tight text-on-surface">Ruby Hall Clinic</p>
+<div class="text-body-sm font-body-sm text-on-surface-variant">4 Heavy Imaging Units</div>
+<div class="flex items-center justify-between text-label-sm pt-1">
+<span class="font-semibold text-primary"> ₹ 34,00,000</span>
+<button class="text-secondary hover:underline font-semibold">Draft Quote</button>
+</div>
+</div>
+<!-- Card 2 -->
+<div class="bg-surface-container-lowest p-3 rounded-lg shadow-sm space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-primary">AMC-2024-0089</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-variant text-on-surface-variant text-[10px] font-bold">41d left</span>
+</div>
+<p class="font-headline-sm text-[13px] leading-tight text-on-surface">Jehangir Multispecialty</p>
+<div class="text-body-sm font-body-sm text-on-surface-variant">Cath Lab & C-Arm</div>
+<div class="flex items-center justify-between text-label-sm pt-1">
+<span class="font-semibold text-primary"> ₹ 12,40,000</span>
+<button class="text-secondary hover:underline font-semibold">Draft Quote</button>
+</div>
+</div>
+<!-- Card 3 -->
+<div class="bg-surface-container-lowest p-3 rounded-lg shadow-sm space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-primary">AMC-2024-0104</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-variant text-on-surface-variant text-[10px] font-bold">58d left</span>
+</div>
+<p class="font-headline-sm text-[13px] leading-tight text-on-surface">Deenanath Mangeshkar</p>
+<div class="text-body-sm font-body-sm text-on-surface-variant">Siemens Somatom CT</div>
+<div class="flex items-center justify-between text-label-sm pt-1">
+<span class="font-semibold text-primary"> ₹ 8,50,000</span>
+<button class="text-secondary hover:underline font-semibold">Draft Quote</button>
+</div>
+</div>
+</div>
+<!-- Stage 2: Quotation Sent -->
+<div class="bg-surface-container-low p-space-md rounded-xl space-y-3">
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-headline-sm text-headline-sm text-primary">Quotation Sent</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold">2</span>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-lg shadow-sm space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-primary">CMC-2024-0044</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container text-[10px]">Rev 1.2</span>
+</div>
+<p class="font-headline-sm text-[13px] leading-tight text-on-surface">Manipal Hospital Kharadi</p>
+<div class="text-body-sm font-body-sm text-on-surface-variant">GE Signa Pioneer 3T MRI</div>
+<div class="flex items-center justify-between text-label-sm pt-1">
+<span class="font-semibold text-primary"> ₹ 22,00,000</span>
+<span class="text-outline text-[11px]">Sent 3d ago</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-lg shadow-sm space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-primary">AMC-2024-0062</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary-container text-on-secondary-container text-[10px]">Rev 1.0</span>
+</div>
+<p class="font-headline-sm text-[13px] leading-tight text-on-surface">Apollo Cradle & Children</p>
+<div class="text-body-sm font-body-sm text-on-surface-variant">2x Ultrasound & Echo</div>
+<div class="flex items-center justify-between text-label-sm pt-1">
+<span class="font-semibold text-primary"> ₹ 5,20,000</span>
+<span class="text-outline text-[11px]">Sent 6d ago</span>
+</div>
+</div>
+</div>
+<!-- Stage 3: Negotiation -->
+<div class="bg-surface-container-low p-space-md rounded-xl space-y-3">
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-primary-container"></span>
+<span class="font-headline-sm text-headline-sm text-primary">Negotiation</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface font-label-sm text-label-sm font-bold">2</span>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-lg shadow-sm space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-primary">CMC-2024-0033</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant text-[10px]">Procurement</span>
+</div>
+<p class="font-headline-sm text-[13px] leading-tight text-on-surface">Inamdar Multispecialty</p>
+<div class="text-body-sm font-body-sm text-on-surface-variant">Philips Ingenia 1.5T MRI</div>
+<div class="flex items-center justify-between text-label-sm pt-1">
+<span class="font-semibold text-primary"> ₹ 18,50,000</span>
+<span class="text-secondary font-semibold text-[11px]">5% disc requested</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-lg shadow-sm space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-primary">AMC-2024-0051</span>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-highest text-on-surface-variant text-[10px]">Director</span>
+</div>
+<p class="font-headline-sm text-[13px] leading-tight text-on-surface">Noble Hospital Hadapsar</p>
+<div class="text-body-sm font-body-sm text-on-surface-variant">6x Anaesthesia Workstations</div>
+<div class="flex items-center justify-between text-label-sm pt-1">
+<span class="font-semibold text-primary"> ₹ 7,90,000</span>
+<span class="text-secondary font-semibold text-[11px]">Tube coverage discussion</span>
+</div>
+</div>
+</div>
+<!-- Stage 4: Renewed -->
+<div class="bg-surface-container-low p-space-md rounded-xl space-y-3">
+<div class="flex items-center justify-between pb-2">
+<div class="flex items-center gap-2">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary"></span>
+<span class="font-headline-sm text-headline-sm text-primary">Renewed (FY25)</span>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">5</span>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-lg shadow-sm space-y-2">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-primary">CMC-2025-0001</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed text-[10px] font-bold">SIGNED</span>
+</div>
+<p class="font-headline-sm text-[13px] leading-tight text-on-surface">KEM Hospital Research Ctr</p>
+<div class="text-body-sm font-body-sm text-on-surface-variant">Canon Aquilion One CT</div>
+<div class="flex items-center justify-between text-label-sm pt-1">
+<span class="font-semibold text-secondary"> ₹ 28,00,000</span>
+<span class="text-[11px] text-outline">P.O. #88392</span>
+</div>
+</div>
+<div class="bg-surface-container-lowest p-3 rounded-lg shadow-sm space-y-2 opacity-80">
+<div class="flex items-center justify-between">
+<span class="font-label-sm text-label-sm font-bold text-primary">AMC-2025-0004</span>
+<span class="px-1.5 py-0.5 rounded bg-secondary-fixed text-on-secondary-fixed text-[10px] font-bold">SIGNED</span>
+</div>
+<p class="font-headline-sm text-[13px] leading-tight text-on-surface">Sancheti Orthopedic</p>
+<div class="text-body-sm font-body-sm text-on-surface-variant">Fluoroscopy suites + 4 units</div>
+<div class="flex items-center justify-between text-label-sm pt-1">
+<span class="font-semibold text-secondary"> ₹ 14,50,000</span>
+<span class="text-[11px] text-outline">P.O. #44101</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Active Contracts Data Table -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="p-space-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md bg-surface-container-low">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-primary text-on-primary flex items-center justify-center">
+<span class="material-symbols-outlined text-[20px]">feed</span>
+</div>
+<div>
+<h3 class="font-headline-md text-headline-md text-primary">Master Service Agreements Master Log</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Live AMC/CMC repository, SLA terms, machine allocations, and automated triggers</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<div class="relative">
+<input class="h-9 pl-9 pr-3 rounded-lg bg-surface text-body-sm font-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary shadow-sm" placeholder="Filter hospital or contract..." type="text"/>
+<span class="material-symbols-outlined absolute left-2.5 top-2 text-outline text-[18px]">filter_list</span>
+</div>
+<button class="h-9 px-3 rounded-lg bg-surface text-on-surface font-label-md text-label-md flex items-center gap-1.5 shadow-sm hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Export CSV</span>
+</button>
+<button class="h-9 px-3 rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm hover:bg-primary-container transition-colors">
+<span class="material-symbols-outlined text-[16px]">add_circle</span>
+<span>New Agreement</span>
+</button>
+</div>
+</div>
+<!-- Table responsive container -->
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high h-10">
+<th class="px-space-md font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Contract No</th>
+<th class="px-space-md font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Hospital / Facility</th>
+<th class="px-space-md font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Contract Type</th>
+<th class="px-space-md font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Covered Modalities</th>
+<th class="px-space-md font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider text-right">ACV Value</th>
+<th class="px-space-md font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">PMS Frequency</th>
+<th class="px-space-md font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Validity Period</th>
+<th class="px-space-md font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Status</th>
+<th class="px-space-md font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider text-center">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- Row 1: Focus Ruby Hall -->
+<tr class="h-14 hover:bg-surface-container-low transition-colors group">
+<td class="px-space-md">
+<span class="font-label-md text-label-md font-bold text-primary tracking-wide">CMC-2024-0012</span>
+</td>
+<td class="px-space-md">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Ruby Hall Clinic</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Pune Central Campus, Dept of Radiology</span>
+</div>
+</td>
+<td class="px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold tracking-wider"> CMC COMPREHENSIVE
+</span>
+</td>
+<td class="px-space-md">
+<div class="flex flex-col">
+<span class="font-body-md font-body-md text-on-surface font-medium">4 Advanced Modalities</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant truncate max-w-xs">1x MRI 3.0T, 2x CT 128-Slice, 1x Cath Lab Bi-Plane</span>
+</div>
+</td>
+<td class="px-space-md text-right">
+<span class="font-headline-sm text-headline-sm text-primary"> ₹ 34,00,000</span>
+</td>
+<td class="px-space-md">
+<div class="flex items-center gap-1.5 text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[16px]">event_repeat</span>
+<span>Quarterly (4/Yr)</span>
+</div>
+</td>
+<td class="px-space-md">
+<div class="flex flex-col font-body-sm text-body-sm">
+<span class="text-on-surface">01 Apr 2024 —————— — 31 Mar 2025</span>
+<span class="text-error font-medium">Lapse: 24 Days Remaining</span>
+</div>
+</td>
+<td class="px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">
+<span class="w-2 h-2 rounded-full bg-error animate-pulse"></span> Expiring in 24 Days
+</span>
+</td>
+<td class="px-space-md text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 rounded-lg text-secondary hover:bg-secondary-container transition-colors" onclick="alert('Triggered Renewal Workflow for CMC-2024-0012')" title="One-Click Renew">
+<span class="material-symbols-outlined text-[18px]">autorenew</span>
+</button>
+<button class="p-1.5 rounded-lg text-primary hover:bg-surface-container transition-colors" onclick="switchTab('pms')" title="View PMS Schedule">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors" title="Download Agreement PDF">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="h-14 hover:bg-surface-container-low transition-colors">
+<td class="px-space-md">
+<span class="font-label-md text-label-md font-bold text-primary tracking-wide">AMC-2024-0038</span>
+</td>
+<td class="px-space-md">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Jupiter Hospital</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Baner, Critical Care & OT Complex</span>
+</div>
+</td>
+<td class="px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold"> AMC STANDARD
+</span>
+</td>
+<td class="px-space-md">
+<div class="flex flex-col">
+<span class="font-body-md font-body-md text-on-surface font-medium">8 OT Modalities</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">4x Draeger Ventilators, 4x Anesthesia</span>
+</div>
+</td>
+<td class="px-space-md text-right">
+<span class="font-headline-sm text-headline-sm text-primary"> ₹ 14,50,000</span>
+</td>
+<td class="px-space-md">
+<div class="flex items-center gap-1.5 text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[16px]">event_repeat</span>
+<span>Bi-Monthly (6/Yr)</span>
+</div>
+</td>
+<td class="px-space-md">
+<div class="flex flex-col font-body-sm text-body-sm">
+<span class="text-on-surface">15 May 2024 —————— — 14 May 2025</span>
+<span class="text-secondary font-medium">Valid: 68 Days Remaining</span>
+</div>
+</td>
+<td class="px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Active & Normal
+</span>
+</td>
+<td class="px-space-md text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 rounded-lg text-secondary hover:bg-secondary-container transition-colors" title="One-Click Renew">
+<span class="material-symbols-outlined text-[18px]">autorenew</span>
+</button>
+<button class="p-1.5 rounded-lg text-primary hover:bg-surface-container transition-colors" onclick="switchTab('pms')" title="View PMS Schedule">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors" title="Download Agreement PDF">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="h-14 hover:bg-surface-container-low transition-colors">
+<td class="px-space-md">
+<span class="font-label-md text-label-md font-bold text-primary tracking-wide">CMC-2024-0071</span>
+</td>
+<td class="px-space-md">
+<div class="flex flex-col">
+<span class="font-headline-sm text-headline-sm text-on-surface">Sahyadri Super Speciality</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Deccan Gymkhana, Oncology Wing</span>
+</div>
+</td>
+<td class="px-space-md">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-primary-container text-on-primary font-label-sm text-label-sm font-semibold tracking-wider"> CMC COMPREHENSIVE
+</span>
+</td>
+<td class="px-space-md">
+<div class="flex flex-col">
+<span class="font-body-md font-body-md text-on-surface font-medium">2 High-Energy Linac Units</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Varian TrueBeam & Elekta Synergy</span>
+</div>
+</td>
+<td class="px-space-md text-right">
+<span class="font-headline-sm text-headline-sm text-primary"> ₹ 48,20,000</span>
+</td>
+<td class="px-space-md">
+<div class="flex items-center gap-1.5 text-body-sm font-body-sm text-on-surface">
+<span class="material-symbols-outlined text-secondary text-[16px]">event_repeat</span>
+<span>Monthly (12/Yr)</span>
+</div>
+</td>
+<td class="px-space-md">
+<div class="flex flex-col font-body-sm text-body-sm">
+<span class="text-on-surface">01 Aug 2024 —————— — 31 Jul 2025</span>
+<span class="text-secondary font-medium">Valid: 146 Days</span>
+</div>
+</td>
+<td class="px-space-md">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Active & Normal
+</span>
+</td>
+<td class="px-space-md text-center">
+<div class="flex items-center justify-center gap-1">
+<button class="p-1.5 rounded-lg text-secondary hover:bg-secondary-container transition-colors" title="One-Click Renew">
+<span class="material-symbols-outlined text-[18px]">autorenew</span>
+</button>
+<button class="p-1.5 rounded-lg text-primary hover:bg-surface-container transition-colors" onclick="switchTab('pms')" title="View PMS Schedule">
+<span class="material-symbols-outlined text-[18px]">calendar_month</span>
+</button>
+<button class="p-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container transition-colors" title="Download Agreement PDF">
+<span class="material-symbols-outlined text-[18px]">download</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<div class="p-space-md bg-surface-container flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span>Showing 3 of 12 Managed Contract Lines</span>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 rounded bg-surface text-on-surface shadow-sm disabled:opacity-50">Prev</button>
+<span class="px-2 font-medium text-primary">Page 1 of 4</span>
+<button class="px-2.5 py-1 rounded bg-surface text-on-surface shadow-sm">Next</button>
+</div>
+</div>
+</div>
+</div>
+<!-- TAB 2: PMS CALENDAR & SCHEDULED VISITS -->
+<div class="tab-pane hidden flex-col p-space-lg space-y-space-xl" id="tab-pms">
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg items-start">
+<!-- Calendar Main Section (7 cols) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl p-space-lg shadow-sm space-y-space-md">
+<!-- Month Navigation Bar -->
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-space-sm pb-space-sm border-b border-surface-container">
+<div class="flex items-center gap-3">
+<h2 class="font-headline-lg text-headline-lg text-primary">March 2025</h2>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold">Q1 Maintenance Run</span>
+</div>
+<div class="flex items-center gap-2">
+<div class="flex items-center bg-surface-container rounded-lg p-0.5">
+<button class="p-1.5 text-on-surface hover:bg-surface-container-lowest rounded"><span class="material-symbols-outlined text-[18px]">chevron_left</span></button>
+<button class="px-2.5 py-1 font-label-sm text-label-sm font-bold text-primary">Today</button>
+<button class="p-1.5 text-on-surface hover:bg-surface-container-lowest rounded"><span class="material-symbols-outlined text-[18px]">chevron_right</span></button>
+</div>
+<div class="flex items-center bg-surface-container rounded-lg p-0.5">
+<button class="px-2.5 py-1 rounded-md bg-surface text-primary font-label-sm text-label-sm shadow-sm font-semibold">Month</button>
+<button class="px-2.5 py-1 rounded-md text-on-surface-variant font-label-sm text-label-sm">Week</button>
+</div>
+</div>
+</div>
+<!-- Legend Chips -->
+<div class="flex items-center gap-space-md flex-wrap text-label-sm font-label-sm">
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-secondary"></span>
+<span class="text-on-surface">Completed (18)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-primary-container"></span>
+<span class="text-on-surface">Scheduled (9)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-secondary-fixed-dim"></span>
+<span class="text-on-surface">Rescheduled (3)</span>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="w-3 h-3 rounded-full bg-error"></span>
+<span class="text-error font-bold">Overdue / Warning (2)</span>
+</div>
+</div>
+<!-- Calendar Matrix Grid -->
+<div class="grid grid-cols-7 gap-1 text-center font-label-sm text-label-sm text-on-surface-variant pt-2">
+<div class="py-1">MON</div>
+<div class="py-1">TUE</div>
+<div class="py-1">WED</div>
+<div class="py-1">THU</div>
+<div class="py-1">FRI</div>
+<div class="py-1 text-error">SAT</div>
+<div class="py-1 text-error">SUN</div>
+</div>
+<div class="grid grid-cols-7 gap-1.5 text-left min-h-[460px]">
+<!-- Week 1 (prev month days) -->
+<div class="p-1.5 rounded-lg bg-surface-container-low min-h-24 opacity-40">
+<span class="text-label-sm font-label-sm">24</span>
+</div>
+<div class="p-1.5 rounded-lg bg-surface-container-low min-h-24 opacity-40">
+<span class="text-label-sm font-label-sm">25</span>
+</div>
+<div class="p-1.5 rounded-lg bg-surface-container-low min-h-24 opacity-40">
+<span class="text-label-sm font-label-sm">26</span>
+</div>
+<div class="p-1.5 rounded-lg bg-surface-container-low min-h-24 opacity-40">
+<span class="text-label-sm font-label-sm">27</span>
+</div>
+<div class="p-1.5 rounded-lg bg-surface-container-low min-h-24 opacity-40">
+<span class="text-label-sm font-label-sm">28</span>
+</div>
+<div class="p-1.5 rounded-lg bg-surface-container-low min-h-24">
+<span class="text-label-sm font-label-sm font-bold text-primary">1</span>
+<div class="mt-1 p-1 rounded bg-secondary text-on-secondary text-[10px] leading-tight font-medium"> ——————— KEM Cath Lab #1
+</div>
+</div>
+<div class="p-1.5 rounded-lg bg-surface-container-low min-h-24">
+<span class="text-label-sm font-label-sm font-bold text-primary">2</span>
+</div>
+<!-- Week 2 -->
+<div class="p-1.5 rounded-lg bg-surface-container-low min-h-24">
+<span class="text-label-sm font-label-sm font-bold text-primary">3</span>
+<div class="mt-1 p-1 rounded bg-secondary text-on-secondary text-[10px] leading-tight font-medium"> ——————— Jupiter CT 64
+</div>
+</div>
+<div class="p-1.5 rounded-lg bg-surface-container-low min-h-24">
+<span class="text-label-sm font-label-sm font-bold text-primary">4</span>
+<div class="mt-1 p-1 rounded bg-secondary text-on-secondary text-[10px] leading-tight font-medium"> ——————— Apollo Echo #3
+</div>
+</div>
+<div class="p-1.5 rounded-lg bg-surface-container-low min-h-24">
+<span class="text-label-sm font-label-sm font-bold text-primary">5</span>
+<div class="mt-1 p-1 rounded bg-error text-on-error text-[10px] leading-tight font-bold">
+! Deenanath CT (OD)
+</div>
+</div>
+<div class="p-1.5 rounded-lg bg-surface-container-low min-h-24">
+<span class="text-label-sm font-label-sm font-bold text-primary">6</span>
+<div class="mt-1 p-1 rounded bg-secondary text-on-secondary text-[10px] leading-tight font-medium"> ——————— Sahyadri Linac
+</div>
+</div>
+<!-- Today: 7th March - ACTIVE -->
+<div class="p-1.5 rounded-lg bg-secondary-container/40 ring-2 ring-secondary min-h-24 relative shadow-sm">
+<span class="text-label-sm font-label-sm font-extrabold text-secondary flex items-center justify-between"> 7
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</span>
+<div class="mt-1 p-1 rounded bg-primary-container text-on-primary text-[10px] leading-tight font-bold cursor-pointer hover:scale-105 transition-transform" onclick="selectPmsDrawer()"> ————— — Ruby Hall MRI #PMS-0048
+</div>
+</div>
+<div class="p-1.5 rounded-lg bg-surface-container-low min-h-24">
+<span class="text-label-sm font-label-sm font-bold text-primary">8</span>
+</div>
+<div class="p-1.5 rounded-lg bg-surface-container-low min-h-24">
+<span class="text-label-sm font-label-sm font-bold text-primary">9</span>
+</div>
+<!-- Week 3 -->
+<div class="p-1.5 rounded-lg bg-surface-container-low min-h-24">
+<span class="text-label-sm font-label-sm font-bold text-primary">10</span>
+<div class="mt-1 p-1 rounded bg-primary text-on-primary text-[10px] leading-tight"> ————— — Inamdar MRI 1.5T
+</div>
+</div>
+<div class="p-1.5 rounded-lg bg-surface-container-low min-h-24">
+<span class="text-label-sm font-label-sm font-bold text-primary">11</span>
+<div class="mt-1 p-1 rounded bg-secondary-fixed-dim text-on-surface text-[10px] leading-tight font-medium"> ————— — Noble Anesth (Resched)
+</div>
+</div>
+<div class="p-1.5 rounded-lg bg-surface-container-low min-h-24">
+<span class="text-label-sm font-label-sm font-bold text-primary">12</span>
+<div class="mt-1 p-1 rounded bg-primary text-on-primary text-[10px] leading-tight"> ————— — Manipal PET-CT
+</div>
+</div>
+<div class="p-1.5 rounded-lg bg-surface-container-low min-h-24">
+<span class="text-label-sm font-label-sm font-bold text-primary">13</span>
+</div>
+<div class="p-1.5 rounded-lg bg-surface-container-low min-h-24">
+<span class="text-label-sm font-label-sm font-bold text-primary">14</span>
+<div class="mt-1 p-1 rounded bg-primary text-on-primary text-[10px] leading-tight"> ————— — Sancheti C-Arm #2
+</div>
+</div>
+<div class="p-1.5 rounded-lg bg-surface-container-low min-h-24">
+<span class="text-label-sm font-label-sm font-bold text-primary">15</span>
+</div>
+<div class="p-1.5 rounded-lg bg-surface-container-low min-h-24">
+<span class="text-label-sm font-label-sm font-bold text-primary">16</span>
+</div>
+</div>
+</div>
+<!-- PMS Visit Detail Drawer / Active Inspection Workboard (5 cols) -->
+<div class="lg:col-span-5 bg-surface-container-lowest rounded-xl p-space-lg shadow-md space-y-space-md relative overflow-hidden" id="pms-drawer">
+<div class="flex items-center justify-between pb-3 border-b border-surface-container">
+<div class="flex flex-col">
+<div class="flex items-center gap-2">
+<span class="font-label-md text-label-md font-bold text-secondary">PMS-2025-0048</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-bold uppercase">Quarterly Calibration</span>
+</div>
+<h3 class="font-headline-md text-headline-md text-primary mt-1">Ruby Hall Clinic —————— — MRI 3.0T</h3>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Asset SN: SIEM-MAG-9942 —————— — Engineer: Vikram Patil</span>
+</div>
+<div class="w-10 h-10 rounded-full bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-[22px]">checklist_rtl</span>
+</div>
+</div>
+<!-- Checklist Item Inspection Table -->
+<div class="space-y-space-sm">
+<div class="flex items-center justify-between text-label-sm font-label-sm text-on-surface-variant px-1 uppercase tracking-wide">
+<span>Engineering Inspection Item</span>
+<span>Outcome Toggle</span>
+</div>
+<!-- Item 1 -->
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between gap-2">
+<div class="flex items-start gap-2">
+<span class="text-primary font-bold text-body-sm mt-0.5">1.</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-[13px] text-on-surface font-semibold">Electrical Safety & Earth Leakage</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">< 100 ————A measured leakage test</span>
+</div>
+</div>
+<div class="flex items-center bg-surface-container rounded-lg p-0.5 shrink-0">
+<button class="px-2 py-1 rounded bg-secondary text-on-secondary font-label-sm text-label-sm font-bold shadow-sm" onclick="setInspectionBtn(this, 'pass')">Pass</button>
+<button class="px-2 py-1 rounded text-on-surface-variant hover:text-error font-label-sm text-label-sm" onclick="setInspectionBtn(this, 'fail')">Fail</button>
+<button class="px-2 py-1 rounded text-on-surface-variant font-label-sm text-label-sm" onclick="setInspectionBtn(this, 'na')">N/A</button>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between gap-2">
+<div class="flex items-start gap-2">
+<span class="text-primary font-bold text-body-sm mt-0.5">2.</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-[13px] text-on-surface font-semibold">Optical Alignment & Gantry Tilt</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Laser crosshair isocenter precision (———0.5mm)</span>
+</div>
+</div>
+<div class="flex items-center bg-surface-container rounded-lg p-0.5 shrink-0">
+<button class="px-2 py-1 rounded bg-secondary text-on-secondary font-label-sm text-label-sm font-bold shadow-sm" onclick="setInspectionBtn(this, 'pass')">Pass</button>
+<button class="px-2 py-1 rounded text-on-surface-variant hover:text-error font-label-sm text-label-sm" onclick="setInspectionBtn(this, 'fail')">Fail</button>
+<button class="px-2 py-1 rounded text-on-surface-variant font-label-sm text-label-sm" onclick="setInspectionBtn(this, 'na')">N/A</button>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between gap-2">
+<div class="flex items-start gap-2">
+<span class="text-primary font-bold text-body-sm mt-0.5">3.</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-[13px] text-on-surface font-semibold">Emergency Stop Switches & Interlocks</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Console, gantry & quench circuit trip test</span>
+</div>
+</div>
+<div class="flex items-center bg-surface-container rounded-lg p-0.5 shrink-0">
+<button class="px-2 py-1 rounded bg-secondary text-on-secondary font-label-sm text-label-sm font-bold shadow-sm" onclick="setInspectionBtn(this, 'pass')">Pass</button>
+<button class="px-2 py-1 rounded text-on-surface-variant hover:text-error font-label-sm text-label-sm" onclick="setInspectionBtn(this, 'fail')">Fail</button>
+<button class="px-2 py-1 rounded text-on-surface-variant font-label-sm text-label-sm" onclick="setInspectionBtn(this, 'na')">N/A</button>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between gap-2">
+<div class="flex items-start gap-2">
+<span class="text-primary font-bold text-body-sm mt-0.5">4.</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-[13px] text-on-surface font-semibold">Cooling Chiller Flow & Liquid Level</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">Primary loop 7.2————C —————— — 92 LPM flow verified</span>
+</div>
+</div>
+<div class="flex items-center bg-surface-container rounded-lg p-0.5 shrink-0">
+<button class="px-2 py-1 rounded bg-secondary text-on-secondary font-label-sm text-label-sm font-bold shadow-sm" onclick="setInspectionBtn(this, 'pass')">Pass</button>
+<button class="px-2 py-1 rounded text-on-surface-variant hover:text-error font-label-sm text-label-sm" onclick="setInspectionBtn(this, 'fail')">Fail</button>
+<button class="px-2 py-1 rounded text-on-surface-variant font-label-sm text-label-sm" onclick="setInspectionBtn(this, 'na')">N/A</button>
+</div>
+</div>
+<!-- Item 5 -->
+<div class="p-2.5 rounded-lg bg-surface-container-low flex items-center justify-between gap-2">
+<div class="flex items-start gap-2">
+<span class="text-primary font-bold text-body-sm mt-0.5">5.</span>
+<div class="flex flex-col">
+<span class="font-label-lg text-[13px] text-on-surface font-semibold">Image Phantom Noise & QA Check</span>
+<span class="font-body-sm text-body-sm text-on-surface-variant">SNR deviation < 2.1% against baseline target</span>
+</div>
+</div>
+<div class="flex items-center bg-surface-container rounded-lg p-0.5 shrink-0">
+<button class="px-2 py-1 rounded bg-secondary text-on-secondary font-label-sm text-label-sm font-bold shadow-sm" onclick="setInspectionBtn(this, 'pass')">Pass</button>
+<button class="px-2 py-1 rounded text-on-surface-variant hover:text-error font-label-sm text-label-sm" onclick="setInspectionBtn(this, 'fail')">Fail</button>
+<button class="px-2 py-1 rounded text-on-surface-variant font-label-sm text-label-sm" onclick="setInspectionBtn(this, 'na')">N/A</button>
+</div>
+</div>
+</div>
+<!-- Findings Notes & Auto-Calculated Next Due Date -->
+<div class="space-y-2 pt-2">
+<label class="font-label-md text-label-md text-on-surface font-semibold">Field Service Findings & Observations</label>
+<textarea class="w-full p-2.5 rounded-lg bg-surface text-body-sm font-body-sm text-on-surface border border-surface-container-high focus:outline-none focus:ring-2 focus:ring-secondary" placeholder="Enter sensor logs, helium boil-off reading, or parts cleaned..." rows="2">RF cage seals cleaned with contact solvent. Compressor adsorber replaced per 10k hr PM interval. Image SNR optimal at 148.4 units.</textarea>
+</div>
+<!-- Next Due Calculation Badge -->
+<div class="p-space-md rounded-lg bg-secondary-container/50 flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">update</span>
+<div class="flex flex-col">
+<span class="font-label-sm text-label-sm text-on-secondary-container font-semibold uppercase">Auto-Scheduled Next Visit (+90 Days)</span>
+<span class="font-headline-sm text-headline-sm text-primary">05 June 2025</span>
+</div>
+</div>
+<span class="text-label-sm font-label-sm font-bold text-secondary bg-surface-container-lowest px-2 py-1 rounded shadow-sm">Q2 Scheduled</span>
+</div>
+<div class="flex items-center gap-space-sm pt-2">
+<button class="flex-1 h-10 rounded-lg bg-primary text-on-primary font-label-lg text-label-lg flex items-center justify-center gap-2 hover:bg-primary-container transition-colors shadow-sm" onclick="alert('PMS-2025-0048 certified and pushed to hospital biomedical log!')">
+<span class="material-symbols-outlined text-[18px]">verified</span>
+<span>Sign & Complete Visit</span>
+</button>
+<button class="h-10 px-3 rounded-lg bg-surface-container text-on-surface font-label-md text-label-md hover:bg-surface-container-highest transition-colors"> Postpone
+</button>
+</div>
+</div>
+</div>
+</div>
+<!-- TAB 3: SPARES INVENTORY & AUTO-RECONCILING STOCK LEDGER -->
+<div class="tab-pane hidden flex-col p-space-lg space-y-space-xl" id="tab-spares">
+<!-- Reorder Level Alert Bar -->
+<div class="p-space-md bg-error-container text-on-error-container rounded-xl shadow-sm flex flex-col md:flex-row md:items-center justify-between gap-space-md border-l-4 border-error">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-error text-on-error flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-[22px]">warning</span>
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm font-bold text-on-error-container">Critical Spares Depletion Alert</span>
+<span class="px-2 py-0.5 rounded-full bg-error text-on-error font-label-sm text-label-sm font-bold">8 SKUs Below Min</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-error-container mt-0.5">8 critical components fell beneath safety thresholds following emergency weekend replacements.</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm shrink-0">
+<button class="h-9 px-4 bg-error text-on-error rounded-lg font-label-lg text-label-lg flex items-center gap-1.5 hover:opacity-90 transition-opacity shadow-sm" onclick="alert('Draft POs initiated for 8 depleted SKUs to Siemens Healthcare & Philips Medical')">
+<span class="material-symbols-outlined text-[18px]">shopping_cart_checkout</span>
+<span>Draft Purchase Orders</span>
+</button>
+</div>
+</div>
+<!-- Inventory Table -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden flex flex-col">
+<div class="p-space-lg flex flex-col md:flex-row md:items-center justify-between gap-space-md bg-surface-container-low">
+<div>
+<h3 class="font-headline-md text-headline-md text-primary">Biomedical Spares Central Catalog</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant">Live telemetry tracking Central Warehouse (Pune Depot) & 4 Field Engineer Mobile Vans</p>
+</div>
+<div class="flex items-center gap-space-sm flex-wrap">
+<div class="relative">
+<input class="h-9 pl-9 pr-3 rounded-lg bg-surface text-body-sm font-body-sm text-on-surface focus:outline-none focus:ring-2 focus:ring-secondary shadow-sm" placeholder="Search part # or model..." type="text"/>
+<span class="material-symbols-outlined absolute left-2.5 top-2 text-outline text-[18px]">search</span>
+</div>
+<button class="h-9 px-3 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md flex items-center gap-1.5 shadow-sm hover:opacity-95 transition-opacity">
+<span class="material-symbols-outlined text-[18px]">swap_horiz</span>
+<span>Van Restock Transfer</span>
+</button>
+</div>
+</div>
+<div class="overflow-x-auto w-full">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-high h-10">
+<th class="px-space-md font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Part Number</th>
+<th class="px-space-md font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Description</th>
+<th class="px-space-md font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Category</th>
+<th class="px-space-md font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider">Compatible Modalities</th>
+<th class="px-space-md font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider text-center">Central Store</th>
+<th class="px-space-md font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider text-center">In 4 Vans</th>
+<th class="px-space-md font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider text-center">Total Qty</th>
+<th class="px-space-md font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider text-center">Min Level</th>
+<th class="px-space-md font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider text-center">Status</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container">
+<!-- Row 1: Low stock item -->
+<tr class="h-14 hover:bg-surface-container-low transition-colors">
+<td class="px-space-md">
+<span class="font-label-md text-label-md font-bold text-primary font-mono">SPR-CT-TBX-902</span>
+</td>
+<td class="px-space-md">
+<span class="font-headline-sm text-headline-sm text-on-surface">Straton MX X-Ray CT Tube Assembly</span>
+</td>
+<td class="px-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">High-Vacuum Tubes</span>
+</td>
+<td class="px-space-md font-body-sm text-body-sm text-on-surface-variant">Siemens Somatom Definition / Edge</td>
+<td class="px-space-md text-center font-bold text-on-surface">1</td>
+<td class="px-space-md text-center font-medium text-secondary">0</td>
+<td class="px-space-md text-center font-headline-sm text-headline-sm text-error font-bold">1</td>
+<td class="px-space-md text-center text-body-sm text-outline">3</td>
+<td class="px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> CRITICAL LOW
+</span>
+</td>
+</tr>
+<!-- Row 2: RF Coil Interface -->
+<tr class="h-14 hover:bg-surface-container-low transition-colors">
+<td class="px-space-md">
+<span class="font-label-md text-label-md font-bold text-primary font-mono">SPR-MR-COIL-441</span>
+</td>
+<td class="px-space-md">
+<span class="font-headline-sm text-headline-sm text-on-surface">16-Ch Neurovascular Head Matrix Coil</span>
+</td>
+<td class="px-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">RF Electronics</span>
+</td>
+<td class="px-space-md font-body-sm text-body-sm text-on-surface-variant">GE Optima 450w 1.5T / Discovery</td>
+<td class="px-space-md text-center font-bold text-on-surface">3</td>
+<td class="px-space-md text-center font-medium text-secondary">1 (Van 02)</td>
+<td class="px-space-md text-center font-headline-sm text-headline-sm text-primary font-bold">4</td>
+<td class="px-space-md text-center text-body-sm text-outline">2</td>
+<td class="px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-semibold"> OPTIMAL
+</span>
+</td>
+</tr>
+<!-- Row 3: Helium Cold Head Displacer -->
+<tr class="h-14 hover:bg-surface-container-low transition-colors">
+<td class="px-space-md">
+<span class="font-label-md text-label-md font-bold text-primary font-mono">SPR-CRY-CLD-109</span>
+</td>
+<td class="px-space-md">
+<span class="font-headline-sm text-headline-sm text-on-surface">Sumitomo RDK-408L2 Cold Head Recond.</span>
+</td>
+<td class="px-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">Cryogenic Refrigeration</span>
+</td>
+<td class="px-space-md font-body-sm text-body-sm text-on-surface-variant">Philips Ingenia, Achieva 1.5T</td>
+<td class="px-space-md text-center font-bold text-on-surface">2</td>
+<td class="px-space-md text-center font-medium text-secondary">0</td>
+<td class="px-space-md text-center font-headline-sm text-headline-sm text-on-surface font-bold">2</td>
+<td class="px-space-md text-center text-body-sm text-outline">2</td>
+<td class="px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-surface-variant text-on-surface font-label-sm text-label-sm font-semibold"> AT MINIMUM
+</span>
+</td>
+</tr>
+<!-- Row 4: High Voltage Generator Board -->
+<tr class="h-14 hover:bg-surface-container-low transition-colors">
+<td class="px-space-md">
+<span class="font-label-md text-label-md font-bold text-primary font-mono">SPR-GEN-HV-512</span>
+</td>
+<td class="px-space-md">
+<span class="font-headline-sm text-headline-sm text-on-surface">100kW Inverter Switching Power PCB</span>
+</td>
+<td class="px-space-md">
+<span class="px-2 py-0.5 rounded bg-surface-container font-label-sm text-label-sm text-on-surface-variant">HV Power Modules</span>
+</td>
+<td class="px-space-md font-body-sm text-body-sm text-on-surface-variant">Allura Clarity & Azurion Cath Labs</td>
+<td class="px-space-md text-center font-bold text-on-surface">1</td>
+<td class="px-space-md text-center font-medium text-secondary">1 (Van 04)</td>
+<td class="px-space-md text-center font-headline-sm text-headline-sm text-error font-bold">2</td>
+<td class="px-space-md text-center text-body-sm text-outline">4</td>
+<td class="px-space-md text-center">
+<span class="inline-flex items-center gap-1 px-2.5 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-error"></span> CRITICAL LOW
+</span>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+</div>
+<!-- Recent Stock Ledger Entries -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm p-space-lg space-y-space-md">
+<div class="flex flex-col sm:flex-row sm:items-center justify-between gap-2 border-b border-surface-container pb-3">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[24px]">receipt_long</span>
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Continuous Auto-Reconciling Stock Ledger</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-time trace of Goods Receipts (GRN), Field Van Allocations, and Automated Call Consumptions</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2.5 py-1 rounded bg-secondary-fixed text-on-secondary-fixed font-label-sm text-label-sm font-bold">LEDGER BALANCED: 100%</span>
+</div>
+</div>
+<div class="space-y-2">
+<!-- Entry 1: Automated Consumption -->
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-3 hover:bg-surface-container transition-colors">
+<div class="flex items-start gap-3">
+<div class="w-9 h-9 rounded-lg bg-error-container text-on-error-container flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">build_circle</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-label-md text-label-md font-bold text-primary font-mono">TXN-2025-0891</span>
+<span class="px-2 py-0.2 rounded bg-error-container text-on-error-container text-[11px] font-bold">CONSUMPTION —————— — AUTO-DEDUCT</span>
+<span class="text-body-sm font-body-sm text-outline">07 Mar 2025, 11:24 AM</span>
+</div>
+<p class="font-body-md font-body-md text-on-surface mt-0.5"> SPR-CT-TBX-902 —————— — Straton MX Tube installed during emergency breakdown at <strong>Ruby Hall Clinic</strong>
+</p>
+<span class="text-body-sm font-body-sm text-secondary">Linked Ticket: CALL-2025-0419 (Tech: Vikram Patil)</span>
+</div>
+</div>
+<div class="text-right shrink-0 flex md:flex-col items-center md:items-end justify-between">
+<span class="font-headline-md text-headline-md text-error font-mono font-bold">-1 Unit</span>
+<span class="text-label-sm font-label-sm text-outline">Central: 2 —————— — 1</span>
+</div>
+</div>
+<!-- Entry 2: Goods Receipt GRN -->
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-3 hover:bg-surface-container transition-colors">
+<div class="flex items-start gap-3">
+<div class="w-9 h-9 rounded-lg bg-secondary-container text-on-secondary-container flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">input</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-label-md text-label-md font-bold text-primary font-mono">TXN-2025-0890</span>
+<span class="px-2 py-0.2 rounded bg-secondary-fixed text-on-secondary-fixed text-[11px] font-bold">RECEIPT —————— — GRN-4491</span>
+<span class="text-body-sm font-body-sm text-outline">06 Mar 2025, 04:10 PM</span>
+</div>
+<p class="font-body-md font-body-md text-on-surface mt-0.5"> SPR-CRY-CLD-109 —————— — Sumitomo Cold Head Reconditioned batch cleared Customs & QA
+</p>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Vendor: Sumitomo Heavy Industries (PO #9921)</span>
+</div>
+</div>
+<div class="text-right shrink-0 flex md:flex-col items-center md:items-end justify-between">
+<span class="font-headline-md text-headline-md text-secondary font-mono font-bold">+2 Units</span>
+<span class="text-label-sm font-label-sm text-outline">Central: 0 —————— — 2</span>
+</div>
+</div>
+<!-- Entry 3: Van Transfer -->
+<div class="p-3 rounded-lg bg-surface-container-low flex flex-col md:flex-row md:items-center justify-between gap-3 hover:bg-surface-container transition-colors">
+<div class="flex items-start gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container text-primary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[18px]">local_shipping</span>
+</div>
+<div class="flex flex-col">
+<div class="flex items-center gap-2 flex-wrap">
+<span class="font-label-md text-label-md font-bold text-primary font-mono">TXN-2025-0888</span>
+<span class="px-2 py-0.2 rounded bg-surface-container-highest text-on-surface text-[11px] font-bold">TRANSFER —————— — INTERNAL LOGISTICS</span>
+<span class="text-body-sm font-body-sm text-outline">05 Mar 2025, 09:15 AM</span>
+</div>
+<p class="font-body-md font-body-md text-on-surface mt-0.5"> SPR-GEN-HV-512 —₹ 100kW Inverter Switching PCB transferred from Central Depot to <strong>Engineer Van #04 (Hadapsar Zone)</strong>
+</p>
+<span class="text-body-sm font-body-sm text-on-surface-variant">Handover Signed: Custodian Amit Deshmukh</span>
+</div>
+</div>
+<div class="text-right shrink-0 flex md:flex-col items-center md:items-end justify-between">
+<span class="font-headline-md text-headline-md text-primary font-mono font-bold"> ———1 Unit</span>
+<span class="text-label-sm font-label-sm text-outline">Depot (-1) —————— — Van (+1)</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Interactive JavaScript Engine -->
+<script> function switchTab(tabKey) {
+ // Hide all tabs — document.querySelectorAll('.tab-pane').forEach(el => {el.classList.add('hidden');
+ });
+
+ // Reset button styles — document.querySelectorAll('.tab-btn').forEach(btn => {btn.classList.remove('bg-primary', 'text-on-primary', 'shadow-sm'); btn.classList.add('text-on-surface-variant');
+ });
+
+ // Activate chosen tab — const targetPane = document.getElementById('tab-' + tabKey); if (targetPane) {targetPane.classList.remove('hidden');
+ } — const activeBtn = document.getElementById('tab-btn-' + tabKey); if (activeBtn) {activeBtn.classList.remove('text-on-surface-variant'); activeBtn.classList.add('bg-primary', 'text-on-primary', 'shadow-sm');
+ }
+ } — function selectPmsDrawer() {const drawer = document.getElementById('pms-drawer'); if (drawer) {drawer.scrollIntoView({ behavior: 'smooth', block: 'nearest' }); drawer.classList.add('ring-2', 'ring-secondary'); setTimeout(() => drawer.classList.remove('ring-2', 'ring-secondary'), 1400);
+ }
+ } — function setInspectionBtn(clickedEl, state) {const parent = clickedEl.parentElement; const buttons = parent.querySelectorAll('button');
+buttons.forEach(btn => {btn.className = 'px-2 py-1 rounded text-on-surface-variant font-label-sm text-label-sm transition-all';
+ }); if (state === 'pass') {clickedEl.className = 'px-2 py-1 rounded bg-secondary text-on-secondary font-label-sm text-label-sm font-bold shadow-sm';
+ } else if (state === 'fail') {clickedEl.className = 'px-2 py-1 rounded bg-error text-on-error font-label-sm text-label-sm font-bold shadow-sm';
+ } else {clickedEl.className = 'px-2 py-1 rounded bg-surface-container-highest text-on-surface font-label-sm text-label-sm font-bold shadow-sm';
+ }
+ } </script>
+</div></main></div><style id="stitch-dark">
+html.dark body{background-color:#12161c !important}
+html.dark .bg-background,html.dark .bg-surface,html.dark .bg-surface-bright{background-color:#12161c !important}
+html.dark .bg-surface-container-lowest{background-color:#1b2129 !important}
+html.dark .bg-surface-container-low{background-color:#171d25 !important}
+html.dark .bg-surface-container{background-color:#222933 !important}
+html.dark .bg-surface-container-high{background-color:#283038 !important}
+html.dark .bg-surface-container-highest{background-color:#303945 !important}
+html.dark .bg-surface-dim{background-color:#252d36 !important}
+html.dark .bg-primary{background-color:#0b3c5d !important}
+html.dark .bg-primary-container{background-color:#164e74 !important}
+html.dark .hover\:bg-surface-container-high:hover{background-color:#283038 !important}
+html.dark .hover\:bg-surface-container-low:hover{background-color:#171d25 !important}
+html.dark .hover\:bg-surface-container:hover{background-color:#222933 !important}
+html.dark .text-on-surface{color:#e6ebf0 !important}
+html.dark .text-on-background{color:#e6ebf0 !important}
+html.dark .text-on-surface-variant{color:#a8b3bc !important}
+html.dark .text-primary{color:#a3cbf2 !important}
+html.dark .text-outline{color:#8a949d !important}
+html.dark .text-secondary{color:#67d6e4 !important}
+html.dark .text-on-secondary-container{color:#a5f3fc !important}
+html.dark .text-white{color:#ffffff !important}
+html.dark .border-outline-variant{border-color:#2e3841 !important}
+html.dark .border-outline{border-color:#39434d !important}
+html.dark .divide-outline-variant > :not([hidden]) ~ :not([hidden]){border-color:#2e3841 !important}
+html.dark .placeholder\:text-outline::placeholder{color:#6f7a84 !important}
+html.dark input,html.dark select,html.dark textarea{color-scheme:dark}
+html.dark .shadow-sm,html.dark .shadow-md{box-shadow:0 1px 3px rgba(0,0,0,0.35) !important}
+html.dark kbd{background:#222933 !important;color:#a3cbf2 !important}
+:focus-visible{outline:2px solid #0e9aa7 !important;outline-offset:2px;border-radius:4px}
+</style><button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark / light theme" style="position:fixed;right:1rem;bottom:1rem;z-index:70;width:46px;height:46px;border-radius:9999px;background:#0b3c5d;color:#8df2ff;border:1px solid #0e9aa7;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(11,60,93,0.35)"><span class="material-symbols-outlined" id="theme-toggle-icon">dark_mode</span></button>
+<script id="stitch-extras">
+(function(){
+  var btn=document.getElementById('theme-toggle');
+  var icon=document.getElementById('theme-toggle-icon');
+  function sync(){if(icon)icon.textContent=document.documentElement.classList.contains('dark')?'light_mode':'dark_mode';}
+  if(btn)btn.addEventListener('click',function(){
+    var next=!document.documentElement.classList.contains('dark');
+    document.documentElement.classList.toggle('dark',next);
+    document.documentElement.style.colorScheme=next?'dark':'light';
+    try{localStorage.setItem('summit-theme',next?'dark':'light');}catch(e){}
+    sync();
+  });
+  sync();
+  document.querySelectorAll('input[type="search"]').forEach(function(el){
+    el.addEventListener('keydown',function(e){if(e.key==='Enter'){var q=el.value.trim();window.location.href='search-results.html?q='+encodeURIComponent(q||'SG-CT-20451');}});
+  });
+  document.querySelectorAll('button').forEach(function(b){
+    var h=(b.innerHTML||'').toLowerCase();var t=(b.textContent||'').toLowerCase();
+    if(h.indexOf('qr_code_2')!==-1){b.addEventListener('click',function(){window.location.href='qr-sticker.html';});}
+    else if(t.indexOf('print qr sticker')!==-1){b.addEventListener('click',function(){window.location.href='qr-sticker.html';});}
+    else if(t.indexOf('assign engineer')!==-1){b.addEventListener('click',function(){window.location.href='assign-engineer.html';});}
+  });
+})();
+</script><script id="stitch-wire">
+(function(){
+  var routes=[['register call','register-service-call.html'],['submit & assign','service-calls-fsr.html'],['submit','service-calls-fsr.html'],['save equipment','equipment-database.html'],['save & generate pms','contracts-pms-spares.html']];
+  document.querySelectorAll('button').forEach(function(b){
+    var t=(b.textContent||'').trim().toLowerCase();
+    for(var i=0;i<routes.length;i++){if(t.indexOf(routes[i][0])!==-1){b.style.cursor='pointer';b.addEventListener('click',(function(u){return function(){window.location.href=u;};})(routes[i][1]));break;}}
+  });
+})();
+</script><script id="stitch-bell">
+document.querySelectorAll('button').forEach(function(b){if(/notifications/i.test(b.textContent||'')){b.style.cursor='pointer';b.addEventListener('click',function(){window.location.href='notifications.html';});}});
+</script>
+<script id="master-nav">(function(){var b=document.getElementById("master-nav-toggle");if(!b)return;var s=document.getElementById("master-nav-submenu");var onMasters=/masters\.html/.test(location.pathname);function setOpen(v){if(!s)return;b.classList.toggle("master-open",v);s.classList.toggle("hidden",!v);b.setAttribute("aria-expanded",v?"true":"false");}b.addEventListener("click",function(){setOpen(!(b.classList.contains("master-open")));});setOpen(onMasters);if(onMasters){var m=location.search.match(/tab=([a-z]+)/);var q=m?m[1]:null;document.querySelectorAll("#master-nav-submenu a").forEach(function(a){var href=a.getAttribute("href")||"";var hit=q?href.indexOf("tab="+q)!==-1:href==="masters.html";if(hit)a.className="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg bg-primary text-on-primary transition-colors font-label-md text-label-md font-semibold";});}})();</script>
+</body></html>

@@ -1,0 +1,408 @@
+<!DOCTYPE html> <html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Summit Service &amp; Spares Manager - Login</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Inter Font -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config"> tailwind.config = {darkMode: "class", theme: {extend: {
+ "colors": {
+ "inverse-surface": "#2d3133",
+ "surface-container": "#ebeef0",
+ "on-primary-fixed-variant": "#1f4a6c",
+ "surface": "#f7fafc",
+ "primary-fixed": "#cee5ff",
+ "on-secondary-fixed": "#001f23",
+ "surface-variant": "#e0e3e5",
+ "surface-container-highest": "#e0e3e5",
+ "surface-tint": "#396285",
+ "secondary-container": "#82f0fe",
+ "on-secondary-container": "#006d77",
+ "secondary-fixed": "#8df2ff",
+ "on-tertiary-container": "#7f9fff",
+ "tertiary-fixed-dim": "#b4c5ff",
+ "on-primary-container": "#7fa7cd",
+ "primary": "#00263f",
+ "background": "#f7fafc",
+ "on-surface": "#181c1e",
+ "tertiary": "#001f5d",
+ "on-primary": "#ffffff",
+ "on-background": "#181c1e",
+ "on-surface-variant": "#42474e",
+ "inverse-on-surface": "#eef1f3",
+ "primary-fixed-dim": "#a3cbf2",
+ "surface-container-high": "#e5e9eb",
+ "on-tertiary": "#ffffff",
+ "on-error-container": "#93000a",
+ "surface-bright": "#f7fafc",
+ "secondary-fixed-dim": "#67d6e4",
+ "surface-dim": "#d7dadc",
+ "inverse-primary": "#a3cbf2",
+ "surface-container-lowest": "#ffffff",
+ "on-secondary-fixed-variant": "#004f56",
+ "on-error": "#ffffff",
+ "tertiary-fixed": "#dbe1ff",
+ "on-primary-fixed": "#001d32",
+ "surface-container-low": "#f1f4f6",
+ "on-tertiary-fixed-variant": "#003ea8",
+ "on-secondary": "#ffffff",
+ "error": "#ba1a1a",
+ "on-tertiary-fixed": "#00174b",
+ "outline": "#72777e",
+ "outline-variant": "#c2c7ce",
+ "tertiary-container": "#00328b",
+ "error-container": "#ffdad6",
+ "secondary": "#006972",
+ "primary-container": "#0b3c5d"
+ },
+ "borderRadius": {
+ "DEFAULT": "0.25rem",
+ "lg": "0.5rem",
+ "xl": "0.75rem",
+ "full": "9999px"
+ },
+ "spacing": {
+ "gutter-desktop": "1.5rem",
+ "space-xs": "0.25rem",
+ "margin": "1rem",
+ "margin-tablet": "1.5rem",
+ "space-sm": "0.5rem",
+ "space-lg": "1.25rem",
+ "space-xl": "2rem",
+ "gutter": "1rem",
+ "space-md": "0.75rem",
+ "margin-desktop": "2rem"
+ },
+ "fontFamily": {
+ "body-md": ["Inter"],
+ "label-sm": ["Inter"],
+ "headline-sm": ["Inter"],
+ "metric-val": ["Inter"],
+ "display-lg": ["Inter"],
+ "label-md": ["Inter"],
+ "body-sm": ["Inter"],
+ "body-lg": ["Inter"],
+ "label-lg": ["Inter"],
+ "headline-xl": ["Inter"],
+ "headline-md": ["Inter"],
+ "headline-lg": ["Inter"]
+ },
+ "fontSize": {
+ "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }],
+ "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+ "headline-sm": ["15px", { "lineHeight": "20px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+ "metric-val": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+ "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "700" }],
+ "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+ "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.005em", "fontWeight": "400" }],
+ "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+ "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "500" }],
+ "headline-xl": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+ "headline-md": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+ "headline-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }]
+ }
+ },
+ },
+ } </script>
+<style>
+.material-symbols-outlined {font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; display: inline-block; vertical-align: middle; line-height: 1;
+ }
+ /* Technical Grid Lines for Biomedical Aesthetic */
+.biomed-grid {background-size: 32px 32px; background-image: linear-gradient(to right, rgba(14, 154, 167, 0.07) 1px, transparent 1px), linear-gradient(to bottom, rgba(14, 154, 167, 0.07) 1px, transparent 1px);
+ } </style>
+<script id="stitch-theme-init">(function(){try{if(localStorage.getItem("summit-theme")==="dark"){document.documentElement.classList.add("dark");document.documentElement.style.colorScheme="dark";}}catch(e){}})();</script>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen font-body-md select-none">
+<!-- Main Viewport Shell -->
+<main class="min-h-screen w-full flex flex-col lg:flex-row">
+<!-- LEFT 45% BRANDING & CLINICAL PLATFORM PANEL -->
+<div class="relative w-full lg:w-[45%] bg-primary-container text-on-primary flex flex-col justify-between p-8 xl:p-12 border-r border-outline-variant overflow-hidden">
+<!-- Background Technical Overlay -->
+<div class="absolute inset-0 biomed-grid pointer-events-none opacity-80"></div>
+<div class="absolute -right-24 -top-24 w-96 h-96 rounded-full bg-secondary opacity-10 blur-3xl pointer-events-none"></div>
+<div class="absolute -left-20 bottom-1/4 w-80 h-80 rounded-full bg-secondary-container opacity-5 blur-2xl pointer-events-none"></div>
+<!-- Top Branding & Version Cluster -->
+<div class="relative z-10 space-y-6">
+<!-- Logo Row -->
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-surface-container-lowest flex items-center justify-center shadow-sm border border-outline-variant">
+<span class="material-symbols-outlined text-secondary text-2xl" data-icon="vital_signs">vital_signs</span>
+</div>
+<div>
+<span class="font-headline-lg text-headline-lg tracking-tight text-on-primary">Summit</span>
+<span class="font-label-sm text-label-sm text-secondary-container uppercase tracking-widest ml-1.5 font-bold">HEALTHCARE</span>
+</div>
+</div>
+<!-- Precision Badge -->
+<div class="hidden sm:inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full bg-primary/60 border border-secondary/30 backdrop-blur-sm">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-container animate-pulse"></span>
+<span class="font-label-sm text-label-sm text-secondary-fixed">CLINICAL PRECISION PLATFORM v0.1</span>
+</div>
+</div>
+<!-- Hero Headline -->
+<div class="pt-6 space-y-3">
+<h1 class="font-headline-xl text-headline-xl lg:text-[30px] lg:leading-[38px] text-on-primary font-bold tracking-tight"> Medical Equipment Service, AMC/CMC, PMS &amp; Spares —— — one platform.
+</h1>
+<div class="w-16 h-1 bg-secondary rounded-full"></div>
+</div>
+<!-- Structured Biomedical Engineering Modules -->
+<div class="space-y-4 pt-4">
+<!-- Bullet 1 -->
+<div class="flex items-start gap-3.5 p-3.5 rounded-lg bg-primary/40 border border-outline/30 backdrop-blur-sm transition-all duration-150 hover:border-secondary/50">
+<div class="w-9 h-9 rounded-lg bg-secondary/20 border border-secondary/40 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary-container text-xl" data-icon="qr_code_2">qr_code_2</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-primary">Equipment database &amp; service history with QR</h2>
+<p class="font-body-sm text-body-sm text-surface-variant mt-0.5">Asset tracking, compliance logs, digital documentation</p>
+</div>
+</div>
+<!-- Bullet 2 -->
+<div class="flex items-start gap-3.5 p-3.5 rounded-lg bg-primary/40 border border-outline/30 backdrop-blur-sm transition-all duration-150 hover:border-secondary/50">
+<div class="w-9 h-9 rounded-lg bg-secondary/20 border border-secondary/40 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary-container text-xl" data-icon="event_repeat">event_repeat</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-primary">AMC/CMC PMS scheduling &amp; reminders</h2>
+<p class="font-body-sm text-body-sm text-surface-variant mt-0.5">Automated SLA schedules, preventive maintenance checklists, and expiry funnels</p>
+</div>
+</div>
+<!-- Bullet 3 -->
+<div class="flex items-start gap-3.5 p-3.5 rounded-lg bg-primary/40 border border-outline/30 backdrop-blur-sm transition-all duration-150 hover:border-secondary/50">
+<div class="w-9 h-9 rounded-lg bg-secondary/20 border border-secondary/40 flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-secondary-container text-xl" data-icon="inventory_2">inventory_2</span>
+</div>
+<div>
+<h2 class="font-headline-sm text-headline-sm text-on-primary">Spares inventory with van stock</h2>
+<p class="font-body-sm text-body-sm text-surface-variant mt-0.5">Dynamic ledger tracking, central depot &amp; field engineer van balances, auto-consumption</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Trust Footer / Standards -->
+<div class="relative z-10 pt-8 mt-6 border-t border-outline/30 space-y-3">
+<div class="flex items-center gap-2 text-secondary-fixed">
+<span class="material-symbols-outlined text-sm" data-icon="verified_user">verified_user</span>
+<span class="font-label-sm text-label-sm font-semibold tracking-wide">ISO 13485 &amp; 21 CFR Part 11 Audit-Ready Architecture</span>
+</div>
+<p class="font-body-sm text-body-sm text-outline-variant">₹ 2026 Summit Healthcare Pvt. Ltd. All rights reserved. </p>
+</div>
+</div>
+<!-- RIGHT 55% AUTHENTICATION & QUICK DEMO PANEL -->
+<div class="w-full lg:w-[55%] bg-surface flex flex-col justify-between p-6 sm:p-10 lg:p-12 overflow-y-auto">
+<!-- Top Row Telemetry Strip -->
+<div class="w-full flex justify-end items-center mb-6">
+<div class="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-surface-container-lowest border border-outline-variant shadow-sm">
+<span class="relative flex h-2 w-2">
+<span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-secondary opacity-75"></span>
+<span class="relative inline-flex rounded-full h-2 w-2 bg-secondary"></span>
+</span>
+<span class="font-label-sm text-label-sm text-on-surface-variant">System Status: <span class="font-semibold text-primary">Online (99.8% SLA)</span></span>
+</div>
+</div>
+<!-- Center Auth Content Container -->
+<div class="w-full max-w-lg mx-auto my-auto space-y-7">
+<!-- Header Block -->
+<div class="space-y-1">
+<h2 class="font-headline-xl text-headline-xl text-primary font-bold">Welcome back</h2>
+<p class="font-body-md text-body-md text-on-surface-variant">Sign in to the service operations console</p>
+</div>
+<!-- Login Form -->
+<form class="space-y-4" onsubmit="event.preventDefault();">
+<!-- Email Address Input -->
+<div class="space-y-1.5">
+<label class="block font-label-md text-label-md text-on-surface font-medium" for="email-input"> Email Address <span class="text-error">*</span>
+</label>
+<div class="relative rounded-lg shadow-sm">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-lg" data-icon="mail">mail</span>
+</div>
+<input class="block w-full pl-10 pr-3 py-2.5 bg-surface-container-lowest border border-outline-variant rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all duration-150" id="email-input" placeholder="name@summit.com" required="" type="email" value="admin@summit.com"/>
+</div>
+</div>
+<!-- Password Input -->
+<div class="space-y-1.5">
+<label class="block font-label-md text-label-md text-on-surface font-medium" for="password-input"> Password <span class="text-error">*</span>
+</label>
+<div class="relative rounded-lg shadow-sm">
+<div class="absolute inset-y-0 left-0 pl-3 flex items-center pointer-events-none text-outline">
+<span class="material-symbols-outlined text-lg" data-icon="lock">lock</span>
+</div>
+<input class="block w-full pl-10 pr-10 py-2.5 bg-surface-container-lowest border border-outline-variant rounded-lg font-body-md text-body-md text-on-surface focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20 tracking-wider transition-all duration-150" id="password-input" required="" type="password" value="HospitalOperations2026!"/>
+<button aria-label="Toggle password visibility" class="absolute inset-y-0 right-0 pr-3 flex items-center text-outline hover:text-primary transition-colors focus:outline-none" id="toggle-pwd-btn" type="button">
+<span class="material-symbols-outlined text-lg" data-icon="visibility" id="pwd-icon">visibility</span>
+</button>
+</div>
+</div>
+<!-- Auxiliary Row -->
+<div class="flex items-center justify-between pt-1">
+<label class="flex items-center gap-2 cursor-pointer">
+<input checked="" class="w-4 h-4 rounded border-outline-variant text-primary-container focus:ring-secondary" type="checkbox"/>
+<span class="font-body-sm text-body-sm text-on-surface">Remember me</span>
+</label>
+<a class="font-label-md text-label-md text-secondary hover:text-primary transition-colors font-medium" href="#"> Forgot password?
+</a>
+</div>
+<!-- Submit CTA -->
+<button class="w-full mt-2 h-11 bg-primary-container text-on-primary rounded-lg font-label-lg text-label-lg font-semibold flex items-center justify-center gap-2 shadow-sm hover:bg-primary active:scale-[0.99] transition-all duration-150" type="submit">
+<span>Sign In to Console</span>
+<span class="material-symbols-outlined text-lg" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</form>
+<!-- DEMO QUICK LOGIN SECTION -->
+<div class="rounded-xl border border-outline-variant bg-surface-container-lowest p-4 xl:p-5 shadow-sm space-y-3.5">
+<!-- Banner Tag -->
+<div class="flex items-center justify-between">
+<div class="inline-flex items-center gap-1.5 px-2 py-0.5 rounded bg-error-container text-on-error-container border border-error/20">
+<span class="material-symbols-outlined text-xs" data-icon="science">science</span>
+<span class="font-label-sm text-label-sm font-semibold uppercase tracking-wider">DEMO MODE —— — remove in production</span>
+</div>
+<span class="font-label-sm text-label-sm text-outline">Quick Switch</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant"> Click any profile below to instantly switch roles with pre-authenticated session tokens:
+</p>
+<!-- Quick Login Buttons Grid -->
+<div class="grid grid-cols-1 gap-2.5">
+<!-- Quick Role 1: Admin -->
+<button class="group w-full p-2.5 text-left rounded-lg border border-outline-variant hover:border-secondary bg-surface-container-low hover:bg-surface-container transition-all duration-150 flex items-center justify-between" onclick="selectRole('admin@summit.com', 'Admin')" type="button">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-md bg-primary-container text-on-primary flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-base" data-icon="admin_panel_settings">admin_panel_settings</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-primary flex items-center gap-1.5"> Admin <span class="font-body-sm text-outline-variant text-[11px]">(admin@summit.com)</span>
+</div>
+<span class="inline-block px-1.5 py-0.2 rounded bg-surface-variant text-on-surface font-label-sm text-[10px]"> Full Access &amp; System Audit
+</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-secondary group-hover:translate-x-0.5 transition-all text-sm" data-icon="login">login</span>
+</button>
+<!-- Quick Role 2: Service Manager -->
+<button class="group w-full p-2.5 text-left rounded-lg border border-outline-variant hover:border-secondary bg-surface-container-low hover:bg-surface-container transition-all duration-150 flex items-center justify-between" onclick="selectRole('manager@summit.com', 'Service Manager')" type="button">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-md bg-secondary text-on-secondary flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-base" data-icon="assignment_turned_in">assignment_turned_in</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-primary flex items-center gap-1.5"> Service Manager <span class="font-body-sm text-outline-variant text-[11px]">(manager@summit.com)</span>
+</div>
+<span class="inline-block px-1.5 py-0.2 rounded bg-surface-variant text-on-surface font-label-sm text-[10px]"> Triage, Dispatch &amp; Contracts
+</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-secondary group-hover:translate-x-0.5 transition-all text-sm" data-icon="login">login</span>
+</button>
+<!-- Quick Role 3: Field Engineer -->
+<button class="group w-full p-2.5 text-left rounded-lg border border-outline-variant hover:border-secondary bg-surface-container-low hover:bg-surface-container transition-all duration-150 flex items-center justify-between" onclick="selectRole('rahul@summit.com', 'Engineer')" type="button">
+<div class="flex items-center gap-3">
+<div class="w-8 h-8 rounded-md bg-tertiary-container text-on-tertiary flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-base" data-icon="build">build</span>
+</div>
+<div>
+<div class="font-headline-sm text-headline-sm text-primary flex items-center gap-1.5"> Engineer <span class="font-body-sm text-outline-variant text-[11px]">(rahul@summit.com)</span>
+</div>
+<span class="inline-block px-1.5 py-0.2 rounded bg-surface-variant text-on-surface font-label-sm text-[10px]"> Mobile FSR &amp; Van Stock
+</span>
+</div>
+</div>
+<span class="material-symbols-outlined text-outline group-hover:text-secondary group-hover:translate-x-0.5 transition-all text-sm" data-icon="login">login</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Security Bottom Footnote -->
+<div class="w-full pt-6 mt-6 border-t border-outline-variant flex items-center justify-center gap-2 text-center text-outline">
+<span class="material-symbols-outlined text-base text-secondary" data-icon="shield_lock">shield_lock</span>
+<span class="font-body-sm text-body-sm"> Protected by enterprise JWT 256-bit encryption &amp; role-based access control. </span>
+</div>
+</div>
+</main>
+<!-- Interactive Demo Behaviors -->
+<script>
+ // Password visibility toggle logic — const pwdInput = document.getElementById('password-input'); const toggleBtn = document.getElementById('toggle-pwd-btn'); const pwdIcon = document.getElementById('pwd-icon'); toggleBtn.addEventListener('click', () => {if (pwdInput.type === 'password') {pwdInput.type = 'text'; pwdIcon.innerText = 'visibility_off';
+ } else {pwdInput.type = 'password'; pwdIcon.innerText = 'visibility';
+ }
+ });
+
+ // Demo Role Selector — function selectRole(email, roleName) {const emailField = document.getElementById('email-input'); emailField.value = email; emailField.focus();
+ 
+ // Visual feedback ripple on selection — emailField.classList.add('ring-2', 'ring-secondary'); setTimeout(() => {emailField.classList.remove('ring-2', 'ring-secondary');
+ }, 500);
+ } </script>
+<style id="stitch-dark">
+html.dark body{background-color:#12161c !important}
+html.dark .bg-background,html.dark .bg-surface,html.dark .bg-surface-bright{background-color:#12161c !important}
+html.dark .bg-surface-container-lowest{background-color:#1b2129 !important}
+html.dark .bg-surface-container-low{background-color:#171d25 !important}
+html.dark .bg-surface-container{background-color:#222933 !important}
+html.dark .bg-surface-container-high{background-color:#283038 !important}
+html.dark .bg-surface-container-highest{background-color:#303945 !important}
+html.dark .bg-surface-dim{background-color:#252d36 !important}
+html.dark .bg-primary{background-color:#0b3c5d !important}
+html.dark .bg-primary-container{background-color:#164e74 !important}
+html.dark .hover\:bg-surface-container-high:hover{background-color:#283038 !important}
+html.dark .hover\:bg-surface-container-low:hover{background-color:#171d25 !important}
+html.dark .hover\:bg-surface-container:hover{background-color:#222933 !important}
+html.dark .text-on-surface{color:#e6ebf0 !important}
+html.dark .text-on-background{color:#e6ebf0 !important}
+html.dark .text-on-surface-variant{color:#a8b3bc !important}
+html.dark .text-primary{color:#a3cbf2 !important}
+html.dark .text-outline{color:#8a949d !important}
+html.dark .text-secondary{color:#67d6e4 !important}
+html.dark .text-on-secondary-container{color:#a5f3fc !important}
+html.dark .text-white{color:#ffffff !important}
+html.dark .border-outline-variant{border-color:#2e3841 !important}
+html.dark .border-outline{border-color:#39434d !important}
+html.dark .divide-outline-variant > :not([hidden]) ~ :not([hidden]){border-color:#2e3841 !important}
+html.dark .placeholder\:text-outline::placeholder{color:#6f7a84 !important}
+html.dark input,html.dark select,html.dark textarea{color-scheme:dark}
+html.dark .shadow-sm,html.dark .shadow-md{box-shadow:0 1px 3px rgba(0,0,0,0.35) !important}
+html.dark kbd{background:#222933 !important;color:#a3cbf2 !important}
+:focus-visible{outline:2px solid #0e9aa7 !important;outline-offset:2px;border-radius:4px}
+</style><button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark / light theme" style="position:fixed;right:1rem;bottom:1rem;z-index:70;width:46px;height:46px;border-radius:9999px;background:#0b3c5d;color:#8df2ff;border:1px solid #0e9aa7;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(11,60,93,0.35)"><span class="material-symbols-outlined" id="theme-toggle-icon">dark_mode</span></button>
+<script id="stitch-extras">
+(function(){
+  var btn=document.getElementById('theme-toggle');
+  var icon=document.getElementById('theme-toggle-icon');
+  function sync(){if(icon)icon.textContent=document.documentElement.classList.contains('dark')?'light_mode':'dark_mode';}
+  if(btn)btn.addEventListener('click',function(){
+    var next=!document.documentElement.classList.contains('dark');
+    document.documentElement.classList.toggle('dark',next);
+    document.documentElement.style.colorScheme=next?'dark':'light';
+    try{localStorage.setItem('summit-theme',next?'dark':'light');}catch(e){}
+    sync();
+  });
+  sync();
+  document.querySelectorAll('input[type="search"]').forEach(function(el){
+    el.addEventListener('keydown',function(e){if(e.key==='Enter'){var q=el.value.trim();window.location.href='search-results.html?q='+encodeURIComponent(q||'SG-CT-20451');}});
+  });
+  document.querySelectorAll('button').forEach(function(b){
+    var h=(b.innerHTML||'').toLowerCase();var t=(b.textContent||'').toLowerCase();
+    if(h.indexOf('qr_code_2')!==-1){b.addEventListener('click',function(){window.location.href='qr-sticker.html';});}
+    else if(t.indexOf('print qr sticker')!==-1){b.addEventListener('click',function(){window.location.href='qr-sticker.html';});}
+    else if(t.indexOf('assign engineer')!==-1){b.addEventListener('click',function(){window.location.href='assign-engineer.html';});}
+  });
+})();
+</script><script id="stitch-wire">
+(function(){
+  var routes=[['register call','register-service-call.html'],['submit & assign','service-calls-fsr.html'],['submit','service-calls-fsr.html'],['save equipment','equipment-database.html'],['save & generate pms','contracts-pms-spares.html']];
+  document.querySelectorAll('button').forEach(function(b){
+    var t=(b.textContent||'').trim().toLowerCase();
+    for(var i=0;i<routes.length;i++){if(t.indexOf(routes[i][0])!==-1){b.style.cursor='pointer';b.addEventListener('click',(function(u){return function(){window.location.href=u;};})(routes[i][1]));break;}}
+  });
+})();
+</script><script id="stitch-bell">
+document.querySelectorAll('button').forEach(function(b){if(/notifications/i.test(b.textContent||'')){b.style.cursor='pointer';b.addEventListener('click',function(){window.location.href='notifications.html';});}});
+</script><script id="stitch-login-wire">
+window.selectRole=function(email,roleName){window.location.href=(roleName==='Engineer')?'engineer-dashboard-mobile.html':'operations-dashboard.html';};
+document.addEventListener('DOMContentLoaded',function(){var form=document.querySelector('form');if(form)form.addEventListener('submit',function(e){e.preventDefault();window.location.href='operations-dashboard.html';});});
+</script>
+</body></html>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<meta name="theme-color" content="#0B3C5D"/>
+<title>Summit SSM — Stitch UI Export (All Screens)</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet"/>
+<style>
+  :root {
+    --navy: #0B3C5D; --navy-dark: #082C44; --teal: #0E9AA7;
+    --bg: #F5F8FA; --border: #E2E8F0; --text: #0F172A; --muted: #64748B;
+    --card: #ffffff;
+  }
+  html.dark { --bg: #12161c; --border: #2e3841; --text: #e6ebf0; --muted: #a8b3bc; --card: #1b2129; }
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', system-ui, sans-serif; background: var(--bg); color: var(--text); min-height: 100vh; transition: background .2s; }
+  header { background: var(--navy); color: #fff; padding: 26px 40px; display: flex; align-items: center; justify-content: space-between; gap: 16px; flex-wrap: wrap; }
+  header h1 { font-size: 20px; font-weight: 700; letter-spacing: -0.02em; }
+  header p { font-size: 13px; color: #a3cbf2; margin-top: 4px; }
+  .badge { background: rgba(255,255,255,0.12); border: 1px solid rgba(255,255,255,0.25); border-radius: 9999px; padding: 6px 14px; font-size: 11px; font-weight: 600; text-transform: uppercase; letter-spacing: 0.04em; }
+  main { max-width: 1240px; margin: 0 auto; padding: 28px 24px 64px; }
+  h2.section { font-size: 12px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.08em; color: var(--muted); margin: 26px 4px 12px; display: flex; align-items: center; gap: 10px; }
+  h2.section::after { content: ""; flex: 1; height: 1px; background: var(--border); }
+  .grid { display: grid; grid-template-columns: repeat(auto-fill, minmax(272px, 1fr)); gap: 14px; }
+  a.card { display: block; background: var(--card); border: 1px solid var(--border); border-radius: 12px; padding: 17px 19px; text-decoration: none; color: inherit; box-shadow: 0 1px 3px rgba(11,60,93,0.05), 0 4px 8px -2px rgba(11,60,93,0.03); transition: transform .15s ease, box-shadow .15s ease, border-color .15s ease; }
+  a.card:hover { transform: translateY(-3px); border-color: var(--teal); box-shadow: 0 4px 6px -1px rgba(11,60,93,0.08), 0 10px 15px -3px rgba(11,60,93,0.06); }
+  .card h3 { font-size: 15px; font-weight: 600; color: var(--navy); letter-spacing: -0.01em; }
+  html.dark .card h3 { color: #a3cbf2; }
+  .card p { font-size: 12px; color: var(--muted); margin-top: 6px; line-height: 1.5; }
+  .meta { margin-top: 11px; font-size: 10px; font-weight: 700; text-transform: uppercase; letter-spacing: 0.06em; color: var(--teal); }
+  .new::after { content: "NEW"; display: inline-block; margin-left: 8px; vertical-align: 2px; font-size: 9px; font-weight: 800; letter-spacing: .08em; color: #fff; background: var(--teal); border-radius: 4px; padding: 2px 6px; }
+  footer { text-align: center; font-size: 12px; color: var(--muted); padding: 20px; border-top: 1px solid var(--border); background: var(--card); }
+  code { background: rgba(14,154,167,0.15); border-radius: 4px; padding: 1px 6px; font-size: 12px; }
+  #theme-fab { position: fixed; right: 1rem; bottom: 1rem; width: 46px; height: 46px; border-radius: 9999px; background: var(--navy); color: #8df2ff; border: 1px solid var(--teal); cursor: pointer; font-size: 22px; z-index: 70; }
+</style>
+</head>
+<body>
+<header>
+  <div>
+    <h1>Summit Service &amp; Spares Manager</h1>
+    <p>All screens · raw Stitch HTML + hand-wired UI behaviour (dark mode, live search, tab panels, print sticker) · project <code style="background:rgba(255,255,255,0.15); color:#fff">18322265306557042440</code></p>
+  </div>
+  <span class="badge">Stitch Export · 23 Screens</span>
+</header>
+
+<main>
+  <h2 class="section">Access</h2>
+  <div class="grid">
+    <a class="card" href="stitch/login.html"><h3>Login &amp; Demo Access Portal</h3><p>Branded login with quick-login demo buttons. Engineer → mobile dashboard; Admin/Manager → Operations Dashboard.</p><div class="meta">Desktop · Entry point</div></a>
+  </div>
+
+  <h2 class="section">Desktop — Operations</h2>
+  <div class="grid">
+    <a class="card" href="stitch/operations-dashboard.html"><h3>Operations Dashboard</h3><p>Service Manager home: KPIs, pending calls, PMS pipeline, low stock, charts.</p><div class="meta">Desktop · Home after login</div></a>
+    <a class="card new" href="stitch/service-calls-register.html"><h3>Service Calls Register</h3><p>The call queue: KPI strip, All/Open/In-Progress/Pending/Closed tabs, filters, table &amp; kanban views, Excel/PDF export. Click any row to open the call.</p><div class="meta">Desktop · Module 2 · Primary</div></a>
+    <a class="card" href="stitch/service-calls-fsr.html"><h3>Call Workspace &amp; FSR Engine</h3><p>Per-call detail: workflow board, work entry, spares ledger deduction, FSR live preview &amp; sign-off.</p><div class="meta">Desktop · Module 2 · Detail</div></a>
+    <a class="card" href="stitch/register-service-call.html"><h3>Register Service Call</h3><p>New call: hospital → equipment dependent select, auto billing type, SLA preview.</p><div class="meta">Desktop · Module 2 · top-bar CTA</div></a>
+    <a class="card new" href="stitch/assign-engineer.html"><h3>Assign Engineer</h3><p>Assignment dialog: engineers ranked by open workload, skills &amp; distance, one-click notify.</p><div class="meta">Desktop · Module 2 · Dialog</div></a>
+    <a class="card new" href="stitch/equipment-database.html"><h3>Equipment Register</h3><p>Asset list: KPI strip, category pills, search + brand/warranty/contract filters, sortable columns, 1,482 assets.</p><div class="meta">Desktop · Module 1 · Register</div></a>
+    <a class="card new" href="stitch/equipment-detail.html"><h3>Equipment Detail — SG-CT-20451</h3><p>Full asset dossier: health stats, 7 tabs (Overview · Contract &amp; Warranty · Service History · PMS History · Spares Used · Documents &amp; Photos · Timeline), QR.</p><div class="meta">Desktop · Module 1 · Detail</div></a>
+    <a class="card" href="stitch/register-equipment.html"><h3>Register Equipment</h3><p>Equipment form: warranty auto-calc, document/photo dropzone, QR preview.</p><div class="meta">Desktop · Module 1 · Form</div></a>
+    <a class="card" href="stitch/contracts-pms-spares.html"><h3>Contracts, PMS &amp; Spares Ledger</h3><p>AMC/CMC pipeline, PMS calendar &amp; checklist, renewal Kanban, spares ledger.</p><div class="meta">Desktop · Modules 3 &amp; 4</div></a>
+    <a class="card" href="stitch/new-contract.html"><h3>New AMC / CMC Contract</h3><p>Contract form: covered-equipment grid, auto PMS schedule preview.</p><div class="meta">Desktop · Module 3 · Form</div></a>
+    <a class="card new" href="stitch/spares-inventory.html"><h3>Spares Inventory</h3><p>Part master with live stock per store (central + vans), low-stock badges, category/brand filters, add-part drawer, reorder tracking.</p><div class="meta">Desktop · Module 4 · Primary</div></a>
+    <a class="card" href="stitch/stock-operations.html"><h3>Stock Operations</h3><p>GRN receive, transfer to van, return, adjustment — balance preview + ledger.</p><div class="meta">Desktop · Module 4</div></a>
+    <a class="card" href="stitch/part-requests.html"><h3>Part Requests</h3><p>Engineer requests, manager approve / reject / issue from central store.</p><div class="meta">Desktop · Module 4</div></a>
+    <a class="card new" href="stitch/part-detail.html"><h3>Spare Part Detail</h3><p>Part 06280123: stock by store, ledger, compatibility, reorder status, actions.</p><div class="meta">Desktop · Module 4 · Detail</div></a>
+  </div>
+
+  <h2 class="section">Desktop — Insight &amp; Admin</h2>
+  <div class="grid">
+    <a class="card" href="stitch/reports-hub.html"><h3>Reports Hub</h3><p>14 reports (Excel/PDF) with filters &amp; preview: call register, aging, engineer performance, PMS, stock…</p><div class="meta">Desktop · Module 5</div></a>
+    <a class="card" href="stitch/notifications.html"><h3>Notification Center</h3><p>Grouped, filterable notifications: PMS, contracts, SLA, stock, calls — mark-all-read.</p><div class="meta">Desktop · Demo extra</div></a>
+    <a class="card new" href="stitch/search-results.html"><h3>Global Search Results</h3><p>Cross-entity results (equipment, calls, hospitals, parts) with kind filters and live counts. Open via any top-bar search (Enter).</p><div class="meta">Desktop · §8 /search</div></a>
+    <a class="card" href="stitch/masters.html"><h3>Master Data</h3><p>7 tabs: Hospitals · Brands · Equipment Types · Models · Suppliers · Stores &amp; Vans · SLA Settings — all with real tables.</p><div class="meta">Desktop · Masters</div></a>
+    <a class="card" href="stitch/admin-console.html"><h3>Administration &amp; Access Control</h3><p>3 tabs: Users &amp; Roles (permission matrix) · System Settings (company, reminders, SMTP, branding) · Audit Log (live feed).</p><div class="meta">Desktop · Admin</div></a>
+    <a class="card new" href="stitch/qr-sticker.html"><h3>QR Asset Sticker (Print)</h3><p>Print-optimised asset sticker: QR → equipment record, serial, asset tag, location. Triggered from equipment QR buttons.</p><div class="meta">Desktop · Module 1 · Print</div></a>
+  </div>
+
+  <h2 class="section">Mobile (PWA)</h2>
+  <div class="grid">
+    <a class="card" href="stitch/engineer-dashboard-mobile.html"><h3>Field Engineer Dashboard</h3><p>My Today: assigned calls, PMS visit, van stock, quick actions — 360px.</p><div class="meta">Mobile · Engineer</div></a>
+    <a class="card" href="stitch/field-pwa-shell.html"><h3>Summit Field PWA Shell</h3><p>Installed-app shell: bottom tabs, offline banner, install prompt.</p><div class="meta">Mobile · PWA</div></a>
+  </div>
+</main>
+
+<footer>
+  Raw Stitch HTML + local wiring (<code>stitch/</code>). Dark-mode toggle bottom-right of every screen (persists via localStorage). Serve: <code>python -m http.server 8123 --directory "ui"</code> · Requires internet for CDN assets.
+</footer>
+<button id="theme-fab" title="Toggle dark / light" onclick="document.documentElement.classList.toggle('dark'); localStorage.setItem('summit-theme', document.documentElement.classList.contains('dark') ? 'dark' : 'light')"><span style="font-size:22px">◐</span></button>
+<script>if (localStorage.getItem('summit-theme') === 'dark') { document.documentElement.classList.add('dark'); }</script>
+</body>
+</html>

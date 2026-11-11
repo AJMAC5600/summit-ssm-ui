@@ -1,0 +1,767 @@
+<!DOCTYPE html> <html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Stock Operations | Summit Healthcare Service &amp; Spares Manager</title>
+<!-- Google Fonts: Inter -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config"> tailwind.config = {darkMode: "class", theme: {extend: {
+ "colors": {
+ "surface-container-highest": "#e0e3e5",
+ "surface-container-low": "#f1f4f6",
+ "secondary-container": "#82f0fe",
+ "primary-fixed-dim": "#a3cbf2",
+ "secondary-fixed": "#8df2ff",
+ "on-tertiary-fixed-variant": "#003ea8",
+ "on-primary": "#ffffff",
+ "primary": "#00263f",
+ "surface-container-lowest": "#ffffff",
+ "on-tertiary-fixed": "#00174b",
+ "on-secondary-fixed": "#001f23",
+ "on-secondary-container": "#006d77",
+ "on-primary-fixed": "#001d32",
+ "on-background": "#181c1e",
+ "on-error-container": "#93000a",
+ "on-error": "#ffffff",
+ "secondary": "#006972",
+ "on-surface": "#181c1e",
+ "on-primary-container": "#7fa7cd",
+ "tertiary-container": "#00328b",
+ "primary-fixed": "#cee5ff",
+ "outline": "#72777e",
+ "on-primary-fixed-variant": "#1f4a6c",
+ "error": "#ba1a1a",
+ "surface-dim": "#d7dadc",
+ "secondary-fixed-dim": "#67d6e4",
+ "surface-tint": "#396285",
+ "surface-container-high": "#e5e9eb",
+ "inverse-primary": "#a3cbf2",
+ "on-tertiary-container": "#7f9fff",
+ "surface-variant": "#e0e3e5",
+ "tertiary-fixed-dim": "#b4c5ff",
+ "on-secondary": "#ffffff",
+ "tertiary": "#001f5d",
+ "on-secondary-fixed-variant": "#004f56",
+ "surface-bright": "#f7fafc",
+ "on-tertiary": "#ffffff",
+ "inverse-surface": "#2d3133",
+ "tertiary-fixed": "#dbe1ff",
+ "on-surface-variant": "#42474e",
+ "surface-container": "#ebeef0",
+ "surface": "#f7fafc",
+ "inverse-on-surface": "#eef1f3",
+ "outline-variant": "#c2c7ce",
+ "primary-container": "#0b3c5d",
+ "error-container": "#ffdad6",
+ "background": "#f7fafc"
+ },
+ "borderRadius": {
+ "DEFAULT": "0.25rem",
+ "lg": "0.5rem",
+ "xl": "0.75rem",
+ "full": "9999px"
+ },
+ "spacing": {
+ "gutter-desktop": "1.5rem",
+ "space-lg": "1.25rem",
+ "margin-desktop": "2rem",
+ "space-xs": "0.25rem",
+ "space-xl": "2rem",
+ "gutter": "1rem",
+ "margin": "1rem",
+ "space-sm": "0.5rem",
+ "margin-tablet": "1.5rem",
+ "space-md": "0.75rem"
+ },
+ "fontFamily": {
+ "label-sm": ["Inter"],
+ "label-md": ["Inter"],
+ "body-lg": ["Inter"],
+ "body-sm": ["Inter"],
+ "label-lg": ["Inter"],
+ "headline-sm": ["Inter"],
+ "headline-xl": ["Inter"],
+ "headline-lg": ["Inter"],
+ "display-lg": ["Inter"],
+ "body-md": ["Inter"],
+ "metric-val": ["Inter"],
+ "headline-md": ["Inter"]
+ },
+ "fontSize": {
+ "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+ "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+ "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+ "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.005em", "fontWeight": "400" }],
+ "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "500" }],
+ "headline-sm": ["15px", { "lineHeight": "20px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+ "headline-xl": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+ "headline-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+ "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "700" }],
+ "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }],
+ "metric-val": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+ "headline-md": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }]
+ }
+ }
+ }
+ } </script>
+<script id="stitch-theme-init">(function(){try{if(localStorage.getItem("summit-theme")==="dark"){document.documentElement.classList.add("dark");document.documentElement.style.colorScheme="dark";}}catch(e){}})();</script>
+</head>
+<body class="bg-background text-on-surface antialiased font-body-md text-body-md flex min-h-screen">
+<!-- ========================================================================= -->
+<!-- SIDE NAVIGATION (Shared Component: SideNavBar) -->
+<!-- ========================================================================= -->
+<aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Summit Healthcare Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIUSceXT4JgT_RjOJHH1_5Ja2X8b8cCgcu9wUSzwk0VNSjfhMq1sA1WT7_ydpQbxwnUeV-CXrpwwwkfohub5ZmF90LAoo9J_xRAfBcsphpdDnANBlLUFQE1x8Cwg5PNJcrUI0KnJfafoPYwmbAQSPU0-KujPvedr8bA-85WLgQkq--x_kTit3_bZTDYSo8eZRspVxZMCBWMn-Ll67g4Ffr_FP3s8naTY2AnLTRvvQJ"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-primary truncate leading-tight">Summit</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider truncate">Healthcare</span></div></div></div><div class="px-space-lg pb-space-md"><div class="inline-flex items-center px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container"><span class="font-label-sm text-label-sm tracking-wide uppercase font-semibold">Service Manager</span></div></div><nav class="flex flex-col gap-1 px-space-md" data-active-classes="bg-primary text-on-primary font-headline-sm rounded-lg"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="operations-dashboard.html"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-lg text-label-lg">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="equipment" href="equipment-database.html"><span class="material-symbols-outlined text-[20px]">precision_manufacturing</span><span class="font-label-lg text-label-lg">Equipment Database</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="calls" href="service-calls-register.html"><span class="material-symbols-outlined text-[20px]">support_agent</span><span class="font-label-lg text-label-lg">Service Calls</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="contracts" href="contracts-pms-spares.html"><span class="material-symbols-outlined text-[20px]">verified</span><span class="font-label-lg text-label-lg">AMC/CMC & PMS</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-colors bg-primary text-on-primary font-headline-sm rounded-lg" data-path="inventory" href="spares-inventory.html"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-label-lg text-label-lg">Spares Inventory</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="reports" title="Reports hub is Phase 5 - not exported from Stitch yet" href="reports-hub.html"><span class="material-symbols-outlined text-[20px]">analytics</span><span class="font-label-lg text-label-lg">Reports Hub</span></a><style>#master-nav-toggle .master-chev{transition:transform .2s ease}#master-nav-toggle.master-open .master-chev{transform:rotate(180deg)}</style><div class="flex flex-col"><button id="master-nav-toggle" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors w-full text-left" aria-expanded="false" aria-controls="master-nav-submenu"><span class="material-symbols-outlined text-[20px]">schema</span><span class="font-label-lg text-label-lg flex-1 text-left">Master Data</span><span class="material-symbols-outlined text-[18px] master-chev">expand_more</span></button><div id="master-nav-submenu" class="flex-col gap-0.5 pl-10 pt-0.5 hidden"><a href="masters.html" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">apps</span><span>All Masters Hub</span></a><a href="masters.html?tab=hospitals" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">local_hospital</span><span>Hospitals</span></a><a href="masters.html?tab=brands" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">branding_watermark</span><span>Brands</span></a><a href="masters.html?tab=types" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">category</span><span>Equipment Types</span></a><a href="masters.html?tab=models" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">precision_manufacturing</span><span>Equipment Models</span></a><a href="masters.html?tab=suppliers" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">local_shipping</span><span>Suppliers</span></a><a href="masters.html?tab=stores" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">warehouse</span><span>Stores &amp; Van Depots</span></a><a href="masters.html?tab=sla" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">timer</span><span>SLA Settings</span></a><a href="masters.html?tab=checklists" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">checklist</span><span>Checklist Templates</span></a></div></div><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="settings" title="Settings screen not exported from Stitch yet" href="admin-console.html"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-label-lg text-label-lg">Settings</span></a></nav></div><div class="p-space-lg bg-surface-container-low m-space-md rounded-lg flex items-center justify-between"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">System SLA</span><span class="font-headline-sm text-headline-sm text-primary">99.8%</span></div><div class="w-2.5 h-2.5 rounded-full bg-secondary ring-4 ring-secondary/20"></div></div></aside>
+<!-- ========================================================================= -->
+<!-- MAIN WORKSPACE CONTAINER (Offset by 16rem / 64 for fixed sidebar) -->
+<!-- ========================================================================= -->
+<div class="pl-64 flex flex-col flex-1 min-w-0">
+<!-- ======================================================================= -->
+<!-- TOP NAVIGATION BAR (Shared Component: TopNavBar) -->
+<!-- ======================================================================= -->
+<header class="flex justify-between items-center h-16 px-space-lg w-full shrink-0 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+<!-- Left: Global Search Input -->
+<div class="flex items-center gap-space-lg w-1/3">
+<div class="relative w-full max-w-lg">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-lg" data-icon="search">search</span>
+<input class="w-full h-10 pl-10 pr-4 bg-surface rounded-lg border border-outline-variant/70 text-body-md font-body-md text-on-surface focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary placeholder:text-outline/70 transition-all" placeholder="Search serial no, call no, hospital, part no..." type="text"/>
+</div>
+</div>
+<!-- Right: Role Switcher, Quick Actions, Notifications & Profile -->
+<div class="flex items-center gap-space-lg">
+<!-- Quick Role Switcher Pills -->
+<div class="flex items-center bg-surface-container-low rounded-full p-1 border border-outline-variant/40">
+<button class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm font-label-sm font-semibold shadow-xs"> Manager
+</button>
+<button class="text-on-surface-variant px-3 py-1 rounded-full text-label-sm font-label-sm font-medium hover:text-on-surface transition-colors"> Engineer
+</button>
+<button class="text-on-surface-variant px-3 py-1 rounded-full text-label-sm font-label-sm font-medium hover:text-on-surface transition-colors"> Admin
+</button>
+</div>
+<div class="h-6 w-px bg-outline-variant/50"></div>
+<!-- Trailing Primary Action: + Register Call -->
+<button class="flex items-center gap-1.5 px-3.5 py-2 bg-primary-container hover:bg-primary text-on-primary rounded-lg text-label-md font-label-md font-semibold tracking-wide transition-all shadow-sm">
+<span class="material-symbols-outlined text-base" data-icon="add">add</span>
+<span>+ Register Call</span>
+</button>
+<!-- Notification Bell with Count Badge (10) -->
+<div class="relative cursor-pointer hover:bg-surface-container rounded-lg p-2 transition-colors">
+<span class="material-symbols-outlined text-on-surface-variant text-xl" data-icon="notifications">notifications</span>
+<span class="absolute top-1 right-1 bg-error text-on-error text-label-sm font-label-sm px-1.5 py-0.2 rounded-full text-[10px] leading-tight font-bold">10</span>
+</div>
+<div class="h-6 w-px bg-outline-variant/50"></div>
+<!-- Profile Avatar & Details -->
+<div class="flex items-center gap-3 pl-1 cursor-pointer">
+<div class="w-9 h-9 rounded-full bg-primary-fixed border border-secondary/40 flex items-center justify-center text-primary font-bold text-label-md"> RS
+</div>
+<div class="flex flex-col text-left">
+<span class="text-label-md font-label-md font-semibold text-on-surface leading-tight">Rahul Sharma</span>
+<span class="text-label-sm font-label-sm text-outline leading-tight">Service Ops Manager</span>
+</div>
+</div>
+</div>
+</header>
+<!-- ======================================================================= -->
+<!-- CONTENT CANVAS -->
+<!-- ======================================================================= -->
+<main class="flex-1 p-gutter-desktop max-w-[1600px] w-full mx-auto space-y-space-lg">
+<!-- Breadcrumbs & View Heading Action Area -->
+<section class="flex flex-col md:flex-row md:items-center md:justify-between gap-space-md">
+<div>
+<!-- Breadcrumb -->
+<nav class="flex items-center gap-1.5 text-label-sm font-label-sm text-outline mb-1">
+<span class="hover:text-primary transition-colors cursor-pointer">Inventory</span>
+<span class="material-symbols-outlined text-xs" data-icon="chevron_right">chevron_right</span>
+<span class="text-secondary font-semibold">Stock Operations</span>
+</nav>
+<!-- Title & Subtitle -->
+<h1 class="text-headline-xl font-headline-xl text-primary tracking-tight font-bold">Stock Operations</h1>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-0.5">Manage multi-location inventory movements, GRN inwarding, mobile van transfers, and real-time audit ledger.</p>
+</div>
+<!-- Right Header Action Group -->
+<div class="flex items-center gap- space-sm">
+<button class="flex items-center gap-2 px-3.5 py-2 bg-surface-container-lowest border border-outline-variant hover:bg-surface-container-low text-on-surface rounded-lg text-label-md font-label-md font-medium transition-all shadow-xs mr-2">
+<span class="material-symbols-outlined text-base text-outline" data-icon="download">download</span>
+<span>Export Ledger</span>
+</button>
+<button class="flex items-center gap-2 px-3.5 py-2 bg-surface-container-lowest border border-outline-variant hover:bg-surface-container-low text-on-surface rounded-lg text-label-md font-label-md font-medium transition-all shadow-xs mr-2">
+<span class="material-symbols-outlined text-base text-outline" data-icon="print">print</span>
+<span>Print GRN</span>
+</button>
+<button class="flex items-center gap-2 px-4 py-2 bg-primary-container hover:bg-primary text-on-primary rounded-lg text-label-md font-label-md font-semibold transition-all shadow-sm">
+<span class="material-symbols-outlined text-base" data-icon="add_circle">add_circle</span>
+<span>+ New Transaction</span>
+</button>
+</div>
+</section>
+<!-- ===================================================================== -->
+<!-- FOUR OPERATION SELECTOR CARDS (Top Bento Row) -->
+<!-- ===================================================================== -->
+<section class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-space-md">
+<!-- Tab 1: Receive (GRN) -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/60 p-space-md hover:border-secondary/50 cursor-pointer transition-all hover:shadow-xs flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="input">input</span>
+</div>
+<span class="text-label-sm font-label-sm text-outline font-semibold">OP-01</span>
+</div>
+<div class="mt-3">
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Receive (GRN)</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1 leading-snug">Inward stock from OEM &amp; suppliers with invoice matching.</p>
+</div>
+</div>
+<!-- Tab 2: Transfer to Van [ACTIVE] -->
+<div class="bg-surface-container-lowest rounded-xl border-2 border-secondary p-space-md shadow-sm relative overflow-hidden cursor-pointer">
+<div class="absolute top-0 right-0 left-0 h-1 bg-secondary"></div>
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-lg bg-secondary/15 flex items-center justify-center text-secondary">
+<span class="material-symbols-outlined text-2xl" data-icon="local_shipping" data-weight="fill" style="font-variation-settings: 'FILL' 1;">local_shipping</span>
+</div>
+<span class="px-2.5 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-label-sm font-label-sm font-bold uppercase tracking-wider flex items-center gap-1">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Active Mode
+</span>
+</div>
+<div class="mt-3">
+<h3 class="text-headline-sm font-headline-sm text-primary font-bold">Transfer to Van</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1 leading-snug">Dispatch central store inventory to field engineer mobile vans with digital custody transfer.</p>
+</div>
+</div>
+<!-- Tab 3: Return -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/60 p-space-md hover:border-secondary/50 cursor-pointer transition-all hover:shadow-xs flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="assignment_return">assignment_return</span>
+</div>
+<span class="text-label-sm font-label-sm text-outline font-semibold">OP-03</span>
+</div>
+<div class="mt-3">
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Return</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1 leading-snug">Inward unused, uninstalled, or defective swap parts back to depot.</p>
+</div>
+</div>
+<!-- Tab 4: Adjustment -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/60 p-space-md hover:border-secondary/50 cursor-pointer transition-all hover:shadow-xs flex flex-col justify-between">
+<div class="flex items-start justify-between">
+<div class="w-10 h-10 rounded-lg bg-surface-container flex items-center justify-center text-primary">
+<span class="material-symbols-outlined text-2xl" data-icon="tune">tune</span>
+</div>
+<span class="text-label-sm font-label-sm text-outline font-semibold">OP-04</span>
+</div>
+<div class="mt-3">
+<h3 class="text-headline-sm font-headline-sm text-on-surface">Adjustment</h3>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1 leading-snug">Physical cycle count reconciliation &amp; audit corrections with mandatory reason.</p>
+</div>
+</div>
+</section>
+<!-- ===================================================================== -->
+<!-- TWO COLUMN WORKSPACE FOR 'TRANSFER TO VAN' -->
+<!-- ===================================================================== -->
+<section class="grid grid-cols-1 lg:grid-cols-12 gap-space-lg">
+<!-- LEFT COLUMN: Transfer to Van Form (7 Columns) -->
+<div class="lg:col-span-7 bg-surface-container-lowest rounded-xl border border-outline-variant/70 shadow-sm p-space-lg flex flex-col justify-between">
+<div>
+<!-- Form Header with Surgical Teal Accent Bar -->
+<div class="border-l-4 border-secondary pl-3 mb-space-md">
+<h2 class="text-headline-md font-headline-md text-primary font-bold">Initiate Transfer to Field Engineer Van</h2>
+<p class="text-body-sm font-body-sm text-outline">Custody handoff and mobile transit allocation</p>
+</div>
+<!-- Form Content Fields -->
+<div class="space-y-space-md">
+<!-- Row: Stores Selection -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md">
+<!-- From Store -->
+<div>
+<label class="block text-label-md font-label-md text-on-surface-variant mb-1.5 font-medium"> From Store <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-10 px-3 pr-8 bg-surface-container-low rounded-lg border border-outline-variant text-body-md font-body-md text-on-surface focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary appearance-none cursor-pointer">
+<option selected="">Central Store —————— — Pune Warehouse</option>
+<option>Regional Depot —————— — Mumbai Hub</option>
+<option>Spares Staging —————— — Bengaluru</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-outline pointer-events-none" data-icon="expand_more">expand_more</span>
+</div>
+<div class="flex items-center gap-1.5 mt-1.5 text-label-sm font-label-sm text-secondary font-medium">
+<span class="material-symbols-outlined text-xs" data-icon="warehouse">warehouse</span>
+<span>Total active SKUs: 1,482</span>
+</div>
+</div>
+<!-- To Van Store -->
+<div>
+<label class="block text-label-md font-label-md text-on-surface-variant mb-1.5 font-medium"> To Van Store <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-10 px-3 pr-8 bg-surface rounded-lg border border-outline-variant text-body-md font-body-md text-on-surface focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary appearance-none cursor-pointer">
+<option selected="">Engineer Van —————— — Rahul Sharma (Pune East)</option>
+<option>Engineer Van —————— — Amit Patil (Navi Mumbai)</option>
+<option>Engineer Van —————— — Rajesh Varma (PCMC Zone)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-outline pointer-events-none" data-icon="expand_more">expand_more</span>
+</div>
+<div class="flex items-center gap-1.5 mt-1.5 text-label-sm font-label-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-xs" data-icon="directions_car">directions_car</span>
+<span class="font-mono">Van Reg: MH-12-BF-4411</span>
+</div>
+</div>
+</div>
+<!-- Part Search & Selection -->
+<div>
+<label class="block text-label-md font-label-md text-on-surface-variant mb-1.5 font-medium"> Part Search &amp; Selection <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-10 px-3 pr-8 bg-surface rounded-lg border border-outline-variant text-body-md font-body-md text-on-surface font-medium focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary appearance-none cursor-pointer">
+<option selected="">Siemens Detector Panel (P/N: 06280123) —————— — 2 in central, 0 in van</option>
+<option>IGBT Inverter Board (P/N: SP-CT-4091) —————— — 5 in central, 1 in van</option>
+<option>5-Lead Shielded ECG Trunk Cable (P/N: ECG-TRK-5L) —————— — 14 in central, 2 in van</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-outline pointer-events-none" data-icon="expand_more">expand_more</span>
+</div>
+<!-- Amber Alert Badge & Modality info -->
+<div class="mt-2 flex flex-wrap items-center gap-2">
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-md bg-amber-50 text-amber-900 border border-amber-300 text-label-sm font-label-sm font-semibold">
+<span class="material-symbols-outlined text-xs text-amber-700" data-icon="warning">warning</span> Central store approaching minimum buffer (Min: 2)
+</span>
+<span class="inline-flex items-center gap-1 px-2.5 py-1 rounded-md bg-surface-container text-on-surface-variant text-label-sm font-label-sm">
+<span class="material-symbols-outlined text-xs text-secondary" data-icon="medical_services">medical_services</span> Compatible with: Siemens Somatom Definition AS, Somatom Go.Top
+</span>
+</div>
+</div>
+<!-- Quantity Stepper & Valuation Rate -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-space-md pt-1">
+<!-- Quantity Stepper -->
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<label class="text-label-md font-label-md text-on-surface-variant font-medium">Quantity <span class="text-error">*</span></label>
+<span class="text-label-sm font-label-sm text-outline">Max available: 2</span>
+</div>
+<div class="flex items-center h-10 border border-outline-variant rounded-lg bg-surface overflow-hidden">
+<button class="w-10 h-full flex items-center justify-center bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors border-r border-outline-variant/60" type="button">
+<span class="material-symbols-outlined text-base" data-icon="remove">remove</span>
+</button>
+<input class="w-full text-center font-bold text-headline-sm font-headline-sm text-primary bg-transparent focus:outline-none" readonly="" type="text" value="1"/>
+<button class="w-10 h-full flex items-center justify-center bg-surface-container-low hover:bg-surface-container text-on-surface transition-colors border-l border-outline-variant/60" type="button">
+<span class="material-symbols-outlined text-base" data-icon="add">add</span>
+</button>
+</div>
+</div>
+<!-- Valuation / Unit Rate -->
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<label class="text-label-md font-label-md text-on-surface-variant font-medium">Valuation / Unit Rate</label>
+<span class="text-label-sm font-label-sm text-secondary font-semibold">Total: ₹ 4,85,000</span>
+</div>
+<div class="relative">
+<span class="absolute left-3 top-2.5 text-body-sm font-body-sm text-outline font-semibold"> ———— </span>
+<input class="w-full h-10 pl-8 pr-3 bg-surface-container-low rounded-lg border border-outline-variant font-semibold text-body-md font-body-md text-on-surface focus:outline-none focus:border-secondary" type="text" value="4,85,000"/>
+</div>
+<p class="text-label-sm font-label-sm text-outline mt-1">Pre-filled from Master Purchase Rate</p>
+</div>
+</div>
+<!-- Transfer Reason / Work Order Note -->
+<div>
+<label class="block text-label-md font-label-md text-on-surface-variant mb-1.5 font-medium"> Transfer Reason / Work Order Note <span class="text-error">*</span>
+</label>
+<input class="w-full h-10 px-3 bg-surface rounded-lg border border-outline-variant text-body-md font-body-md text-on-surface focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary" type="text" value="Urgent dispatch for scheduled gantry reconstruction on Call #SC-2026-00142 (Sahyadri Hospital)"/>
+</div>
+<!-- Custody Protocol Switch -->
+<div class="p-space-md rounded-xl bg-surface-container-low border border-outline-variant/60 flex items-start gap-space-md">
+<!-- Toggle switch ON state -->
+<div class="relative inline-flex items-center cursor-pointer mt-0.5">
+<input checked="" class="sr-only peer" type="checkbox"/>
+<div class="w-11 h-6 bg-outline-variant/80 peer-focus:outline-none rounded-full peer peer-checked:after:translate-x-full peer-checked:after:border-white after:content-[''] after:absolute after:top-[2px] after:left-[2px] after:bg-white after:border-gray-300 after:border after:rounded-full after:h-5 after:w-5 after:transition-all peer-checked:bg-secondary"></div>
+</div>
+<div class="flex-1">
+<span class="text-headline-sm font-headline-sm text-primary font-semibold block leading-tight">Receiver Acknowledgement Custody Protocol</span>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1 leading-snug"> Engineer must acknowledge &amp; verify physical seal on mobile PWA before stock balance officially reflects in van on-hand balance. Generates transit transfer slip.
+</p>
+</div>
+</div>
+</div>
+</div>
+<!-- Form Actions Footer -->
+<div class="pt-space-lg mt-space-md border-t border-outline-variant/40 flex items-center justify-end gap-space-md">
+<button class="px-4 py-2 border border-outline-variant rounded-lg text-label-md font-label-md font-medium text-on-surface-variant hover:bg-surface-container-low transition-colors" type="button"> Cancel / Clear
+</button>
+<button class="flex items-center gap-2 px-5 py-2.5 bg-primary-container hover:bg-primary text-on-primary rounded-lg text-label-md font-label-md font-semibold transition-all shadow-sm" type="button">
+<span class="material-symbols-outlined text-base" data-icon="local_shipping">local_shipping</span>
+<span>Dispatch &amp; Issue Transit Voucher</span>
+</button>
+</div>
+</div>
+<!-- RIGHT COLUMN: Impact Preview & Recent Movements (5 Columns) -->
+<div class="lg:col-span-5 flex flex-col gap-space-md">
+<!-- Impact Preview Card -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/70 shadow-sm p-space-md">
+<div class="flex items-center justify-between pb-space-sm border-b border-outline-variant/30">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="sync_alt">sync_alt</span>
+<h3 class="text-headline-sm font-headline-sm text-primary font-bold">Real-Time Inventory Impact Preview</h3>
+</div>
+<span class="text-label-sm font-label-sm px-2 py-0.5 rounded bg-surface-container text-outline font-semibold">Simulated</span>
+</div>
+<!-- Balances Matrix -->
+<div class="mt-3 space-y-2.5">
+<!-- Central Store Row -->
+<div class="p-2.5 rounded-lg bg-surface border border-outline-variant/40 flex items-center justify-between">
+<div>
+<span class="text-label-md font-label-md font-semibold text-on-surface block">Central Store (Pune)</span>
+<div class="flex items-center gap-1.5 mt-0.5 text-body-sm font-body-sm font-mono text-outline">
+<span>Curr: <b class="text-on-surface">2</b></span>
+<span class="text-error font-semibold">-1</span>
+<span> ————— — Proj: <b class="text-error">1</b></span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container text-label-sm font-label-sm font-semibold border border-error/20"> Low Buffer Warning
+</span>
+</div>
+<!-- Rahul's Van Row -->
+<div class="p-2.5 rounded-lg bg-surface border border-outline-variant/40 flex items-center justify-between">
+<div>
+<span class="text-label-md font-label-md font-semibold text-on-surface block">Rahul's Van (MH-12-BF-4411)</span>
+<div class="flex items-center gap-1.5 mt-0.5 text-body-sm font-body-sm font-mono text-outline">
+<span>Curr: <b class="text-on-surface">0</b></span>
+<span class="text-secondary font-semibold">+1</span>
+<span> ————— — Proj: <b class="text-on-surface">1</b></span>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container text-label-sm font-label-sm font-semibold border border-secondary/20"> Optimal Stock
+</span>
+</div>
+</div>
+<!-- Warning Callout Box -->
+<div class="mt-3 p-3 rounded-lg bg-amber-50 border border-amber-300 flex items-start gap-2.5">
+<span class="material-symbols-outlined text-amber-700 text-lg shrink-0 mt-0.5" data-icon="notification_important">notification_important</span>
+<p class="text-label-md font-label-md text-amber-900 leading-snug">
+<b>Notice:</b> Central depot detector stock will drop below safety threshold (1 unit remaining, reorder level is 2). Purchase requisition trigger ready.
+</p>
+</div>
+</div>
+<!-- Recent Ledger Activity (5 rows) -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant/70 shadow-sm p-space-md flex-1 flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between pb-2 border-b border-outline-variant/30">
+<h3 class="text-headline-sm font-headline-sm text-primary font-bold">Recent Ledger Activity</h3>
+<span class="text-label-sm font-label-sm text-secondary hover:underline cursor-pointer font-semibold">View Live Log</span>
+</div>
+<div class="divide-y divide-outline-variant/30 mt-1">
+<!-- Item 1 -->
+<div class="py-2.5 flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface truncate max-w-[210px]">Siemens Detector Panel</span>
+<span class="text-label-sm font-label-sm text-outline">Today, 09:12 —————— — Central Store</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-purple-50 text-purple-700 border border-purple-200 text-label-sm font-label-sm font-semibold">TransferOut</span>
+<span class="font-mono font-bold text-error">-1</span>
+</div>
+</div>
+<!-- Item 2 -->
+<div class="py-2.5 flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface truncate max-w-[210px]">UPS 12V 100Ah High-Cap Battery</span>
+<span class="text-label-sm font-label-sm text-outline">Yesterday, 17:40 —————— — Central Store</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-emerald-50 text-emerald-700 border border-emerald-200 text-label-sm font-label-sm font-semibold">Receipt (GRN)</span>
+<span class="font-mono font-bold text-emerald-600">+10</span>
+</div>
+</div>
+<!-- Item 3 -->
+<div class="py-2.5 flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface truncate max-w-[210px]">5-Lead Shielded ECG Trunk Cable</span>
+<span class="text-label-sm font-label-sm text-outline">Yesterday, 15:03 —————— — Rahul Van</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-amber-50 text-amber-700 border border-amber-200 text-label-sm font-label-sm font-semibold">Consumption</span>
+<span class="font-mono font-bold text-amber-700">-1</span>
+</div>
+</div>
+<!-- Item 4 -->
+<div class="py-2.5 flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface truncate max-w-[210px]">Collimator Stepper Servo (Defective)</span>
+<span class="text-label-sm font-label-sm text-outline">22 Oct, 11:20 —————— — Central Store</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-teal-50 text-teal-700 border border-teal-200 text-label-sm font-label-sm font-semibold">Return</span>
+<span class="font-mono font-bold text-secondary">+1</span>
+</div>
+</div>
+<!-- Item 5 -->
+<div class="py-2.5 flex items-center justify-between text-body-sm font-body-sm">
+<div class="flex flex-col">
+<span class="font-semibold text-on-surface truncate max-w-[210px]">HeNe Laser Alignment Diode</span>
+<span class="text-label-sm font-label-sm text-outline">21 Oct, 16:45 —————— — Central Store</span>
+</div>
+<div class="flex items-center gap-2">
+<span class="px-2 py-0.5 rounded bg-red-50 text-red-700 border border-red-200 text-label-sm font-label-sm font-semibold">Adjustment</span>
+<span class="font-mono font-bold text-error">-1</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Footer micro telemetry -->
+<div class="pt-2 text-label-sm font-label-sm text-outline flex items-center justify-between border-t border-outline-variant/20 mt-1">
+<span>Custody Signatures Synced</span>
+<span class="text-secondary font-mono">100% PWA Verified</span>
+</div>
+</div>
+</div>
+</section>
+<!-- ===================================================================== -->
+<!-- BOTTOM FULL-WIDTH SECTION: MASTER STOCK LEDGER -->
+<!-- ===================================================================== -->
+<section class="bg-surface-container-lowest rounded-xl border border-outline-variant/70 shadow-sm overflow-hidden">
+<!-- Ledger Header & Filter Toolbar -->
+<div class="p-space-md border-b border-outline-variant/40 flex flex-col lg:flex-row lg:items-center lg:justify-between gap-space-md bg-surface-container-low/40">
+<div>
+<h2 class="text-headline-md font-headline-md text-primary font-bold">Master Stock Ledger (Single-Source-of-Truth)</h2>
+<p class="text-body-sm font-body-sm text-outline">Traceable chain-of-custody for all medical equipment replacement components</p>
+</div>
+<!-- Filters Cluster -->
+<div class="flex flex-wrap items-center gap-2">
+<!-- Store Filter -->
+<select class="h-9 px-2.5 text-label-md font-label-md bg-surface border border-outline-variant rounded-lg text-on-surface focus:outline-none focus:border-secondary">
+<option>Store Filter: All Stores</option>
+<option>Central Store —————— — Pune</option>
+<option>Rahul Van Stock</option>
+<option>Amit Van Stock</option>
+</select>
+<!-- Transaction Type Filter -->
+<select class="h-9 px-2.5 text-label-md font-label-md bg-surface border border-outline-variant rounded-lg text-on-surface focus:outline-none focus:border-secondary">
+<option>Transaction Type: All Types</option>
+<option>Receipt</option>
+<option>TransferOut</option>
+<option>TransferIn</option>
+<option>Consumption</option>
+<option>Return</option>
+<option>Adjustment</option>
+</select>
+<!-- Date Range -->
+<button class="h-9 px-3 flex items-center gap-1.5 text-label-md font-label-md bg-surface border border-outline-variant rounded-lg text-on-surface hover:bg-surface-container-low transition-colors">
+<span class="material-symbols-outlined text-base text-outline" data-icon="calendar_today">calendar_today</span>
+<span>Last 30 Days</span>
+</button>
+<!-- Search Part Input -->
+<div class="relative">
+<span class="material-symbols-outlined absolute left-2.5 top-2 text-outline text-base" data-icon="search">search</span>
+<input class="h-9 pl-8 pr-3 text-label-md font-label-md bg-surface border border-outline-variant rounded-lg text-on-surface placeholder:text-outline/70 focus:outline-none focus:border-secondary w-36 lg:w-44" placeholder="Search Part..." type="text"/>
+</div>
+</div>
+</div>
+<!-- Ledger Table (8 realistic rows) -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low/80 h-10 border-b border-outline-variant/60 text-outline text-label-sm font-label-sm uppercase tracking-wider select-none">
+<th class="py-2 px-4 font-semibold">Date &amp; Time</th>
+<th class="py-2 px-3 font-semibold">Transaction Type</th>
+<th class="py-2 px-3 font-semibold">Part Number</th>
+<th class="py-2 px-4 font-semibold">Description</th>
+<th class="py-2 px-3 font-semibold text-right">Qty</th>
+<th class="py-2 px-4 font-semibold">Store Location</th>
+<th class="py-2 px-3 font-semibold">Reference</th>
+<th class="py-2 px-4 font-semibold">Logged By</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/30 text-body-sm font-body-sm text-on-surface">
+<!-- Row 1 -->
+<tr class="hover:bg-surface transition-colors h-12">
+<td class="py-2 px-4 text-label-md font-label-md text-on-surface font-medium whitespace-nowrap">24 Oct 2025, 09:12</td>
+<td class="py-2 px-3 whitespace-nowrap">
+<span class="px-2.5 py-0.5 rounded-full bg-purple-50 text-purple-700 border border-purple-200 text-label-sm font-label-sm font-semibold">TransferOut</span>
+</td>
+<td class="py-2 px-3 font-mono font-semibold text-primary whitespace-nowrap">06280123</td>
+<td class="py-2 px-4 font-medium text-on-surface">Siemens Stellar Solid-State Detector Panel</td>
+<td class="py-2 px-3 font-mono font-bold text-error text-right whitespace-nowrap">-1</td>
+<td class="py-2 px-4 text-on-surface-variant whitespace-nowrap">Central Store</td>
+<td class="py-2 px-3 font-mono text-outline text-label-sm font-label-sm whitespace-nowrap">TR-2026-0089</td>
+<td class="py-2 px-4 text-on-surface whitespace-nowrap">Rahul Sharma</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface transition-colors h-12">
+<td class="py-2 px-4 text-label-md font-label-md text-on-surface font-medium whitespace-nowrap">23 Oct 2025, 17:40</td>
+<td class="py-2 px-3 whitespace-nowrap">
+<span class="px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-label-sm font-label-sm font-semibold">Receipt</span>
+</td>
+<td class="py-2 px-3 font-mono font-semibold text-primary whitespace-nowrap">BAT-UPS-100</td>
+<td class="py-2 px-4 font-medium text-on-surface">Amaron Quanta 12V 100Ah VRLA Battery</td>
+<td class="py-2 px-3 font-mono font-bold text-emerald-600 text-right whitespace-nowrap">+10</td>
+<td class="py-2 px-4 text-on-surface-variant whitespace-nowrap">Central Store</td>
+<td class="py-2 px-3 font-mono text-outline text-label-sm font-label-sm whitespace-nowrap">INV-EX-9921</td>
+<td class="py-2 px-4 text-on-surface whitespace-nowrap">Rajesh Varma</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface transition-colors h-12">
+<td class="py-2 px-4 text-label-md font-label-md text-on-surface font-medium whitespace-nowrap">23 Oct 2025, 15:03</td>
+<td class="py-2 px-3 whitespace-nowrap">
+<span class="px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-700 border border-amber-200 text-label-sm font-label-sm font-semibold">Consumption</span>
+</td>
+<td class="py-2 px-3 font-mono font-semibold text-primary whitespace-nowrap">ECG-TRK-5L</td>
+<td class="py-2 px-4 font-medium text-on-surface">5-Lead Shielded ECG Trunk Cable (Mindray)</td>
+<td class="py-2 px-3 font-mono font-bold text-amber-700 text-right whitespace-nowrap">-1</td>
+<td class="py-2 px-4 text-on-surface-variant whitespace-nowrap">Rahul Van Stock</td>
+<td class="py-2 px-3 font-mono text-outline text-label-sm font-label-sm whitespace-nowrap">SC-2026-00141</td>
+<td class="py-2 px-4 text-on-surface whitespace-nowrap">Rahul Sharma</td>
+</tr>
+<!-- Row 4 -->
+<tr class="hover:bg-surface transition-colors h-12">
+<td class="py-2 px-4 text-label-md font-label-md text-on-surface font-medium whitespace-nowrap">23 Oct 2025, 11:15</td>
+<td class="py-2 px-3 whitespace-nowrap">
+<span class="px-2.5 py-0.5 rounded-full bg-blue-50 text-blue-700 border border-blue-200 text-label-sm font-label-sm font-semibold">TransferIn</span>
+</td>
+<td class="py-2 px-3 font-mono font-semibold text-primary whitespace-nowrap">06280123</td>
+<td class="py-2 px-4 font-medium text-on-surface">Siemens Stellar Solid-State Detector Panel</td>
+<td class="py-2 px-3 font-mono font-bold text-blue-600 text-right whitespace-nowrap">+1</td>
+<td class="py-2 px-4 text-on-surface-variant whitespace-nowrap">Rahul Van Stock</td>
+<td class="py-2 px-3 font-mono text-outline text-label-sm font-label-sm whitespace-nowrap">TR-2026-0089</td>
+<td class="py-2 px-4 text-on-surface whitespace-nowrap">Rahul Sharma</td>
+</tr>
+<!-- Row 5 -->
+<tr class="hover:bg-surface transition-colors h-12">
+<td class="py-2 px-4 text-label-md font-label-md text-on-surface font-medium whitespace-nowrap">22 Oct 2025, 14:30</td>
+<td class="py-2 px-3 whitespace-nowrap">
+<span class="px-2.5 py-0.5 rounded-full bg-amber-50 text-amber-700 border border-amber-200 text-label-sm font-label-sm font-semibold">Consumption</span>
+</td>
+<td class="py-2 px-3 font-mono font-semibold text-primary whitespace-nowrap">SP-CT-4091</td>
+<td class="py-2 px-4 font-medium text-on-surface">IGBT Driver Inverter Switching Board</td>
+<td class="py-2 px-3 font-mono font-bold text-amber-700 text-right whitespace-nowrap">-1</td>
+<td class="py-2 px-4 text-on-surface-variant whitespace-nowrap">Central Store</td>
+<td class="py-2 px-3 font-mono text-outline text-label-sm font-label-sm whitespace-nowrap">SC-2025-00142</td>
+<td class="py-2 px-4 text-on-surface whitespace-nowrap">Rahul Sharma</td>
+</tr>
+<!-- Row 6 -->
+<tr class="hover:bg-surface transition-colors h-12">
+<td class="py-2 px-4 text-label-md font-label-md text-on-surface font-medium whitespace-nowrap">22 Oct 2025, 11:20</td>
+<td class="py-2 px-3 whitespace-nowrap">
+<span class="px-2.5 py-0.5 rounded-full bg-teal-50 text-teal-700 border border-teal-200 text-label-sm font-label-sm font-semibold">Return</span>
+</td>
+<td class="py-2 px-3 font-mono font-semibold text-primary whitespace-nowrap">PUMP-IV-VLV</td>
+<td class="py-2 px-4 font-medium text-on-surface">Stepper Servo Valve (Defective Core Return)</td>
+<td class="py-2 px-3 font-mono font-bold text-secondary text-right whitespace-nowrap">+1</td>
+<td class="py-2 px-4 text-on-surface-variant whitespace-nowrap">Central Store</td>
+<td class="py-2 px-3 font-mono text-outline text-label-sm font-label-sm whitespace-nowrap">RET-2026-0012</td>
+<td class="py-2 px-4 text-on-surface whitespace-nowrap">Amit Patil</td>
+</tr>
+<!-- Row 7 -->
+<tr class="hover:bg-surface transition-colors h-12">
+<td class="py-2 px-4 text-label-md font-label-md text-on-surface font-medium whitespace-nowrap">21 Oct 2025, 16:45</td>
+<td class="py-2 px-3 whitespace-nowrap">
+<span class="px-2.5 py-0.5 rounded-full bg-red-50 text-red-700 border border-red-200 text-label-sm font-label-sm font-semibold">Adjustment</span>
+</td>
+<td class="py-2 px-3 font-mono font-semibold text-primary whitespace-nowrap">XTH-8821</td>
+<td class="py-2 px-4 font-medium text-on-surface">X-Ray Tube Heat Exchanger Hose Clamp</td>
+<td class="py-2 px-3 font-mono font-bold text-error text-right whitespace-nowrap">-2</td>
+<td class="py-2 px-4 text-on-surface-variant whitespace-nowrap">Central Store</td>
+<td class="py-2 px-3 font-mono text-outline text-label-sm font-label-sm whitespace-nowrap">CYC-AUD-009</td>
+<td class="py-2 px-4 text-on-surface whitespace-nowrap">Manoj Kulkarni</td>
+</tr>
+<!-- Row 8 -->
+<tr class="hover:bg-surface transition-colors h-12">
+<td class="py-2 px-4 text-label-md font-label-md text-on-surface font-medium whitespace-nowrap">20 Oct 2025, 10:05</td>
+<td class="py-2 px-3 whitespace-nowrap">
+<span class="px-2.5 py-0.5 rounded-full bg-emerald-50 text-emerald-700 border border-emerald-200 text-label-sm font-label-sm font-semibold">Receipt</span>
+</td>
+<td class="py-2 px-3 font-mono font-semibold text-primary whitespace-nowrap">SP-GSK-08</td>
+<td class="py-2 px-4 font-medium text-on-surface">High-Voltage Cable Silicone Bushing Gasket</td>
+<td class="py-2 px-3 font-mono font-bold text-emerald-600 text-right whitespace-nowrap">+25</td>
+<td class="py-2 px-4 text-on-surface-variant whitespace-nowrap">Central Store</td>
+<td class="py-2 px-3 font-mono text-outline text-label-sm font-label-sm whitespace-nowrap">GRN-2026-0298</td>
+<td class="py-2 px-4 text-on-surface whitespace-nowrap">Rajesh Varma</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Pagination Controls -->
+<div class="px-space-md py-3 bg-surface border-t border-outline-variant/40 flex items-center justify-between text-body-sm font-body-sm">
+<span class="text-outline text-label-md font-label-md"> Showing <b class="text-on-surface">1 to 8</b> of <b class="text-on-surface">1,280</b> ledger transactions
+</span>
+<div class="flex items-center gap-3">
+<span class="text-label-md font-label-md text-outline">Page 1 of 160</span>
+<div class="flex items-center gap-1">
+<button class="h-8 px-2.5 rounded border border-outline-variant/50 text-outline cursor-not-allowed flex items-center justify-center" disabled="">
+<span class="material-symbols-outlined text-base" data-icon="chevron_left">chevron_left</span>
+</button>
+<button class="h-8 px-2.5 rounded border border-outline-variant bg-surface hover:bg-surface-container-low text-on-surface transition-colors flex items-center justify-center">
+<span class="material-symbols-outlined text-base" data-icon="chevron_right">chevron_right</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+</main>
+</div>
+<style id="stitch-dark">
+html.dark body{background-color:#12161c !important}
+html.dark .bg-background,html.dark .bg-surface,html.dark .bg-surface-bright{background-color:#12161c !important}
+html.dark .bg-surface-container-lowest{background-color:#1b2129 !important}
+html.dark .bg-surface-container-low{background-color:#171d25 !important}
+html.dark .bg-surface-container{background-color:#222933 !important}
+html.dark .bg-surface-container-high{background-color:#283038 !important}
+html.dark .bg-surface-container-highest{background-color:#303945 !important}
+html.dark .bg-surface-dim{background-color:#252d36 !important}
+html.dark .bg-primary{background-color:#0b3c5d !important}
+html.dark .bg-primary-container{background-color:#164e74 !important}
+html.dark .hover\:bg-surface-container-high:hover{background-color:#283038 !important}
+html.dark .hover\:bg-surface-container-low:hover{background-color:#171d25 !important}
+html.dark .hover\:bg-surface-container:hover{background-color:#222933 !important}
+html.dark .text-on-surface{color:#e6ebf0 !important}
+html.dark .text-on-background{color:#e6ebf0 !important}
+html.dark .text-on-surface-variant{color:#a8b3bc !important}
+html.dark .text-primary{color:#a3cbf2 !important}
+html.dark .text-outline{color:#8a949d !important}
+html.dark .text-secondary{color:#67d6e4 !important}
+html.dark .text-on-secondary-container{color:#a5f3fc !important}
+html.dark .text-white{color:#ffffff !important}
+html.dark .border-outline-variant{border-color:#2e3841 !important}
+html.dark .border-outline{border-color:#39434d !important}
+html.dark .divide-outline-variant > :not([hidden]) ~ :not([hidden]){border-color:#2e3841 !important}
+html.dark .placeholder\:text-outline::placeholder{color:#6f7a84 !important}
+html.dark input,html.dark select,html.dark textarea{color-scheme:dark}
+html.dark .shadow-sm,html.dark .shadow-md{box-shadow:0 1px 3px rgba(0,0,0,0.35) !important}
+html.dark kbd{background:#222933 !important;color:#a3cbf2 !important}
+:focus-visible{outline:2px solid #0e9aa7 !important;outline-offset:2px;border-radius:4px}
+</style><button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark / light theme" style="position:fixed;right:1rem;bottom:1rem;z-index:70;width:46px;height:46px;border-radius:9999px;background:#0b3c5d;color:#8df2ff;border:1px solid #0e9aa7;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(11,60,93,0.35)"><span class="material-symbols-outlined" id="theme-toggle-icon">dark_mode</span></button>
+<script id="stitch-extras">
+(function(){
+  var btn=document.getElementById('theme-toggle');
+  var icon=document.getElementById('theme-toggle-icon');
+  function sync(){if(icon)icon.textContent=document.documentElement.classList.contains('dark')?'light_mode':'dark_mode';}
+  if(btn)btn.addEventListener('click',function(){
+    var next=!document.documentElement.classList.contains('dark');
+    document.documentElement.classList.toggle('dark',next);
+    document.documentElement.style.colorScheme=next?'dark':'light';
+    try{localStorage.setItem('summit-theme',next?'dark':'light');}catch(e){}
+    sync();
+  });
+  sync();
+  document.querySelectorAll('input[type="search"]').forEach(function(el){
+    el.addEventListener('keydown',function(e){if(e.key==='Enter'){var q=el.value.trim();window.location.href='search-results.html?q='+encodeURIComponent(q||'SG-CT-20451');}});
+  });
+  document.querySelectorAll('button').forEach(function(b){
+    var h=(b.innerHTML||'').toLowerCase();var t=(b.textContent||'').toLowerCase();
+    if(h.indexOf('qr_code_2')!==-1){b.addEventListener('click',function(){window.location.href='qr-sticker.html';});}
+    else if(t.indexOf('print qr sticker')!==-1){b.addEventListener('click',function(){window.location.href='qr-sticker.html';});}
+    else if(t.indexOf('assign engineer')!==-1){b.addEventListener('click',function(){window.location.href='assign-engineer.html';});}
+  });
+})();
+</script><script id="stitch-wire">
+(function(){
+  var routes=[['register call','register-service-call.html'],['submit & assign','service-calls-fsr.html'],['submit','service-calls-fsr.html'],['save equipment','equipment-database.html'],['save & generate pms','contracts-pms-spares.html']];
+  document.querySelectorAll('button').forEach(function(b){
+    var t=(b.textContent||'').trim().toLowerCase();
+    for(var i=0;i<routes.length;i++){if(t.indexOf(routes[i][0])!==-1){b.style.cursor='pointer';b.addEventListener('click',(function(u){return function(){window.location.href=u;};})(routes[i][1]));break;}}
+  });
+})();
+</script><script id="stitch-bell">
+document.querySelectorAll('button').forEach(function(b){if(/notifications/i.test(b.textContent||'')){b.style.cursor='pointer';b.addEventListener('click',function(){window.location.href='notifications.html';});}});
+</script>
+<script id="master-nav">(function(){var b=document.getElementById("master-nav-toggle");if(!b)return;var s=document.getElementById("master-nav-submenu");var onMasters=/masters\.html/.test(location.pathname);function setOpen(v){if(!s)return;b.classList.toggle("master-open",v);s.classList.toggle("hidden",!v);b.setAttribute("aria-expanded",v?"true":"false");}b.addEventListener("click",function(){setOpen(!(b.classList.contains("master-open")));});setOpen(onMasters);if(onMasters){var m=location.search.match(/tab=([a-z]+)/);var q=m?m[1]:null;document.querySelectorAll("#master-nav-submenu a").forEach(function(a){var href=a.getAttribute("href")||"";var hit=q?href.indexOf("tab="+q)!==-1:href==="masters.html";if(hit)a.className="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg bg-primary text-on-primary transition-colors font-label-md text-label-md font-semibold";});}})();</script>
+</body></html>

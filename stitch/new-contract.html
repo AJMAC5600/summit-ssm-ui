@@ -1,0 +1,690 @@
+<!DOCTYPE html> <html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>New Maintenance Contract - Summit Service &amp; Spares</title>
+<!-- Fonts -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config"> tailwind.config = {darkMode: "class", theme: {extend: {
+ "colors": {
+ "inverse-primary": "#a3cbf2",
+ "secondary-fixed-dim": "#67d6e4",
+ "primary": "#00263f",
+ "on-secondary-fixed-variant": "#004f56",
+ "on-surface": "#181c1e",
+ "on-tertiary-fixed": "#00174b",
+ "outline": "#72777e",
+ "tertiary-fixed-dim": "#b4c5ff",
+ "inverse-surface": "#2d3133",
+ "on-primary": "#ffffff",
+ "tertiary": "#001f5d",
+ "on-secondary-fixed": "#001f23",
+ "inverse-on-surface": "#eef1f3",
+ "on-surface-variant": "#42474e",
+ "surface-tint": "#396285",
+ "error": "#ba1a1a",
+ "on-secondary-container": "#006d77",
+ "surface-variant": "#e0e3e5",
+ "secondary": "#006972",
+ "surface": "#f7fafc",
+ "secondary-fixed": "#8df2ff",
+ "primary-fixed-dim": "#a3cbf2",
+ "on-primary-fixed": "#001d32",
+ "on-tertiary": "#ffffff",
+ "surface-container": "#ebeef0",
+ "surface-dim": "#d7dadc",
+ "secondary-container": "#82f0fe",
+ "on-tertiary-container": "#7f9fff",
+ "surface-container-lowest": "#ffffff",
+ "on-background": "#181c1e",
+ "outline-variant": "#c2c7ce",
+ "error-container": "#ffdad6",
+ "primary-container": "#0b3c5d",
+ "on-error": "#ffffff",
+ "surface-container-highest": "#e0e3e5",
+ "on-primary-container": "#7fa7cd",
+ "tertiary-container": "#00328b",
+ "background": "#f7fafc",
+ "primary-fixed": "#cee5ff",
+ "tertiary-fixed": "#dbe1ff",
+ "surface-container-low": "#f1f4f6",
+ "on-secondary": "#ffffff",
+ "on-primary-fixed-variant": "#1f4a6c",
+ "surface-container-high": "#e5e9eb",
+ "surface-bright": "#f7fafc",
+ "on-tertiary-fixed-variant": "#003ea8",
+ "on-error-container": "#93000a"
+ },
+ "borderRadius": {
+ "DEFAULT": "0.25rem",
+ "lg": "0.5rem",
+ "xl": "0.75rem",
+ "full": "9999px"
+ },
+ "spacing": {
+ "margin-desktop": "2rem",
+ "gutter-desktop": "1.5rem",
+ "margin-tablet": "1.5rem",
+ "space-xl": "2rem",
+ "gutter": "1rem",
+ "space-md": "0.75rem",
+ "margin": "1rem",
+ "space-sm": "0.5rem",
+ "space-lg": "1.25rem",
+ "space-xs": "0.25rem"
+ },
+ "fontFamily": {
+ "display-lg": ["Inter"],
+ "body-lg": ["Inter"],
+ "label-sm": ["Inter"],
+ "label-md": ["Inter"],
+ "body-md": ["Inter"],
+ "label-lg": ["Inter"],
+ "body-sm": ["Inter"],
+ "headline-xl": ["Inter"],
+ "headline-md": ["Inter"],
+ "metric-val": ["Inter"],
+ "headline-sm": ["Inter"],
+ "headline-lg": ["Inter"]
+ },
+ "fontSize": {
+ "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "700" }],
+ "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+ "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+ "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+ "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }],
+ "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "500" }],
+ "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.005em", "fontWeight": "400" }],
+ "headline-xl": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+ "headline-md": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+ "metric-val": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+ "headline-sm": ["15px", { "lineHeight": "20px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+ "headline-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }]
+ }
+ }
+ }
+ } </script>
+<style>
+.material-symbols-outlined {font-variation-settings: 'FILL' 0, 'wght' 400, 'GRAD' 0, 'opsz' 24; display: inline-block; vertical-align: middle; line-height: 1;
+ } — body {font-family: 'Inter', sans-serif;
+ } </style>
+<script id="stitch-theme-init">(function(){try{if(localStorage.getItem("summit-theme")==="dark"){document.documentElement.classList.add("dark");document.documentElement.style.colorScheme="dark";}}catch(e){}})();</script>
+</head>
+<body class="bg-background text-on-surface antialiased min-h-screen flex flex-col selection:bg-secondary selection:text-white">
+<!-- Persisted App Shell: SideNav & TopAppBar Container -->
+<div class="flex h-screen overflow-hidden">
+<!-- 1. LEFT NAVIGATION SIDEBAR (Fixed layout according to Shared Components JSON) -->
+<aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Summit Healthcare Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIUSceXT4JgT_RjOJHH1_5Ja2X8b8cCgcu9wUSzwk0VNSjfhMq1sA1WT7_ydpQbxwnUeV-CXrpwwwkfohub5ZmF90LAoo9J_xRAfBcsphpdDnANBlLUFQE1x8Cwg5PNJcrUI0KnJfafoPYwmbAQSPU0-KujPvedr8bA-85WLgQkq--x_kTit3_bZTDYSo8eZRspVxZMCBWMn-Ll67g4Ffr_FP3s8naTY2AnLTRvvQJ"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-primary truncate leading-tight">Summit</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider truncate">Healthcare</span></div></div></div><div class="px-space-lg pb-space-md"><div class="inline-flex items-center px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container"><span class="font-label-sm text-label-sm tracking-wide uppercase font-semibold">Service Manager</span></div></div><nav class="flex flex-col gap-1 px-space-md" data-active-classes="bg-primary text-on-primary font-headline-sm rounded-lg"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="operations-dashboard.html"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-lg text-label-lg">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="equipment" href="equipment-database.html"><span class="material-symbols-outlined text-[20px]">precision_manufacturing</span><span class="font-label-lg text-label-lg">Equipment Database</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="calls" href="service-calls-register.html"><span class="material-symbols-outlined text-[20px]">support_agent</span><span class="font-label-lg text-label-lg">Service Calls</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-colors bg-primary text-on-primary font-headline-sm rounded-lg" data-path="contracts" href="contracts-pms-spares.html"><span class="material-symbols-outlined text-[20px]">verified</span><span class="font-label-lg text-label-lg">AMC/CMC & PMS</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="inventory" href="spares-inventory.html"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-label-lg text-label-lg">Spares Inventory</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="reports" title="Reports hub is Phase 5 - not exported from Stitch yet" href="reports-hub.html"><span class="material-symbols-outlined text-[20px]">analytics</span><span class="font-label-lg text-label-lg">Reports Hub</span></a><style>#master-nav-toggle .master-chev{transition:transform .2s ease}#master-nav-toggle.master-open .master-chev{transform:rotate(180deg)}</style><div class="flex flex-col"><button id="master-nav-toggle" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors w-full text-left" aria-expanded="false" aria-controls="master-nav-submenu"><span class="material-symbols-outlined text-[20px]">schema</span><span class="font-label-lg text-label-lg flex-1 text-left">Master Data</span><span class="material-symbols-outlined text-[18px] master-chev">expand_more</span></button><div id="master-nav-submenu" class="flex-col gap-0.5 pl-10 pt-0.5 hidden"><a href="masters.html" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">apps</span><span>All Masters Hub</span></a><a href="masters.html?tab=hospitals" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">local_hospital</span><span>Hospitals</span></a><a href="masters.html?tab=brands" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">branding_watermark</span><span>Brands</span></a><a href="masters.html?tab=types" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">category</span><span>Equipment Types</span></a><a href="masters.html?tab=models" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">precision_manufacturing</span><span>Equipment Models</span></a><a href="masters.html?tab=suppliers" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">local_shipping</span><span>Suppliers</span></a><a href="masters.html?tab=stores" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">warehouse</span><span>Stores &amp; Van Depots</span></a><a href="masters.html?tab=sla" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">timer</span><span>SLA Settings</span></a><a href="masters.html?tab=checklists" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">checklist</span><span>Checklist Templates</span></a></div></div><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="settings" title="Settings screen not exported from Stitch yet" href="admin-console.html"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-label-lg text-label-lg">Settings</span></a></nav></div><div class="p-space-lg bg-surface-container-low m-space-md rounded-lg flex items-center justify-between"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">System SLA</span><span class="font-headline-sm text-headline-sm text-primary">99.8%</span></div><div class="w-2.5 h-2.5 rounded-full bg-secondary ring-4 ring-secondary/20"></div></div></aside>
+<!-- Canvas Wrapper Area (Pushed right by sidebar width) -->
+<div class="pl-64 flex-1 flex flex-col h-screen overflow-hidden">
+<!-- 2. TOP NAVBAR (Shared Components JSON implementation) -->
+<header class="flex justify-between items-center h-16 px-space-lg w-full shrink-0 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+<!-- Left: Search Box -->
+<div class="flex items-center gap-3 w-1/3 min-w-[300px]">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-lg" data-icon="search">search</span>
+<input class="w-full h-10 pl-9 pr-4 py-2 bg-surface-container-low border border-outline-variant/50 rounded-lg text-body-sm font-body-sm text-on-surface focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary/20 placeholder:text-outline" placeholder="Search serial no, call no, hospital, part no..." type="text"/>
+</div>
+</div>
+<!-- Center: Role Switcher Badges -->
+<div class="flex items-center bg-surface-container-low p-1 rounded-full border border-outline-variant/40">
+<button class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm font-label-sm font-semibold transition-all shadow-xs"> Manager
+</button>
+<button class="text-on-surface-variant hover:text-on-surface px-3 py-1 text-label-sm font-label-sm font-medium transition-colors"> Engineer
+</button>
+<button class="text-on-surface-variant hover:text-on-surface px-3 py-1 text-label-sm font-label-sm font-medium transition-colors"> Admin
+</button>
+</div>
+<!-- Right: Primary Action & Profile Info -->
+<div class="flex items-center gap-4">
+<!-- Trailing Action Button -->
+<button class="flex items-center gap-1.5 bg-primary text-on-primary hover:bg-primary-container px-3.5 py-2 rounded-lg text-label-md font-label-md font-medium transition-all shadow-xs active:scale-[0.98]">
+<span class="material-symbols-outlined text-sm font-bold" data-icon="add">add</span>
+<span>+ Register Call</span>
+</button>
+<!-- Notification Bell with Count -->
+<button class="relative p-2 text-on-surface-variant hover:text-on-surface rounded-lg hover:bg-surface-container transition-colors">
+<span class="material-symbols-outlined text-2xl" data-icon="notifications">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-4 h-4 bg-error text-on-error rounded-full text-[10px] font-bold flex items-center justify-center border border-white"> 10
+</span>
+</button>
+<div class="h-6 w-px bg-outline-variant/40"></div>
+<!-- User Details & Avatar -->
+<div class="flex items-center gap-3 pl-1">
+<div class="w-9 h-9 rounded-full bg-primary-container text-secondary-fixed flex items-center justify-center font-bold text-sm border border-secondary/30"> RS
+</div>
+<div class="flex flex-col text-left">
+<span class="text-label-md font-label-md font-semibold text-on-surface leading-tight">Rahul Sharma</span>
+<span class="text-[11px] font-medium text-outline leading-none mt-0.5">Service Ops Manager</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Main Scrollable Canvas Content -->
+<main class="flex-1 overflow-y-auto pb-24 bg-surface px-8 pt-6">
+<div class="max-w-[1600px] mx-auto space-y-6">
+<!-- Page Header & Metadata Strip -->
+<div class="flex flex-col md:flex-row md:items-center justify-between gap-4 pb-4 border-b border-outline-variant/30">
+<div>
+<div class="flex items-center gap-2 text-label-md font-label-md text-outline mb-1">
+<span>Contracts</span>
+<span class="material-symbols-outlined text-xs" data-icon="chevron_right">chevron_right</span>
+<span class="text-primary font-semibold">New</span>
+</div>
+<div class="flex items-center gap-3">
+<h2 class="text-headline-xl font-headline-xl text-primary font-bold">New Maintenance Contract</h2>
+<span class="inline-flex items-center gap-1.5 px-3 py-1 rounded-full text-label-sm font-label-sm font-semibold bg-amber-50 text-amber-800 border border-amber-200">
+<span class="w-1.5 h-1.5 rounded-full bg-amber-500"></span> Draft Status —————— — Yearly Sequential Tagging
+</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant mt-1"> Set up multi-asset preventive maintenance agreement, define commercial SLA terms, and auto-generate visit milestones.
+</p>
+</div>
+<!-- Header Quick Metric Tags -->
+<div class="flex items-center gap-3">
+<div class="px-4 py-2 bg-surface-container-lowest border border-outline-variant/40 rounded-xl shadow-xs flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-2xl" data-icon="clinical_notes">clinical_notes</span>
+<div>
+<span class="text-[10px] uppercase font-bold text-outline tracking-wider block">Target Service SLA</span>
+<span class="text-label-md font-label-md font-bold text-primary">24h Breakdown Response</span>
+</div>
+</div>
+<div class="px-4 py-2 bg-surface-container-lowest border border-outline-variant/40 rounded-xl shadow-xs flex items-center gap-3">
+<span class="material-symbols-outlined text-secondary text-2xl" data-icon="shield">shield</span>
+<div>
+<span class="text-[10px] uppercase font-bold text-outline tracking-wider block">OEM Compliance</span>
+<span class="text-label-md font-label-md font-bold text-primary">AERB Validated</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Two Column Body Grid (7 cols left / 5 cols right layout) -->
+<div class="grid grid-cols-12 gap-6 items-start">
+<!-- LEFT COLUMN: Contract Details (7 Cols) -->
+<section class="col-span-12 xl:col-span-7 bg-surface-container-lowest rounded-xl border border-outline-variant/40 shadow-xs p-6 space-y-6">
+<!-- Card Header -->
+<div class="flex items-center justify-between pb-4 border-b border-outline-variant/20">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container-low text-primary flex items-center justify-center border border-outline-variant/30">
+<span class="material-symbols-outlined text-xl" data-icon="description">description</span>
+</div>
+<div>
+<h3 class="text-headline-md font-headline-md text-primary font-bold">Contract Specifications &amp; Terms</h3>
+<p class="text-body-sm font-body-sm text-outline">Define commercial parameters and SLA boundaries</p>
+</div>
+</div>
+<span class="px-2.5 py-1 rounded bg-surface-container-high text-primary font-semibold text-label-sm font-label-sm border border-outline-variant/30"> Step 1 of 2
+</span>
+</div>
+<!-- Form Body Content -->
+<div class="space-y-5">
+<!-- Row 1: Contract No & Type Segmented Toggle -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Contract No (Read Only) -->
+<div>
+<label class="block text-label-md font-label-md text-on-surface mb-1.5"> Contract Sequence ID
+</label>
+<div class="relative">
+<input class="w-full h-10 px-3 bg-surface-container-low border border-outline-variant/60 rounded-lg text-body-md font-body-md font-mono text-primary font-semibold focus:outline-none cursor-not-allowed" readonly="" type="text" value="AMC-2026-0013"/>
+<span class="absolute right-2.5 top-2.5 flex items-center gap-1 text-[11px] font-medium text-outline bg-surface-container-lowest px-2 py-0.5 rounded border border-outline-variant/40">
+<span class="material-symbols-outlined text-xs" data-icon="lock">lock</span> Auto-allocated sequence
+</span>
+</div>
+</div>
+<!-- Type Segmented Toggle -->
+<div>
+<label class="block text-label-md font-label-md text-on-surface mb-1.5"> Contract Agreement Type <span class="text-error">*</span>
+</label>
+<div class="flex p-1 bg-surface-container-low rounded-lg border border-outline-variant/40">
+<button class="flex-1 py-1.5 bg-primary text-on-primary rounded font-semibold text-label-md font-label-md shadow-xs text-center transition-all" type="button"> AMC (Annual Maint.)
+</button>
+<button class="flex-1 py-1.5 text-on-surface-variant hover:text-on-surface rounded font-medium text-label-md font-label-md text-center transition-all" type="button"> CMC (Comprehensive)
+</button>
+</div>
+</div>
+</div>
+<!-- Explanation Under Toggle -->
+<div class="p-3 bg-surface-container-low/70 rounded-lg border border-outline-variant/30 flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-lg mt-0.5" data-icon="info">info</span>
+<div class="text-body-sm font-body-sm text-on-surface-variant">
+<strong class="text-on-surface font-semibold">AMC:</strong> PMS visits + regular breakdown labor included; replacement spare parts chargeable at tariff. 
+<span class="text-outline italic ml-1 block sm:inline">(Note: CMC covers both labor and comprehensive replacement spares).</span>
+</div>
+</div>
+<!-- Row 2: Hospital Select Dropdown & Contract Value -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Hospital Select -->
+<div>
+<label class="block text-label-md font-label-md text-on-surface mb-1.5"> Client / Hospital Facility <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-10 pl-3 pr-8 bg-surface-container-lowest border border-outline-variant/60 rounded-lg text-body-md font-body-md text-on-surface font-medium focus:border-secondary focus:ring-1 focus:ring-secondary/20 appearance-none">
+<option selected="">Ruby Hall Clinic —————— — Pune</option>
+<option>Jupiter Hospital —————— — Thane</option>
+<option>Manipal Hospital —————— — Bangalore</option>
+<option>Fortis Memorial Research Institute —————— — Gurugram</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-outline pointer-events-none" data-icon="expand_more">expand_more</span>
+</div>
+<div class="text-body-sm font-body-sm text-outline mt-1 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="pin_drop">pin_drop</span> Plot 40, Sassoon Rd, Pune —————— — Client ID: <span class="font-mono text-primary">RHC-PN-002</span>
+</div>
+</div>
+<!-- Contract Value -->
+<div>
+<label class="block text-label-md font-label-md text-on-surface mb-1.5"> Total Annual Contract Value <span class="text-error">*</span>
+</label>
+<div class="relative">
+<span class="absolute left-3 top-2.5 font-semibold text-primary"> ———— </span>
+<input class="w-full h-10 pl-7 pr-3 bg-surface-container-lowest border border-outline-variant/60 rounded-lg text-body-md font-body-md font-semibold text-primary focus:border-secondary focus:ring-1 focus:ring-secondary/20" type="text" value="8,40,000"/>
+</div>
+<p class="text-body-sm font-body-sm text-outline mt-1">Calculated from 3 covered equipment items</p>
+</div>
+</div>
+<!-- Row 3: Start Date & End Date -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Start Date -->
+<div>
+<label class="block text-label-md font-label-md text-on-surface mb-1.5"> Contract Start Date <span class="text-error">*</span>
+</label>
+<div class="relative">
+<input class="w-full h-10 pl-9 pr-3 bg-surface-container-lowest border border-outline-variant/60 rounded-lg text-body-md font-body-md text-on-surface focus:border-secondary focus:ring-1 focus:ring-secondary/20 font-medium" type="text" value="01 Oct 2026"/>
+<span class="material-symbols-outlined absolute left-2.5 top-2.5 text-outline text-lg" data-icon="calendar_today">calendar_today</span>
+</div>
+</div>
+<!-- End Date -->
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<label class="text-label-md font-label-md text-on-surface"> Contract End Date <span class="text-error">*</span>
+</label>
+<span class="text-label-sm font-label-sm font-semibold text-secondary bg-secondary-container/40 px-2 py-0.5 rounded-full"> 12 Months Duration
+</span>
+</div>
+<div class="relative">
+<input class="w-full h-10 pl-9 pr-3 bg-surface-container-lowest border border-outline-variant/60 rounded-lg text-body-md font-body-md text-on-surface focus:border-secondary focus:ring-1 focus:ring-secondary/20 font-medium" type="text" value="30 Sep 2027"/>
+<span class="material-symbols-outlined absolute left-2.5 top-2.5 text-outline text-lg" data-icon="calendar_today">calendar_today</span>
+</div>
+</div>
+</div>
+<!-- Row 4: Payment Terms & PMS Frequency -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<!-- Payment Terms -->
+<div>
+<label class="block text-label-md font-label-md text-on-surface mb-1.5"> Commercial Payment Terms <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-10 pl-3 pr-8 bg-surface-container-lowest border border-outline-variant/60 rounded-lg text-body-md font-body-md text-on-surface focus:border-secondary focus:ring-1 focus:ring-secondary/20 appearance-none">
+<option selected="">50% advance, 50% on PMS completion</option>
+<option>100% Advance Payment</option>
+<option>Quarterly Equal Installments</option>
+<option>40-30-30 Stage-Gate Settlement</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-outline pointer-events-none" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+<!-- PMS Frequency -->
+<div>
+<label class="block text-label-md font-label-md text-on-surface mb-1.5"> PMS Routine Frequency <span class="text-error">*</span>
+</label>
+<div class="relative">
+<select class="w-full h-10 pl-3 pr-8 bg-surface-container-lowest border border-outline-variant/60 rounded-lg text-body-md font-body-md text-on-surface focus:border-secondary focus:ring-1 focus:ring-secondary/20 appearance-none font-medium">
+<option>Monthly (12 visits)</option>
+<option selected="">Quarterly (4 visits)</option>
+<option>Half-Yearly (2 visits)</option>
+<option>Annual (1 visit)</option>
+</select>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-outline pointer-events-none" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+</div>
+<!-- Row 5: Visits Per Year & Contract Status -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-4">
+<div>
+<label class="block text-label-md font-label-md text-on-surface mb-1.5"> Visits per Year (Calculated)
+</label>
+<div class="flex items-center gap-2">
+<div class="flex items-center border border-outline-variant/60 rounded-lg bg-surface-container-lowest overflow-hidden h-10 w-28">
+<button class="w-8 h-full flex items-center justify-center text-outline hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-sm" data-icon="remove">remove</span>
+</button>
+<input class="w-12 text-center font-bold text-primary border-0 p-0 focus:ring-0 text-body-md font-body-md" readonly="" type="text" value="4"/>
+<button class="w-8 h-full flex items-center justify-center text-outline hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-sm" data-icon="add">add</span>
+</button>
+</div>
+<span class="text-body-sm font-body-sm text-outline">visits based on Quarterly frequency</span>
+</div>
+</div>
+<div>
+<label class="block text-label-md font-label-md text-on-surface mb-1.5"> Contract Lifecycle State
+</label>
+<div class="h-10 flex items-center">
+<span class="inline-flex items-center gap-1.5 px-3 py-1.5 rounded-lg text-label-sm font-label-sm font-bold bg-amber-100 text-amber-900 border border-amber-300">
+<span class="w-2 h-2 rounded-full bg-amber-600"></span> Draft (Unfinalized)
+</span>
+</div>
+</div>
+</div>
+<!-- Terms & Notes Textarea -->
+<div>
+<label class="block text-label-md font-label-md text-on-surface mb-1.5"> Special SLA Terms &amp; Engineering Protocol Notes
+</label>
+<textarea class="w-full p-3 bg-surface-container-lowest border border-outline-variant/60 rounded-lg text-body-sm font-body-sm text-on-surface focus:border-secondary focus:ring-1 focus:ring-secondary/20 leading-relaxed resize-none" rows="3">Includes 4 PMS visits, breakdown on-call within 24h, parts chargeable at cost + 10%. Engineer SLA response window: &lt; 4 hours for Tier-1 emergency alerts.</textarea>
+</div>
+<!-- Contract Attachment Upload Section -->
+<div>
+<label class="block text-label-md font-label-md text-on-surface mb-1.5"> Contract Master Document Attachment
+</label>
+<div class="p-3 bg-surface-container-low rounded-lg border border-dashed border-outline-variant flex items-center justify-between">
+<div class="flex items-center gap-3">
+<div class="w-10 h-10 rounded-lg bg-red-100 text-red-700 flex items-center justify-center font-bold text-xs border border-red-200"> PDF
+</div>
+<div>
+<div class="flex items-center gap-2">
+<span class="text-body-sm font-body-sm font-semibold text-primary">Contract copy.pdf</span>
+<span class="text-label-sm font-label-sm text-green-700 bg-green-100 px-2 py-0.5 rounded flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="check_circle" style="font-variation-settings: 'FILL' 1;">check_circle</span> PDF Ready
+</span>
+</div>
+<span class="text-[11px] text-outline">1.8 MB —————— — Uploaded by Rahul Sharma</span>
+</div>
+</div>
+<button class="p-2 text-outline hover:text-error hover:bg-error-container/20 rounded-lg transition-colors" type="button">
+<span class="material-symbols-outlined text-lg" data-icon="delete">delete</span>
+</button>
+</div>
+</div>
+</div>
+</section>
+<!-- RIGHT COLUMN: Covered Equipment & Schedule Preview (5 Cols) -->
+<div class="col-span-12 xl:col-span-5 space-y-6">
+<!-- Covered Equipment Fleet Card -->
+<section class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 shadow-xs p-6 space-y-4">
+<div class="flex items-center justify-between pb-3 border-b border-outline-variant/20">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-2xl" data-icon="devices">devices</span>
+<div>
+<h3 class="text-headline-sm font-headline-sm text-primary font-bold">Covered Equipment Fleet (3 Assets)</h3>
+<p class="text-body-sm font-body-sm text-outline">Assets included under this maintenance envelope</p>
+</div>
+</div>
+<button class="px-3 py-1.5 rounded-lg border border-secondary text-secondary hover:bg-secondary/10 text-label-sm font-label-sm font-semibold flex items-center gap-1 transition-colors" type="button">
+<span class="material-symbols-outlined text-sm font-bold" data-icon="add">add</span>
+ + Add Equipment
+</button>
+</div>
+<!-- Asset Search Selector Helper -->
+<div class="relative">
+<span class="material-symbols-outlined absolute left-2.5 top-2.5 text-outline text-base" data-icon="search">search</span>
+<input class="w-full h-9 pl-8 pr-3 text-body-sm font-body-sm bg-surface-container-low border border-outline-variant/40 rounded-lg placeholder:text-outline focus:outline-none focus:border-secondary" placeholder="Search asset by serial or model to append..." type="text"/>
+</div>
+<!-- Mini Table Asset Grid -->
+<div class="overflow-x-auto rounded-lg border border-outline-variant/30">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-[10px] uppercase font-bold text-outline border-b border-outline-variant/30">
+<th class="py-2.5 px-3">Serial</th>
+<th class="py-2.5 px-3">Equipment &amp; Model</th>
+<th class="py-2.5 px-3">Modality</th>
+<th class="py-2.5 px-3 text-right">Annual Value</th>
+<th class="py-2.5 px-2 text-center">Action</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-outline-variant/20 text-body-sm font-body-sm">
+<!-- Row 1 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-3">
+<span class="font-mono text-xs font-semibold px-2 py-0.5 bg-surface-container-high rounded text-primary"> SG-CT-20451
+</span>
+</td>
+<td class="py-3 px-3 font-semibold text-on-surface"> Siemens Somatom Go.Top 128-Slice
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-sky-100 text-sky-800"> CT Scanner
+</span>
+</td>
+<td class="py-3 px-3 text-right font-semibold text-primary"> ₹ 3,10,000
+</td>
+<td class="py-3 px-2 text-center">
+<button class="text-outline hover:text-error transition-colors p-1">
+<span class="material-symbols-outlined text-base" data-icon="close">close</span>
+</button>
+</td>
+</tr>
+<!-- Row 2 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-3">
+<span class="font-mono text-xs font-semibold px-2 py-0.5 bg-surface-container-high rounded text-primary"> SG-MON-1128
+</span>
+</td>
+<td class="py-3 px-3 font-semibold text-on-surface"> Mindray BeneView T8
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-purple-100 text-purple-800"> Patient Monitor
+</span>
+</td>
+<td class="py-3 px-3 text-right font-semibold text-primary"> ₹ 90,000
+</td>
+<td class="py-3 px-2 text-center">
+<button class="text-outline hover:text-error transition-colors p-1">
+<span class="material-symbols-outlined text-base" data-icon="close">close</span>
+</button>
+</td>
+</tr>
+<!-- Row 3 -->
+<tr class="hover:bg-surface-container-low/50 transition-colors">
+<td class="py-3 px-3">
+<span class="font-mono text-xs font-semibold px-2 py-0.5 bg-surface-container-high rounded text-primary"> SG-VENT-0342
+</span>
+</td>
+<td class="py-3 px-3 font-semibold text-on-surface"> Mindray SV300 Critical Care
+</td>
+<td class="py-3 px-3">
+<span class="px-2 py-0.5 rounded text-[11px] font-semibold bg-teal-100 text-teal-800"> ICU Ventilator
+</span>
+</td>
+<td class="py-3 px-3 text-right font-semibold text-primary"> ₹ 4,40,000
+</td>
+<td class="py-3 px-2 text-center">
+<button class="text-outline hover:text-error transition-colors p-1">
+<span class="material-symbols-outlined text-base" data-icon="close">close</span>
+</button>
+</td>
+</tr>
+</tbody>
+<tfoot>
+<tr class="bg-surface-container-low font-bold text-primary border-t border-outline-variant/30">
+<td class="py-2.5 px-3 text-label-md font-label-md" colspan="3"> Total Contract Value (3 Assets Covered)
+</td>
+<td class="py-2.5 px-3 text-right text-label-md font-label-md text-secondary"> ₹ 8,40,000
+</td>
+<td></td>
+</tr>
+</tfoot>
+</table>
+</div>
+</section>
+<!-- Generated PMS Schedule Preview Card -->
+<section class="bg-surface-container-lowest rounded-xl border border-outline-variant/40 shadow-xs p-6 space-y-4">
+<div class="flex items-start justify-between pb-2 border-b border-outline-variant/20">
+<div class="flex items-center gap-2.5">
+<span class="material-symbols-outlined text-secondary text-2xl" data-icon="event_note">event_note</span>
+<div>
+<h3 class="text-headline-sm font-headline-sm text-primary font-bold"> Generated PMS Schedule Preview (Quarterly Interval)
+</h3>
+<p class="text-body-sm font-body-sm text-outline">Automated dispatch calendar mapped across contract timeline</p>
+</div>
+</div>
+<span class="px-2 py-0.5 rounded-full text-[10px] font-bold bg-secondary-container text-on-secondary-container uppercase"> Auto Generated
+</span>
+</div>
+<!-- 4 Visit Milestones Timeline Rows -->
+<div class="space-y-3">
+<!-- Visit 1 -->
+<div class="p-3 bg-surface-container-low/60 rounded-lg border border-outline-variant/30 flex items-start gap-3 hover:border-secondary/50 transition-colors">
+<div class="p-2 rounded-lg bg-surface-container-lowest text-secondary border border-outline-variant/30 mt-0.5 shrink-0">
+<span class="material-symbols-outlined text-lg" data-icon="calendar_month">calendar_month</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="text-label-md font-label-md font-bold text-primary">Visit 1 —————— — 01 Jan 2027</span>
+<span class="text-label-sm font-label-sm font-semibold px-2 py-0.5 rounded bg-surface-container-high text-on-surface"> Quarterly Milestone
+</span>
+</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant mt-1">
+<span class="font-medium text-outline">Covered Assets:</span> All 3 machines ————— <span class="font-medium text-outline">Checklist:</span> AERB &amp; OEM Protocol
+</div>
+</div>
+</div>
+<!-- Visit 2 -->
+<div class="p-3 bg-surface-container-low/60 rounded-lg border border-outline-variant/30 flex items-start gap-3 hover:border-secondary/50 transition-colors">
+<div class="p-2 rounded-lg bg-surface-container-lowest text-secondary border border-outline-variant/30 mt-0.5 shrink-0">
+<span class="material-symbols-outlined text-lg" data-icon="calendar_month">calendar_month</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="text-label-md font-label-md font-bold text-primary">Visit 2 —————— — 01 Apr 2027</span>
+<span class="text-label-sm font-label-sm font-semibold px-2 py-0.5 rounded bg-surface-container-high text-on-surface"> Quarterly Milestone
+</span>
+</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant mt-1">
+<span class="font-medium text-outline">Covered Assets:</span> All 3 machines ————— <span class="font-medium text-outline">Checklist:</span> Preventive Calibration
+</div>
+</div>
+</div>
+<!-- Visit 3 -->
+<div class="p-3 bg-surface-container-low/60 rounded-lg border border-outline-variant/30 flex items-start gap-3 hover:border-secondary/50 transition-colors">
+<div class="p-2 rounded-lg bg-surface-container-lowest text-secondary border border-outline-variant/30 mt-0.5 shrink-0">
+<span class="material-symbols-outlined text-lg" data-icon="calendar_month">calendar_month</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="text-label-md font-label-md font-bold text-primary">Visit 3 —————— — 01 Jul 2027</span>
+<span class="text-label-sm font-label-sm font-semibold px-2 py-0.5 rounded bg-surface-container-high text-on-surface"> Quarterly Milestone
+</span>
+</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant mt-1">
+<span class="font-medium text-outline">Covered Assets:</span> All 3 machines ————— <span class="font-medium text-outline">Checklist:</span> Safety &amp; Electrical Tests
+</div>
+</div>
+</div>
+<!-- Visit 4 -->
+<div class="p-3 bg-surface-container-low/60 rounded-lg border border-outline-variant/30 flex items-start gap-3 hover:border-secondary/50 transition-colors">
+<div class="p-2 rounded-lg bg-surface-container-lowest text-secondary border border-outline-variant/30 mt-0.5 shrink-0">
+<span class="material-symbols-outlined text-lg" data-icon="event_available">event_available</span>
+</div>
+<div class="flex-1">
+<div class="flex items-center justify-between">
+<span class="text-label-md font-label-md font-bold text-primary">Visit 4 —————— — 25 Sep 2027</span>
+<span class="text-label-sm font-label-sm font-semibold px-2 py-0.5 rounded bg-amber-100 text-amber-900 border border-amber-200"> Final Annual Audit
+</span>
+</div>
+<div class="text-body-sm font-body-sm text-on-surface-variant mt-1">
+<span class="font-medium text-outline">Covered Assets:</span> All 3 machines ————— <span class="font-medium text-outline">Checklist:</span> Comprehensive Sign-off
+</div>
+</div>
+</div>
+</div>
+<div class="p-2.5 bg-surface-container-low rounded-lg text-body-sm font-body-sm text-outline flex items-center gap-2">
+<span class="material-symbols-outlined text-sm text-secondary" data-icon="alarm">alarm</span>
+<span>Schedule will automatically register in Engineer Calendar &amp; trigger reminder notifications 7 days prior.</span>
+</div>
+</section>
+</div>
+</div>
+</div>
+</main>
+<!-- Sticky Bottom Footer Action Bar -->
+<footer class="fixed bottom-0 right-0 left-64 bg-surface-container-lowest/95 backdrop-blur-md border-t border-outline-variant/30 px-8 py-3.5 z-20 shadow-md flex items-center justify-between">
+<!-- Left Side Confirmation Context -->
+<div class="flex items-center gap-2 text-body-sm font-body-sm text-on-surface-variant">
+<span class="material-symbols-outlined text-secondary text-lg" data-icon="info">info</span>
+<span>Contract No <strong class="font-mono text-primary font-semibold">AMC-2026-0013</strong> will be permanently created on save with 4 automated PMS triggers.</span>
+</div>
+<!-- Right Side Primary Action Cluster -->
+<div class="flex items-center gap-3">
+<button class="px-4 py-2 border border-outline-variant/60 rounded-lg text-body-md font-body-md font-medium text-on-surface-variant hover:bg-surface-container-low transition-colors" type="button"> Cancel
+</button>
+<button class="px-4 py-2 border border-outline-variant/60 rounded-lg text-body-md font-body-md font-medium text-primary hover:bg-surface-container-low transition-colors" type="button"> Save as Draft
+</button>
+<button class="bg-secondary text-on-secondary hover:bg-on-secondary-container px-6 py-2.5 rounded-lg font-semibold text-body-md font-body-md flex items-center gap-2 shadow-xs transition-all active:scale-[0.98]" type="button">
+<span class="material-symbols-outlined text-lg" data-icon="task_alt">task_alt</span>
+<span>Save &amp; Generate PMS Schedule</span>
+</button>
+</div>
+</footer>
+</div>
+</div>
+<style id="stitch-dark">
+html.dark body{background-color:#12161c !important}
+html.dark .bg-background,html.dark .bg-surface,html.dark .bg-surface-bright{background-color:#12161c !important}
+html.dark .bg-surface-container-lowest{background-color:#1b2129 !important}
+html.dark .bg-surface-container-low{background-color:#171d25 !important}
+html.dark .bg-surface-container{background-color:#222933 !important}
+html.dark .bg-surface-container-high{background-color:#283038 !important}
+html.dark .bg-surface-container-highest{background-color:#303945 !important}
+html.dark .bg-surface-dim{background-color:#252d36 !important}
+html.dark .bg-primary{background-color:#0b3c5d !important}
+html.dark .bg-primary-container{background-color:#164e74 !important}
+html.dark .hover\:bg-surface-container-high:hover{background-color:#283038 !important}
+html.dark .hover\:bg-surface-container-low:hover{background-color:#171d25 !important}
+html.dark .hover\:bg-surface-container:hover{background-color:#222933 !important}
+html.dark .text-on-surface{color:#e6ebf0 !important}
+html.dark .text-on-background{color:#e6ebf0 !important}
+html.dark .text-on-surface-variant{color:#a8b3bc !important}
+html.dark .text-primary{color:#a3cbf2 !important}
+html.dark .text-outline{color:#8a949d !important}
+html.dark .text-secondary{color:#67d6e4 !important}
+html.dark .text-on-secondary-container{color:#a5f3fc !important}
+html.dark .text-white{color:#ffffff !important}
+html.dark .border-outline-variant{border-color:#2e3841 !important}
+html.dark .border-outline{border-color:#39434d !important}
+html.dark .divide-outline-variant > :not([hidden]) ~ :not([hidden]){border-color:#2e3841 !important}
+html.dark .placeholder\:text-outline::placeholder{color:#6f7a84 !important}
+html.dark input,html.dark select,html.dark textarea{color-scheme:dark}
+html.dark .shadow-sm,html.dark .shadow-md{box-shadow:0 1px 3px rgba(0,0,0,0.35) !important}
+html.dark kbd{background:#222933 !important;color:#a3cbf2 !important}
+:focus-visible{outline:2px solid #0e9aa7 !important;outline-offset:2px;border-radius:4px}
+</style><button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark / light theme" style="position:fixed;right:1rem;bottom:1rem;z-index:70;width:46px;height:46px;border-radius:9999px;background:#0b3c5d;color:#8df2ff;border:1px solid #0e9aa7;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(11,60,93,0.35)"><span class="material-symbols-outlined" id="theme-toggle-icon">dark_mode</span></button>
+<script id="stitch-extras">
+(function(){
+  var btn=document.getElementById('theme-toggle');
+  var icon=document.getElementById('theme-toggle-icon');
+  function sync(){if(icon)icon.textContent=document.documentElement.classList.contains('dark')?'light_mode':'dark_mode';}
+  if(btn)btn.addEventListener('click',function(){
+    var next=!document.documentElement.classList.contains('dark');
+    document.documentElement.classList.toggle('dark',next);
+    document.documentElement.style.colorScheme=next?'dark':'light';
+    try{localStorage.setItem('summit-theme',next?'dark':'light');}catch(e){}
+    sync();
+  });
+  sync();
+  document.querySelectorAll('input[type="search"]').forEach(function(el){
+    el.addEventListener('keydown',function(e){if(e.key==='Enter'){var q=el.value.trim();window.location.href='search-results.html?q='+encodeURIComponent(q||'SG-CT-20451');}});
+  });
+  document.querySelectorAll('button').forEach(function(b){
+    var h=(b.innerHTML||'').toLowerCase();var t=(b.textContent||'').toLowerCase();
+    if(h.indexOf('qr_code_2')!==-1){b.addEventListener('click',function(){window.location.href='qr-sticker.html';});}
+    else if(t.indexOf('print qr sticker')!==-1){b.addEventListener('click',function(){window.location.href='qr-sticker.html';});}
+    else if(t.indexOf('assign engineer')!==-1){b.addEventListener('click',function(){window.location.href='assign-engineer.html';});}
+  });
+})();
+</script><script id="stitch-wire">
+(function(){
+  var routes=[['register call','register-service-call.html'],['submit & assign','service-calls-fsr.html'],['submit','service-calls-fsr.html'],['save equipment','equipment-database.html'],['save & generate pms','contracts-pms-spares.html']];
+  document.querySelectorAll('button').forEach(function(b){
+    var t=(b.textContent||'').trim().toLowerCase();
+    for(var i=0;i<routes.length;i++){if(t.indexOf(routes[i][0])!==-1){b.style.cursor='pointer';b.addEventListener('click',(function(u){return function(){window.location.href=u;};})(routes[i][1]));break;}}
+  });
+})();
+</script><script id="stitch-bell">
+document.querySelectorAll('button').forEach(function(b){if(/notifications/i.test(b.textContent||'')){b.style.cursor='pointer';b.addEventListener('click',function(){window.location.href='notifications.html';});}});
+</script>
+<script id="master-nav">(function(){var b=document.getElementById("master-nav-toggle");if(!b)return;var s=document.getElementById("master-nav-submenu");var onMasters=/masters\.html/.test(location.pathname);function setOpen(v){if(!s)return;b.classList.toggle("master-open",v);s.classList.toggle("hidden",!v);b.setAttribute("aria-expanded",v?"true":"false");}b.addEventListener("click",function(){setOpen(!(b.classList.contains("master-open")));});setOpen(onMasters);if(onMasters){var m=location.search.match(/tab=([a-z]+)/);var q=m?m[1]:null;document.querySelectorAll("#master-nav-submenu a").forEach(function(a){var href=a.getAttribute("href")||"";var hit=q?href.indexOf("tab="+q)!==-1:href==="masters.html";if(hit)a.className="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg bg-primary text-on-primary transition-colors font-label-md text-label-md font-semibold";});}})();</script>
+</body></html>

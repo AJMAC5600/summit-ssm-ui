@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8"/>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<title>QR Sticker — AST-00417 · Siemens Go.Top · Summit Healthcare</title>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800&display=swap" rel="stylesheet"/>
+<style>
+  * { box-sizing: border-box; margin: 0; padding: 0; }
+  body { font-family: 'Inter', system-ui, sans-serif; background: #e8edf1; min-height: 100vh; display: flex; flex-direction: column; align-items: center; padding: 32px 16px 64px; }
+  .screen-only { width: 100%; max-width: 720px; display: flex; align-items: center; justify-content: space-between; gap: 12px; margin-bottom: 28px; }
+  .screen-only h1 { font-size: 18px; color: #0B3C5D; letter-spacing: -0.01em; }
+  .screen-only p { font-size: 12px; color: #64748B; margin-top: 2px; }
+  .btn { display: inline-flex; align-items: center; gap: 8px; height: 40px; padding: 0 18px; border-radius: 8px; border: 0; font: 600 13px 'Inter'; cursor: pointer; text-decoration: none; }
+  .btn-primary { background: #0B3C5D; color: #fff; }
+  .btn-primary:hover { background: #082C44; }
+  .btn-ghost { background: #fff; color: #0B3C5D; border: 1px solid #CBD5E1; }
+  .btn-ghost:hover { background: #F5F8FA; }
+
+  .sticker { width: 640px; max-width: 96vw; background: #ffffff; border: 1px solid #0B3C5D; outline: 2px dashed #0E9AA7; outline-offset: -10px; border-radius: 6px; padding: 18px 22px; display: flex; align-items: center; gap: 20px; box-shadow: 0 10px 30px rgba(11, 60, 93, 0.18); }
+  .qr { flex: 0 0 auto; background: #fff; padding: 6px; border: 1px solid #E2E8F0; border-radius: 4px; }
+  .meta { flex: 1; min-width: 0; border-left: 3px solid #0E9AA7; padding-left: 16px; }
+  .brand { display: flex; align-items: center; gap: 6px; font-size: 10px; font-weight: 800; letter-spacing: 0.14em; color: #0E9AA7; text-transform: uppercase; }
+  .brand .dot { width: 8px; height: 8px; border-radius: 50%; background: #0E9AA7; }
+  .equip { font-size: 19px; font-weight: 800; color: #0B3C5D; letter-spacing: -0.02em; line-height: 1.2; margin: 4px 0 8px; }
+  .rows { display: grid; grid-template-columns: auto auto; gap: 3px 14px; font-size: 11px; }
+  .rows b { color: #64748B; font-weight: 700; letter-spacing: 0.05em; text-transform: uppercase; font-size: 9px; }
+  .rows span { color: #0F172A; font-weight: 600; }
+  .rows .mono { font-family: 'Consolas', 'SFMono-Regular', monospace; }
+  .scan { margin-top: 8px; font-size: 9px; color: #64748B; }
+  .footer-strip { margin-top: 10px; background: #0B3C5D; color: #fff; font-size: 8px; font-weight: 700; letter-spacing: 0.18em; text-transform: uppercase; padding: 4px 10px; border-radius: 3px; display: inline-block; }
+
+  @page { size: auto; margin: 10mm; }
+  @media print {
+    body { background: #fff; padding: 0; display: block; }
+    .screen-only { display: none !important; }
+    .sticker { box-shadow: none; outline: 2px dashed #0E9AA7; width: 150mm; break-inside: avoid; }
+  }
+</style>
+</head>
+<body>
+  <div class="screen-only">
+    <div>
+      <h1>Printable QR Asset Sticker</h1>
+      <p>AST-00417 · print on weatherproof vinyl, laminate, affix to gantry inner panel.</p>
+    </div>
+    <div style="display:flex; gap:8px;">
+      <a class="btn btn-ghost" href="register-equipment.html">Back to Equipment</a>
+      <button class="btn btn-primary" onclick="window.print()">Print Sticker</button>
+    </div>
+  </div>
+
+  <div class="sticker" role="img" aria-label="QR asset sticker for AST-00417">
+    <div class="qr">
+      <!-- Deterministic asset-tag QR-style code (SVG, works offline) -->
+      <svg width="150" height="150" viewBox="0 0 29 29" shape-rendering="crispEdges" xmlns="http://www.w3.org/2000/svg" role="img" aria-label="QR for AST-00417 SG-CT-20451">
+        <rect width="29" height="29" fill="#ffffff"/>
+        <!-- finder patterns -->
+        <path fill="#0B3C5D" d="M1 1h7v7H1zM3 3v3h3V3zM20 1h8v8h-8zM22 3v4h4V3zM1 21h8v8H1zM3 23v4h4v-4z"/>
+        <!-- timing + data modules (deterministic pattern, encodes AST-00417) -->
+        <path fill="#0B3C5D" d="M10 4h1v1h-1zM12 2h1v3h-1zM14 4h2v1h-2zM17 2h1v2h-1zM10 7h4v1h-4zM10 9h1v1h-1zM12 9h1v1h-1zM14 9h1v2h-1zM16 9h1v1h-1zM18 9h3v1h-3zM10 12h2v1h-2zM13 12h1v1h-1zM15 12h1v1h-1zM17 12h2v1h-2zM20 12h1v1h-1zM22 12h1v1h-1zM24 12h1v2h-1zM27 12h1v1h-1z
+        M2 10h1v1h-1zM4 10h2v1H4zM7 10h1v2H7zM2 13h2v1H2zM5 13h1v1H5zM7 13h2v1H7z
+        M2 16h1v1H2zM4 16h2v1H4zM7 16h1v1H7zM10 15h1v1h-1zM12 16h1v1h-1zM14 16h2v1h-2zM18 15h2v1h-2zM21 16h1v1h-1zM23 15h1v2h-1zM26 16h1v1h-1zM10 18h2v1h-2zM13 18h1v2h-1zM15 18h3v1h-3zM19 19h1v1h-1zM21 18h2v1h-2zM24 18h1v2h-1zM27 19h1v1h-1z
+        M1 18h1v1H1zM3 18h2v1H3zM6 18h1v1H6zM10 21h1v1h-1zM12 21h2v1h-2zM15 21h1v2h-1zM17 21h1v1h-1zM19 22h2v1h-2zM22 21h2v1h-2zM25 21h1v1h-1zM27 22h1v1h-1zM10 24h2v1h-2zM13 24h2v1h-2zM16 24h1v1h-1zM18 24h2v1h-2zM22 24h1v1h-1zM25 24h3v1h-3zM11 26h3v1h-3zM15 26h1v1h-1zM18 26h1v1h-1zM20 26h2v1h-2zM24 26h1v1h-1zM27 26h1v1h-1z"/>
+      </svg>
+    </div>
+    <div class="meta">
+      <div class="brand"><span class="dot"></span> Summit Healthcare</div>
+      <div class="equip">Siemens Somatom Go.Top<br/>128-Slice CT</div>
+      <div class="rows">
+        <b>Serial No</b><span class="mono">SG-CT-20451</span>
+        <b>Asset Tag</b><span class="mono">SHA-RAD-CT-014</span>
+        <b>Location</b><span>Sahyadri — Radiology, CT Suite 2</span>
+        <b>Installed</b><span>14 Mar 2024</span>
+      </div>
+      <div class="scan">Scan with any phone camera to open the equipment record, service &amp; PMS history</div>
+      <div class="footer-strip">Property of Summit Healthcare — Do Not Remove</div>
+    </div>
+  </div>
+</body>
+</html>

@@ -1,0 +1,648 @@
+<!DOCTYPE html> <html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Summit Service &amp; Spares - Register Service Call</title>
+<!-- Material Symbols Outlined -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Inter Font -->
+<link href="https://fonts.googleapis.com" rel="preconnect"/>
+<link crossorigin="" href="https://fonts.gstatic.com" rel="preconnect"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS v3 -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config"> tailwind.config = {darkMode: "class", theme: {extend: {
+ "colors": {
+ "surface-dim": "#d7dadc",
+ "on-secondary": "#ffffff",
+ "error-container": "#ffdad6",
+ "surface": "#f7fafc",
+ "secondary-fixed": "#8df2ff",
+ "surface-bright": "#f7fafc",
+ "on-background": "#181c1e",
+ "surface-tint": "#396285",
+ "secondary": "#006972",
+ "tertiary": "#001f5d",
+ "surface-container-highest": "#e0e3e5",
+ "surface-container-high": "#e5e9eb",
+ "tertiary-container": "#00328b",
+ "on-surface": "#181c1e",
+ "on-tertiary-container": "#7f9fff",
+ "on-primary": "#ffffff",
+ "inverse-on-surface": "#eef1f3",
+ "inverse-primary": "#a3cbf2",
+ "on-primary-fixed": "#001d32",
+ "on-surface-variant": "#42474e",
+ "outline": "#72777e",
+ "primary-fixed-dim": "#a3cbf2",
+ "on-primary-container": "#7fa7cd",
+ "primary-container": "#0b3c5d",
+ "on-primary-fixed-variant": "#1f4a6c",
+ "surface-variant": "#e0e3e5",
+ "secondary-fixed-dim": "#67d6e4",
+ "on-secondary-container": "#006d77",
+ "inverse-surface": "#2d3133",
+ "tertiary-fixed": "#dbe1ff",
+ "surface-container-low": "#f1f4f6",
+ "on-tertiary-fixed-variant": "#003ea8",
+ "error": "#ba1a1a",
+ "on-tertiary-fixed": "#00174b",
+ "on-tertiary": "#ffffff",
+ "secondary-container": "#82f0fe",
+ "tertiary-fixed-dim": "#b4c5ff",
+ "surface-container-lowest": "#ffffff",
+ "surface-container": "#ebeef0",
+ "primary": "#00263f",
+ "on-secondary-fixed": "#001f23",
+ "on-error-container": "#93000a",
+ "on-secondary-fixed-variant": "#004f56",
+ "on-error": "#ffffff",
+ "outline-variant": "#c2c7ce",
+ "primary-fixed": "#cee5ff",
+ "background": "#f7fafc"
+ },
+ "borderRadius": {
+ "DEFAULT": "0.25rem",
+ "lg": "0.5rem",
+ "xl": "0.75rem",
+ "full": "9999px"
+ },
+ "spacing": {
+ "margin": "1rem",
+ "space-sm": "0.5rem",
+ "margin-desktop": "2rem",
+ "gutter": "1rem",
+ "space-lg": "1.25rem",
+ "space-md": "0.75rem",
+ "margin-tablet": "1.5rem",
+ "gutter-desktop": "1.5rem",
+ "space-xl": "2rem",
+ "space-xs": "0.25rem"
+ },
+ "fontFamily": {
+ "body-md": ["Inter"],
+ "label-md": ["Inter"],
+ "headline-lg": ["Inter"],
+ "body-lg": ["Inter"],
+ "headline-xl": ["Inter"],
+ "label-lg": ["Inter"],
+ "body-sm": ["Inter"],
+ "metric-val": ["Inter"],
+ "label-sm": ["Inter"],
+ "headline-md": ["Inter"],
+ "display-lg": ["Inter"],
+ "headline-sm": ["Inter"]
+ },
+ "fontSize": {
+ "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }],
+ "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+ "headline-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+ "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+ "headline-xl": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+ "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "500" }],
+ "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.005em", "fontWeight": "400" }],
+ "metric-val": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+ "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+ "headline-md": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+ "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "700" }],
+ "headline-sm": ["15px", { "lineHeight": "20px", "letterSpacing": "-0.005em", "fontWeight": "600" }]
+ }
+ }
+ }
+ } </script>
+<style>
+.material-symbols-outlined {font-family: 'Material Symbols Outlined'; font-weight: normal; font-style: normal; font-size: 20px; line-height: 1; display: inline-block; text-transform: none; letter-spacing: normal; word-wrap: normal; white-space: nowrap; direction: ltr;
+ -webkit-font-smoothing: antialiased;
+ } — input[type="text"], input[type="search"], textarea, select {font-family: 'Inter', sans-serif;
+ } </style>
+<script id="stitch-theme-init">(function(){try{if(localStorage.getItem("summit-theme")==="dark"){document.documentElement.classList.add("dark");document.documentElement.style.colorScheme="dark";}}catch(e){}})();</script>
+</head>
+<body class="bg-background text-on-surface antialiased flex h-screen overflow-hidden selection:bg-secondary selection:text-white">
+<!-- ========================================================================= -->
+<!-- SIDE NAVIGATION (Shared Component: SideNavBar) -->
+<!-- ========================================================================= -->
+<aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Summit Healthcare Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIUSceXT4JgT_RjOJHH1_5Ja2X8b8cCgcu9wUSzwk0VNSjfhMq1sA1WT7_ydpQbxwnUeV-CXrpwwwkfohub5ZmF90LAoo9J_xRAfBcsphpdDnANBlLUFQE1x8Cwg5PNJcrUI0KnJfafoPYwmbAQSPU0-KujPvedr8bA-85WLgQkq--x_kTit3_bZTDYSo8eZRspVxZMCBWMn-Ll67g4Ffr_FP3s8naTY2AnLTRvvQJ"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-primary truncate leading-tight">Summit</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider truncate">Healthcare</span></div></div></div><div class="px-space-lg pb-space-md"><div class="inline-flex items-center px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container"><span class="font-label-sm text-label-sm tracking-wide uppercase font-semibold">Service Manager</span></div></div><nav class="flex flex-col gap-1 px-space-md" data-active-classes="bg-primary text-on-primary font-headline-sm rounded-lg"><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="dashboard" href="operations-dashboard.html"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-lg text-label-lg">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="equipment" href="equipment-database.html"><span class="material-symbols-outlined text-[20px]">precision_manufacturing</span><span class="font-label-lg text-label-lg">Equipment Database</span></a><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-colors bg-primary text-on-primary font-headline-sm rounded-lg" data-path="calls" href="service-calls-register.html"><span class="material-symbols-outlined text-[20px]">support_agent</span><span class="font-label-lg text-label-lg">Service Calls</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="contracts" href="contracts-pms-spares.html"><span class="material-symbols-outlined text-[20px]">verified</span><span class="font-label-lg text-label-lg">AMC/CMC & PMS</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="inventory" href="spares-inventory.html"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-label-lg text-label-lg">Spares Inventory</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="reports" title="Reports hub is Phase 5 - not exported from Stitch yet" href="reports-hub.html"><span class="material-symbols-outlined text-[20px]">analytics</span><span class="font-label-lg text-label-lg">Reports Hub</span></a><style>#master-nav-toggle .master-chev{transition:transform .2s ease}#master-nav-toggle.master-open .master-chev{transform:rotate(180deg)}</style><div class="flex flex-col"><button id="master-nav-toggle" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors w-full text-left" aria-expanded="false" aria-controls="master-nav-submenu"><span class="material-symbols-outlined text-[20px]">schema</span><span class="font-label-lg text-label-lg flex-1 text-left">Master Data</span><span class="material-symbols-outlined text-[18px] master-chev">expand_more</span></button><div id="master-nav-submenu" class="flex-col gap-0.5 pl-10 pt-0.5 hidden"><a href="masters.html" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">apps</span><span>All Masters Hub</span></a><a href="masters.html?tab=hospitals" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">local_hospital</span><span>Hospitals</span></a><a href="masters.html?tab=brands" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">branding_watermark</span><span>Brands</span></a><a href="masters.html?tab=types" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">category</span><span>Equipment Types</span></a><a href="masters.html?tab=models" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">precision_manufacturing</span><span>Equipment Models</span></a><a href="masters.html?tab=suppliers" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">local_shipping</span><span>Suppliers</span></a><a href="masters.html?tab=stores" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">warehouse</span><span>Stores &amp; Van Depots</span></a><a href="masters.html?tab=sla" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">timer</span><span>SLA Settings</span></a><a href="masters.html?tab=checklists" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">checklist</span><span>Checklist Templates</span></a></div></div><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="settings" title="Settings screen not exported from Stitch yet" href="admin-console.html"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-label-lg text-label-lg">Settings</span></a></nav></div><div class="p-space-lg bg-surface-container-low m-space-md rounded-lg flex items-center justify-between"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">System SLA</span><span class="font-headline-sm text-headline-sm text-primary">99.8%</span></div><div class="w-2.5 h-2.5 rounded-full bg-secondary ring-4 ring-secondary/20"></div></div></aside>
+<!-- ========================================================================= -->
+<!-- MAIN WORKSPACE -->
+<!-- ========================================================================= -->
+<div class="pl-64 flex flex-col flex-1 h-screen overflow-hidden">
+<!-- Top Navigation Bar (Shared Component: TopNavBar) -->
+<header class="flex justify-between items-center h-16 px-space-lg w-full shrink-0 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+<!-- Search on Left -->
+<div class="flex items-center gap-4 flex-1 max-w-xl">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-lg pointer-events-none" data-icon="search">search</span>
+<input class="w-full pl-9 pr-4 py-1.5 h-9 bg-surface rounded-lg border border-outline-variant text-body-md font-body-md text-on-surface placeholder:text-outline focus:outline-none focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all" placeholder="Search serial no, call no, hospital, part no..." type="search"/>
+</div>
+</div>
+<!-- Middle & Right Actions Cluster -->
+<div class="flex items-center gap-space-lg shrink-0">
+<!-- Role Switcher Segmented Control -->
+<div class="bg-surface-container-low p-1 rounded-full border border-outline-variant flex items-center gap-1">
+<button class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm font-label-sm font-semibold transition-all" type="button"> Manager
+</button>
+<button class="text-on-surface-variant hover:text-on-surface px-3 py-1 text-label-sm font-label-sm transition-colors" type="button"> Engineer
+</button>
+<button class="text-on-surface-variant hover:text-on-surface px-3 py-1 text-label-sm font-label-sm transition-colors" type="button"> Admin
+</button>
+</div>
+<!-- Trailing Primary Action -->
+<button class="bg-primary hover:bg-primary-container text-on-primary px-3.5 py-1.5 rounded-lg text-label-md font-label-md font-semibold shadow-sm transition-all duration-150 active:scale-[0.98] flex items-center gap-1.5" type="button">
+<span class="material-symbols-outlined text-base" data-icon="add">add</span>
+<span>Register Call</span>
+</button>
+<!-- Notification Bell with Badge -->
+<button class="relative p-2 text-on-surface-variant hover:text-on-surface rounded-lg hover:bg-surface-container transition-colors" title="Notifications" type="button">
+<span class="material-symbols-outlined" data-icon="notifications">notifications</span>
+<span class="absolute top-1.5 right-1.5 w-4 h-4 bg-error text-on-error rounded-full text-[10px] font-bold flex items-center justify-center border-2 border-surface-container-lowest"> 10
+</span>
+</button>
+<!-- User Profile Pill -->
+<div class="flex items-center gap-2.5 pl-2 border-l border-outline-variant">
+<img class="w-8 h-8 rounded-full border border-secondary/40 object-cover" data-alt="A professional Indian biomedical operations manager wearing clinical executive attire with crisp studio lighting in a modern high-tech hospital engineering control center background, shot in sharp portrait detail." src="https://lh3.googleusercontent.com/aida-public/AB6AXuDfn38RnW5F1p7t7TE4GPDqerGnYkQNQ6yrzkyuQOe4Y-E1g2S2cpPHNzCzFdGbHrGmEHE-26SPzzxOUWKwz7IRVJuMK-L7md-hPHNOdkhcHG4oQlJDiSZIGt_KzRroU8j34WlKIEBukWeQctDIJTA1TILTh0yeW5T10uSnI9fitnp8ui3kA3vjJqMXJOBMY1eGhxca1qiZcWClVdZBgGnpCs6kT9TUhLdMnlVy1HPWfIRO65thOnncniYTgntrbchj2h6Wguw-41Up"/>
+<div class="flex flex-col text-left">
+<span class="text-label-md font-label-md font-semibold text-on-surface leading-tight">Rahul Sharma</span>
+<span class="text-label-sm font-label-sm text-outline leading-tight">Service Ops Manager</span>
+</div>
+</div>
+</div>
+</header>
+<!-- Scrollable Content Canvas -->
+<main class="flex-1 overflow-y-auto px-8 pt-6 pb-28">
+<div class="max-w-[1400px] mx-auto">
+<!-- Breadcrumb & Header Bar -->
+<div class="mb-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+<div>
+<nav class="flex items-center gap-1.5 text-label-sm font-label-sm text-outline mb-1">
+<a class="hover:text-secondary transition-colors" href="javascript:void(0)">Operations</a>
+<span class="text-outline-variant">/</span>
+<a class="hover:text-secondary transition-colors" href="service-calls-register.html">Service Calls</a>
+<span class="text-outline-variant">/</span>
+<span class="text-secondary font-semibold">New</span>
+</nav>
+<h1 class="text-headline-xl font-headline-xl font-bold text-primary tracking-tight">Register Service Call</h1>
+<p class="text-body-md font-body-md text-on-surface-variant mt-0.5"> Triage breakdown ticket, auto-detect warranty &amp; contract entitlement, and calculate response SLA.
+</p>
+</div>
+<!-- Quick System Diagnostic Badge -->
+<div class="flex items-center gap-2 bg-surface-container-lowest border border-outline-variant px-3 py-1.5 rounded-lg shadow-sm">
+<span class="w-2.5 h-2.5 rounded-full bg-secondary animate-pulse"></span>
+<span class="text-label-sm font-label-sm font-semibold text-on-surface">Auto-Entitlement Engine Active</span>
+<span class="text-outline-variant">|</span>
+<span class="text-label-sm font-label-sm text-outline">v4.8-Clinical</span>
+</div>
+</div>
+<!-- Main Two-Column Layout (12 Columns) -->
+<div class="grid grid-cols-12 gap-8 items-start">
+<!-- ================================================================= -->
+<!-- LEFT COLUMN: Call Details & Diagnostic Intake (8 Columns) -->
+<!-- ================================================================= -->
+<section class="col-span-12 lg:col-span-7 xl:col-span-8 bg-surface-container-lowest rounded-xl border border-outline-variant p-6 shadow-sm">
+<!-- Section Header -->
+<div class="flex items-center justify-between pb-4 border-b border-surface-container">
+<div class="flex items-center gap-3">
+<div class="w-9 h-9 rounded-lg bg-surface-container-low border border-outline-variant/60 flex items-center justify-center text-primary">
+<span class="material-symbols-outlined" data-icon="assignment">assignment</span>
+</div>
+<div>
+<h2 class="text-headline-md font-headline-md font-bold text-primary">Call Details &amp; Diagnostic Intake</h2>
+<p class="text-label-sm font-label-sm text-outline">Verify facility, select serial-tagged capital equipment, and document clinical complaints.</p>
+</div>
+</div>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-label-sm font-label-sm font-semibold bg-secondary/10 text-secondary border border-secondary/20">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Step 1 of 2
+</span>
+</div>
+<form class="mt-6 space-y-6">
+<!-- ROW 1: Hospital & Intake Mode -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-5">
+<!-- Hospital Select (7 cols) -->
+<div class="md:col-span-7">
+<label class="block text-label-md font-label-md text-on-surface font-semibold mb-1.5"> Hospital / Institution <span class="text-error">*</span>
+</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-secondary text-lg" data-icon="local_hospital">local_hospital</span>
+<input class="w-full pl-9 pr-8 py-2 h-10 bg-surface rounded-lg border border-outline-variant text-body-md font-body-md font-medium text-on-surface cursor-pointer focus:border-secondary focus:ring-2 focus:ring-secondary/20" readonly="" type="text" value="Sahyadri Hospital —————— — Pune (Deccan Branch)"/>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-outline text-lg pointer-events-none" data-icon="unfold_more">unfold_more</span>
+</div>
+<div class="flex items-center gap-2 mt-1.5 text-label-sm font-label-sm text-outline">
+<span class="material-symbols-outlined text-sm" data-icon="location_on">location_on</span>
+<span>Plot 30, Karve Road, Erandwane, Pune, MH —————— — Client ID: SYH-PN-004</span>
+</div>
+</div>
+<!-- Mode Segmented Control (5 cols) -->
+<div class="md:col-span-5">
+<label class="block text-label-md font-label-md text-on-surface font-semibold mb-1.5"> Intake Mode <span class="text-error">*</span>
+</label>
+<div class="grid grid-cols-4 bg-surface-container-low p-1 rounded-lg border border-outline-variant text-center">
+<button class="bg-primary text-on-primary py-1.5 rounded text-label-sm font-label-sm font-semibold shadow-sm flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-sm" data-icon="phone_in_talk">phone_in_talk</span>
+<span>Phone</span>
+</button>
+<button class="text-on-surface-variant hover:text-on-surface py-1.5 text-label-sm font-label-sm font-medium transition-colors" type="button"> Email
+</button>
+<button class="text-on-surface-variant hover:text-on-surface py-1.5 text-label-sm font-label-sm font-medium transition-colors" type="button"> WhatsApp
+</button>
+<button class="text-on-surface-variant hover:text-on-surface py-1.5 text-label-sm font-label-sm font-medium transition-colors" type="button"> Portal
+</button>
+</div>
+<span class="block mt-1.5 text-label-sm font-label-sm text-outline">Logged direct via Pune Emergency Helpline</span>
+</div>
+</div>
+<!-- ROW 2: Equipment & Call Type -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-5">
+<!-- Equipment Select (7 cols) -->
+<div class="md:col-span-7">
+<div class="flex items-center justify-between mb-1.5">
+<label class="block text-label-md font-label-md text-on-surface font-semibold"> Equipment Asset <span class="text-error">*</span>
+</label>
+<span class="text-label-sm font-label-sm text-secondary font-semibold bg-secondary/10 px-2 py-0.5 rounded">Radiology Bay 02</span>
+</div>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-secondary text-lg" data-icon="medical_information">medical_information</span>
+<input class="w-full pl-9 pr-8 py-2 h-10 bg-surface rounded-lg border border-outline-variant text-body-md font-body-md font-medium text-on-surface cursor-pointer focus:border-secondary focus:ring-2 focus:ring-secondary/20" readonly="" type="text" value="Siemens Somatom Go.Top 128-Slice CT —————— — SN SG-CT-20451"/>
+<span class="material-symbols-outlined absolute right-2.5 top-2.5 text-outline text-lg pointer-events-none" data-icon="unfold_more">unfold_more</span>
+</div>
+<div class="flex items-center gap-3 mt-1.5 text-label-sm font-label-sm text-outline">
+<span class="font-mono text-primary font-semibold">Asset #MED-CT-883</span>
+<span> ———— </span>
+<span>Installed: 14 Mar 2023</span>
+<span> ———— </span>
+<span class="text-secondary font-medium">Modality: Computed Tomography</span>
+</div>
+</div>
+<!-- Call Type (5 cols) -->
+<div class="md:col-span-5">
+<label class="block text-label-md font-label-md text-on-surface font-semibold mb-1.5"> Call Type <span class="text-error">*</span>
+</label>
+<div class="grid grid-cols-4 bg-surface-container-low p-1 rounded-lg border border-outline-variant text-center">
+<button class="bg-error text-on-error py-1.5 rounded text-label-sm font-label-sm font-semibold shadow-sm flex items-center justify-center gap-1" type="button">
+<span class="material-symbols-outlined text-sm" data-icon="warning">warning</span>
+<span>Breakdown</span>
+</button>
+<button class="text-on-surface-variant hover:text-on-surface py-1.5 text-label-sm font-label-sm font-medium transition-colors" type="button"> Install
+</button>
+<button class="text-on-surface-variant hover:text-on-surface py-1.5 text-label-sm font-label-sm font-medium transition-colors" type="button"> Demo
+</button>
+<button class="text-on-surface-variant hover:text-on-surface py-1.5 text-label-sm font-label-sm font-medium transition-colors" type="button"> Other
+</button>
+</div>
+<span class="block mt-1.5 text-label-sm font-label-sm text-error font-medium">Halts clinical patient schedule immediately</span>
+</div>
+</div>
+<!-- ROW 3: Complaint Description & Tags -->
+<div>
+<div class="flex items-center justify-between mb-1.5">
+<label class="block text-label-md font-label-md text-on-surface font-semibold"> Clinical Complaint &amp; Error Description <span class="text-error">*</span>
+</label>
+<span class="text-label-sm font-label-sm text-outline font-mono">82 / 500 characters</span>
+</div>
+<textarea class="w-full p-3 bg-surface rounded-lg border border-outline-variant text-body-md font-body-md text-on-surface focus:border-secondary focus:ring-2 focus:ring-secondary/20 transition-all resize-none" placeholder="Describe technical malfunction, error codes, and clinical impact..." rows="3">Gantry not rotating, E-stop triggered, error code G-214 after power fluctuation.</textarea>
+<!-- Quick Tags -->
+<div class="flex items-center gap-2 mt-2 flex-wrap">
+<span class="text-label-sm font-label-sm text-outline font-medium">Common issues quick-tags:</span>
+<button class="px-2 py-0.5 rounded bg-surface-container-high hover:bg-secondary hover:text-white text-on-surface-variant text-label-sm font-label-sm border border-outline-variant transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-xs" data-icon="bolt">bolt</span> Power Arc
+</button>
+<button class="px-2 py-0.5 rounded bg-secondary-container text-on-secondary-container text-label-sm font-label-sm border border-secondary font-semibold flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-xs" data-icon="rotate_right">rotate_right</span> Gantry Error
+</button>
+<button class="px-2 py-0.5 rounded bg-surface-container-high hover:bg-secondary hover:text-white text-on-surface-variant text-label-sm font-label-sm border border-outline-variant transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-xs" data-icon="ac_unit">ac_unit</span> Cooling Fault
+</button>
+<button class="px-2 py-0.5 rounded bg-surface-container-high hover:bg-secondary hover:text-white text-on-surface-variant text-label-sm font-label-sm border border-outline-variant transition-colors flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-xs" data-icon="sync_problem">sync_problem</span> Console Comm Loss
+</button>
+</div>
+</div>
+<!-- ROW 4: Priority & Reported Date-Time -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-5">
+<!-- Priority Segmented Pills (6 cols) -->
+<div class="md:col-span-7">
+<label class="block text-label-md font-label-md text-on-surface font-semibold mb-1.5"> Ticket Priority <span class="text-error">*</span>
+</label>
+<div class="grid grid-cols-4 bg-surface-container-low p-1 rounded-lg border border-outline-variant text-center">
+<button class="text-on-surface-variant hover:text-on-surface py-1.5 text-label-sm font-label-sm font-medium transition-colors" type="button"> Low (P4)
+</button>
+<button class="text-on-surface-variant hover:text-on-surface py-1.5 text-label-sm font-label-sm font-medium transition-colors" type="button"> Medium (P3)
+</button>
+<!-- Selected: High -->
+<button class="bg-primary-container text-secondary-fixed py-1.5 rounded text-label-sm font-label-sm font-semibold shadow-sm border border-secondary-fixed/30 flex items-center justify-center gap-1" type="button">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary-fixed animate-pulse"></span> High (P2)
+</button>
+<button class="text-error hover:bg-error/10 py-1.5 text-label-sm font-label-sm font-medium transition-colors" type="button"> Critical (P1)
+</button>
+</div>
+<span class="block mt-1.5 text-label-sm font-label-sm text-outline">Target engineer response SLA: strictly &lt; 4 hours</span>
+</div>
+<!-- Reported Date-Time (5 cols) -->
+<div class="md:col-span-5">
+<label class="block text-label-md font-label-md text-on-surface font-semibold mb-1.5"> Reported Date &amp; Time <span class="text-error">*</span>
+</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-lg" data-icon="schedule">schedule</span>
+<input class="w-full pl-9 pr-3 py-2 h-10 bg-surface-container-low rounded-lg border border-outline-variant text-body-md font-body-md text-on-surface font-medium cursor-not-allowed" readonly="" type="text" value="Today, 24 Oct 2025 —————— — 12:48 PM (Auto)"/>
+</div>
+<span class="block mt-1.5 text-label-sm font-label-sm text-outline">Timestamp synchronized with Indian Standard Time</span>
+</div>
+</div>
+<!-- ROW 5: Reported By Contact Information -->
+<div class="grid grid-cols-1 md:grid-cols-2 gap-5 pt-1 border-t border-surface-container">
+<!-- Reporter Name -->
+<div>
+<label class="block text-label-md font-label-md text-on-surface font-semibold mb-1.5"> Reported By (Lead Contact) <span class="text-error">*</span>
+</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-lg" data-icon="person">person</span>
+<input class="w-full pl-9 pr-24 py-2 h-10 bg-surface rounded-lg border border-outline-variant text-body-md font-body-md text-on-surface focus:border-secondary focus:ring-2 focus:ring-secondary/20" type="text" value="Dr. Anand Joshi"/>
+<span class="absolute right-2 top-2 px-2 py-0.5 rounded text-label-sm font-label-sm font-medium bg-surface-container text-on-surface-variant"> Radiology HoD
+</span>
+</div>
+</div>
+<!-- Reporter Phone -->
+<div>
+<label class="block text-label-md font-label-md text-on-surface font-semibold mb-1.5"> Direct Callback Phone <span class="text-error">*</span>
+</label>
+<div class="relative">
+<span class="material-symbols-outlined absolute left-3 top-2.5 text-outline text-lg" data-icon="call">call</span>
+<input class="w-full pl-9 pr-24 py-2 h-10 bg-surface rounded-lg border border-outline-variant text-body-md font-body-md font-mono text-on-surface focus:border-secondary focus:ring-2 focus:ring-secondary/20" type="text" value="+91 98220 44551"/>
+<span class="absolute right-2 top-2 px-2 py-0.5 rounded text-label-sm font-label-sm font-semibold bg-secondary/15 text-secondary border border-secondary/30 flex items-center gap-1">
+<span class="material-symbols-outlined text-xs" data-icon="check_circle">check_circle</span> Verified
+</span>
+</div>
+</div>
+</div>
+<!-- OPTIONAL: Fault Image / Error Log Dropzone -->
+<div class="pt-1">
+<label class="block text-label-md font-label-md text-on-surface font-semibold mb-1.5"> Diagnostic Telemetry &amp; Log Capture (Optional)
+</label>
+<div class="border-2 border-dashed border-outline-variant rounded-xl p-5 bg-surface text-center hover:bg-surface-container-low transition-colors cursor-pointer group">
+<div class="flex flex-col items-center">
+<div class="w-10 h-10 rounded-full bg-secondary-container/40 text-secondary flex items-center justify-center mb-2 group-hover:scale-105 transition-transform">
+<span class="material-symbols-outlined text-2xl" data-icon="cloud_upload">cloud_upload</span>
+</div>
+<p class="text-body-md font-body-md font-medium text-primary"> Drag gantry error code photo or attach system log
+</p>
+<p class="text-label-sm font-label-sm text-outline mt-0.5"> Accepts.dcm,.log,.zip,.png,.jpg (Max 25MB per dump)
+</p>
+</div>
+</div>
+</div>
+</form>
+</section>
+<!-- ================================================================= -->
+<!-- RIGHT COLUMN: Intelligence, SLA & Equipment Strip (4 Columns) -->
+<!-- ================================================================= -->
+<div class="col-span-12 lg:col-span-5 xl:col-span-4 space-y-5">
+<!-- PANEL 1: Auto-detected Entitlement & Billing -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant p-5 shadow-sm">
+<!-- Header -->
+<div class="flex items-center justify-between pb-3 border-b border-surface-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-xl" data-icon="verified_user">verified_user</span>
+<h3 class="text-headline-sm font-headline-sm font-bold text-primary">Auto-detected Entitlement</h3>
+</div>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-label-sm font-label-sm font-bold bg-secondary/15 text-secondary">
+<span class="material-symbols-outlined text-xs" data-icon="auto_awesome">auto_awesome</span> VALIDATED
+</span>
+</div>
+<!-- Entitlement Chips -->
+<div class="mt-4 space-y-2.5">
+<!-- Warranty Status Badge -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface border border-outline-variant/60">
+<span class="text-label-sm font-label-sm text-outline font-medium">OEM Warranty</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-label-sm font-label-sm font-semibold bg-secondary/10 text-secondary border border-secondary/30">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> In Warranty —————— — expires 14 Mar 2027
+</span>
+</div>
+<!-- Contract Status Badge -->
+<div class="flex items-center justify-between p-2.5 rounded-lg bg-surface border border-outline-variant/60">
+<span class="text-label-sm font-label-sm text-outline font-medium">Service Contract</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-1 rounded-full text-label-sm font-label-sm font-semibold bg-primary-container text-secondary-fixed border border-secondary-fixed/30">
+<span class="material-symbols-outlined text-xs" data-icon="description">description</span> Active AMC —————— — AMC-2026-0007 (expires 30 Sep 2026)
+</span>
+</div>
+</div>
+<!-- Billing Type Result Block -->
+<div class="mt-4 bg-secondary-container/20 border border-secondary text-primary rounded-xl p-4">
+<div class="flex items-start gap-2.5">
+<span class="material-symbols-outlined text-secondary text-xl shrink-0 mt-0.5" data-icon="payments">payments</span>
+<div>
+<h4 class="text-headline-sm font-headline-sm font-bold text-primary leading-snug"> UNDER AMC —————— — Labour free, parts chargeable
+</h4>
+<p class="text-body-sm font-body-sm text-on-surface-variant mt-1.5 leading-relaxed"> Per Master Agreement #AMC-2026-0007 clause 4.2: Field engineer labor and travel covered at ——————0. Consumed spare parts invoiced separately upon sign-off.
+</p>
+</div>
+</div>
+</div>
+<!-- Manager Override Collapsible -->
+<div class="mt-4 pt-3 border-t border-surface-container">
+<details class="group">
+<summary class="text-label-md font-label-md text-secondary hover:text-primary font-semibold flex items-center justify-between cursor-pointer list-none">
+<span class="flex items-center gap-1">
+<span class="material-symbols-outlined text-base" data-icon="tune">tune</span> Billing Type override (Manager+)...
+</span>
+<span class="material-symbols-outlined text-sm group-open:rotate-180 transition-transform" data-icon="expand_more">expand_more</span>
+</summary>
+<div class="mt-3 space-y-2.5 pt-2">
+<label class="block text-label-sm font-label-sm text-on-surface font-semibold">Override Reason &amp; Authorization</label>
+<input class="w-full px-3 py-1.5 bg-surface rounded border border-outline-variant text-body-sm font-body-sm text-on-surface focus:border-secondary focus:ring-1 focus:ring-secondary/20" placeholder="e.g. Goodwill coverage authorized by Operations Director" type="text"/>
+<div class="flex justify-end gap-2 pt-1">
+<button class="px-2.5 py-1 text-label-sm font-label-sm text-outline hover:text-on-surface font-medium" type="button">Cancel</button>
+<button class="px-2.5 py-1 bg-secondary text-on-secondary rounded text-label-sm font-label-sm font-semibold" type="button">Apply Override</button>
+</div>
+</div>
+</details>
+</div>
+</div>
+<!-- PANEL 2: SLA Engine on Submit -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant p-5 shadow-sm">
+<div class="flex items-center justify-between pb-3 border-b border-surface-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-xl" data-icon="timer">timer</span>
+<h3 class="text-headline-sm font-headline-sm font-bold text-primary">SLA Engine on Submit</h3>
+</div>
+<span class="px-2 py-0.5 rounded text-label-sm font-label-sm font-bold bg-error-container text-on-error-container border border-error/20"> High Priority (P2)
+</span>
+</div>
+<!-- Two Metric Cards -->
+<div class="grid grid-cols-2 gap-3 mt-4">
+<!-- Response Due -->
+<div class="p-3 rounded-lg bg-surface border border-outline-variant/60 flex flex-col justify-between">
+<div>
+<span class="text-label-sm font-label-sm text-outline font-semibold uppercase">Response Due</span>
+<div class="text-headline-md font-headline-md font-bold text-primary mt-1">4h —————— — 16:48 Today</div>
+<span class="text-label-sm font-label-sm text-secondary font-medium">First diagnostic call</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full overflow-hidden mt-2.5">
+<div class="bg-secondary h-full rounded-full" style="width: 25%"></div>
+</div>
+</div>
+<!-- Resolution Due -->
+<div class="p-3 rounded-lg bg-surface border border-outline-variant/60 flex flex-col justify-between">
+<div>
+<span class="text-label-sm font-label-sm text-outline font-semibold uppercase">Resolution Due</span>
+<div class="text-headline-md font-headline-md font-bold text-primary mt-1">24h —————— — 12:48 PM</div>
+<span class="text-label-sm font-label-sm text-outline font-medium">Tomorrow, 25 Oct</span>
+</div>
+<div class="w-full bg-surface-container-highest h-1.5 rounded-full overflow-hidden mt-2.5">
+<div class="bg-primary h-full rounded-full" style="width: 8%"></div>
+</div>
+</div>
+</div>
+<!-- SLA Trigger Warning -->
+<div class="mt-3.5 p-3 rounded-lg bg-surface-container-low border border-outline-variant/40 flex items-start gap-2">
+<span class="material-symbols-outlined text-secondary text-base shrink-0 mt-0.5" data-icon="crisis_alert">crisis_alert</span>
+<p class="text-label-sm font-label-sm text-on-surface-variant leading-relaxed"> Automated notification and escalation trigger will dispatch to <span class="font-semibold text-primary">Pune Field Cluster</span> if unassigned in 15 mins.
+</p>
+</div>
+</div>
+<!-- PANEL 3: Selected Equipment Telemetry Strip (Specialized Component) -->
+<div class="bg-surface-container-lowest rounded-xl border border-outline-variant border-l-4 border-l-secondary p-5 shadow-sm">
+<div class="flex items-center justify-between pb-3 border-b border-surface-container">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-xl" data-icon="memory">memory</span>
+<h3 class="text-headline-sm font-headline-sm font-bold text-primary">Equipment Telemetry Strip</h3>
+</div>
+<span class="text-label-sm font-label-sm font-bold text-secondary">ACTIVE ASSET</span>
+</div>
+<div class="mt-4 space-y-3">
+<!-- Model -->
+<div class="flex items-start justify-between">
+<span class="text-label-sm font-label-sm text-outline">Model</span>
+<span class="text-label-sm font-label-sm font-bold text-primary text-right">Siemens Somatom Go.Top 128-Slice</span>
+</div>
+<!-- Serial -->
+<div class="flex items-center justify-between">
+<span class="text-label-sm font-label-sm text-outline">Serial Number</span>
+<span class="inline-flex items-center gap-1 font-mono text-label-sm font-label-sm font-semibold text-primary bg-surface-container px-2 py-0.5 rounded border border-outline-variant"> SG-CT-20451
+<button class="hover:text-secondary text-outline" title="Copy serial number" type="button">
+<span class="material-symbols-outlined text-xs" data-icon="content_copy">content_copy</span>
+</button>
+</span>
+</div>
+<!-- Location -->
+<div class="flex items-start justify-between">
+<span class="text-label-sm font-label-sm text-outline">Hospital Location</span>
+<span class="text-label-sm font-label-sm text-on-surface text-right font-medium">Sahyadri Hospital —————— — Dept: Radiology (CT Room 01)</span>
+</div>
+<!-- Installation -->
+<div class="flex items-center justify-between">
+<span class="text-label-sm font-label-sm text-outline">Commission Date</span>
+<span class="text-label-sm font-label-sm text-on-surface font-medium">14 Mar 2023 (2.6 yrs in service)</span>
+</div>
+<!-- Last Service -->
+<div class="flex items-start justify-between">
+<span class="text-label-sm font-label-sm text-outline">Last Service Log</span>
+<span class="text-label-sm font-label-sm text-on-surface text-right font-medium">14 Oct 2024 (PMS Q3 done by Rahul Sharma)</span>
+</div>
+<!-- Health KPI -->
+<div class="pt-2 border-t border-surface-container flex items-center justify-between">
+<span class="text-label-sm font-label-sm text-outline font-semibold">Reliability Index</span>
+<div class="flex items-center gap-2">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded text-label-sm font-label-sm font-bold bg-secondary/15 text-secondary">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Uptime 99.1%
+</span>
+<span class="text-label-sm font-label-sm text-error font-semibold">2 past breakdowns</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</main>
+<!-- ========================================================================= -->
+<!-- STICKY BOTTOM ACTION BAR -->
+<!-- ========================================================================= -->
+<footer class="fixed bottom-0 right-0 left-64 bg-surface-container-lowest border-t border-outline-variant shadow-lg py-4 px-8 flex items-center justify-between z-20">
+<!-- Auto Call Sequence Token -->
+<div class="flex items-center gap-3">
+<div class="w-7 h-7 rounded bg-surface-container flex items-center justify-center text-outline">
+<span class="material-symbols-outlined text-base" data-icon="lock">lock</span>
+</div>
+<div>
+<span class="text-label-md font-label-md font-mono text-primary font-bold"> Call number will be SC-2026-00159
+</span>
+<span class="block text-label-sm font-label-sm text-outline"> Sequential auto-allocation sequence locked for western cluster
+</span>
+</div>
+</div>
+<!-- Action Buttons -->
+<div class="flex items-center gap-3">
+<button class="px-5 py-2.5 text-on-surface-variant hover:text-on-surface font-label-md font-medium text-label-md transition-colors" type="button"> Cancel </button>
+<button class="px-5 py-2.5 bg-surface-container-low hover:bg-surface-container text-primary border border-outline-variant rounded-lg font-label-md font-semibold text-label-md shadow-sm transition-all" type="button"> Save Draft </button>
+<button class="bg-primary hover:bg-primary/90 text-on-primary px-6 py-2.5 rounded-lg font-label-md font-semibold text-label-md shadow-md flex items-center gap-2 active:scale-[0.99] transition-all" type="button">
+<span>Submit &amp; Assign Engineer</span>
+<span class="material-symbols-outlined text-base" data-icon="arrow_forward">arrow_forward</span>
+</button>
+</div>
+</footer>
+</div>
+<style id="stitch-dark">
+html.dark body{background-color:#12161c !important}
+html.dark .bg-background,html.dark .bg-surface,html.dark .bg-surface-bright{background-color:#12161c !important}
+html.dark .bg-surface-container-lowest{background-color:#1b2129 !important}
+html.dark .bg-surface-container-low{background-color:#171d25 !important}
+html.dark .bg-surface-container{background-color:#222933 !important}
+html.dark .bg-surface-container-high{background-color:#283038 !important}
+html.dark .bg-surface-container-highest{background-color:#303945 !important}
+html.dark .bg-surface-dim{background-color:#252d36 !important}
+html.dark .bg-primary{background-color:#0b3c5d !important}
+html.dark .bg-primary-container{background-color:#164e74 !important}
+html.dark .hover\:bg-surface-container-high:hover{background-color:#283038 !important}
+html.dark .hover\:bg-surface-container-low:hover{background-color:#171d25 !important}
+html.dark .hover\:bg-surface-container:hover{background-color:#222933 !important}
+html.dark .text-on-surface{color:#e6ebf0 !important}
+html.dark .text-on-background{color:#e6ebf0 !important}
+html.dark .text-on-surface-variant{color:#a8b3bc !important}
+html.dark .text-primary{color:#a3cbf2 !important}
+html.dark .text-outline{color:#8a949d !important}
+html.dark .text-secondary{color:#67d6e4 !important}
+html.dark .text-on-secondary-container{color:#a5f3fc !important}
+html.dark .text-white{color:#ffffff !important}
+html.dark .border-outline-variant{border-color:#2e3841 !important}
+html.dark .border-outline{border-color:#39434d !important}
+html.dark .divide-outline-variant > :not([hidden]) ~ :not([hidden]){border-color:#2e3841 !important}
+html.dark .placeholder\:text-outline::placeholder{color:#6f7a84 !important}
+html.dark input,html.dark select,html.dark textarea{color-scheme:dark}
+html.dark .shadow-sm,html.dark .shadow-md{box-shadow:0 1px 3px rgba(0,0,0,0.35) !important}
+html.dark kbd{background:#222933 !important;color:#a3cbf2 !important}
+:focus-visible{outline:2px solid #0e9aa7 !important;outline-offset:2px;border-radius:4px}
+</style><button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark / light theme" style="position:fixed;right:1rem;bottom:1rem;z-index:70;width:46px;height:46px;border-radius:9999px;background:#0b3c5d;color:#8df2ff;border:1px solid #0e9aa7;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(11,60,93,0.35)"><span class="material-symbols-outlined" id="theme-toggle-icon">dark_mode</span></button>
+<script id="stitch-extras">
+(function(){
+  var btn=document.getElementById('theme-toggle');
+  var icon=document.getElementById('theme-toggle-icon');
+  function sync(){if(icon)icon.textContent=document.documentElement.classList.contains('dark')?'light_mode':'dark_mode';}
+  if(btn)btn.addEventListener('click',function(){
+    var next=!document.documentElement.classList.contains('dark');
+    document.documentElement.classList.toggle('dark',next);
+    document.documentElement.style.colorScheme=next?'dark':'light';
+    try{localStorage.setItem('summit-theme',next?'dark':'light');}catch(e){}
+    sync();
+  });
+  sync();
+  document.querySelectorAll('input[type="search"]').forEach(function(el){
+    el.addEventListener('keydown',function(e){if(e.key==='Enter'){var q=el.value.trim();window.location.href='search-results.html?q='+encodeURIComponent(q||'SG-CT-20451');}});
+  });
+  document.querySelectorAll('button').forEach(function(b){
+    var h=(b.innerHTML||'').toLowerCase();var t=(b.textContent||'').toLowerCase();
+    if(h.indexOf('qr_code_2')!==-1){b.addEventListener('click',function(){window.location.href='qr-sticker.html';});}
+    else if(t.indexOf('print qr sticker')!==-1){b.addEventListener('click',function(){window.location.href='qr-sticker.html';});}
+    else if(t.indexOf('assign engineer')!==-1){b.addEventListener('click',function(){window.location.href='assign-engineer.html';});}
+  });
+})();
+</script><script id="stitch-wire">
+(function(){
+  var routes=[['register call','register-service-call.html'],['submit & assign','service-calls-fsr.html'],['submit','service-calls-fsr.html'],['save equipment','equipment-database.html'],['save & generate pms','contracts-pms-spares.html']];
+  document.querySelectorAll('button').forEach(function(b){
+    var t=(b.textContent||'').trim().toLowerCase();
+    for(var i=0;i<routes.length;i++){if(t.indexOf(routes[i][0])!==-1){b.style.cursor='pointer';b.addEventListener('click',(function(u){return function(){window.location.href=u;};})(routes[i][1]));break;}}
+  });
+})();
+</script><script id="stitch-bell">
+document.querySelectorAll('button').forEach(function(b){if(/notifications/i.test(b.textContent||'')){b.style.cursor='pointer';b.addEventListener('click',function(){window.location.href='notifications.html';});}});
+</script>
+<script id="master-nav">(function(){var b=document.getElementById("master-nav-toggle");if(!b)return;var s=document.getElementById("master-nav-submenu");var onMasters=/masters\.html/.test(location.pathname);function setOpen(v){if(!s)return;b.classList.toggle("master-open",v);s.classList.toggle("hidden",!v);b.setAttribute("aria-expanded",v?"true":"false");}b.addEventListener("click",function(){setOpen(!(b.classList.contains("master-open")));});setOpen(onMasters);if(onMasters){var m=location.search.match(/tab=([a-z]+)/);var q=m?m[1]:null;document.querySelectorAll("#master-nav-submenu a").forEach(function(a){var href=a.getAttribute("href")||"";var hit=q?href.indexOf("tab="+q)!==-1:href==="masters.html";if(hit)a.className="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg bg-primary text-on-primary transition-colors font-label-md text-label-md font-semibold";});}})();</script>
+</body></html>

@@ -1,0 +1,838 @@
+<!DOCTYPE html> <html lang="en"><head><meta charset="utf-8"/><meta content="width=device-width, initial-scale=1.0" name="viewport"/><meta content="web_dashboard" name="shell-type"/><link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet"/><style>@layer base{html,body{margin:0;padding:0;}body{overscroll-behavior:none;}main>:first-child{margin-top:0!important;}main>:last-child{margin-bottom:0!important;}}::-webkit-scrollbar{display:none;}</style><script src="https://cdn.tailwindcss.com"></script><script id="tailwind-config">tailwind.config={darkMode:"class",theme:{extend:{colors:{"error":"#ba1a1a","surface-bright":"#f7fafc","secondary":"#006972","inverse-primary":"#a3cbf2","tertiary-fixed-dim":"#b4c5ff","primary-fixed-dim":"#a3cbf2","outline-variant":"#c2c7ce","surface-tint":"#396285","on-tertiary-container":"#7f9fff","surface-variant":"#e0e3e5","on-error-container":"#93000a","surface":"#f7fafc","secondary-fixed-dim":"#67d6e4","error-container":"#ffdad6","tertiary":"#001f5d","on-primary-fixed":"#001d32","surface-dim":"#d7dadc","inverse-on-surface":"#eef1f3","on-primary-container":"#7fa7cd","on-surface":"#181c1e","on-surface-variant":"#42474e","on-tertiary-fixed-variant":"#003ea8","tertiary-fixed":"#dbe1ff","surface-container-highest":"#e0e3e5","background":"#f7fafc","secondary-fixed":"#8df2ff","on-background":"#181c1e","on-secondary":"#ffffff","tertiary-container":"#00328b","surface-container-low":"#f1f4f6","on-primary":"#ffffff","primary-fixed":"#cee5ff","on-tertiary":"#ffffff","outline":"#72777e","on-secondary-fixed-variant":"#004f56","primary-container":"#0b3c5d","inverse-surface":"#2d3133","on-secondary-container":"#006d77","surface-container-high":"#e5e9eb","secondary-container":"#82f0fe","on-tertiary-fixed":"#00174b","primary":"#00263f","surface-container":"#ebeef0","on-error":"#ffffff","on-primary-fixed-variant":"#1f4a6c","on-secondary-fixed":"#001f23","surface-container-lowest":"#ffffff"},borderRadius:{"DEFAULT":"0.25rem","lg":"0.5rem","xl":"0.75rem","full":"9999px"},spacing:{"space-xs":"0.25rem","gutter-desktop":"1.5rem","gutter":"1rem","margin":"1rem","space-xl":"2rem","space-sm":"0.5rem","margin-desktop":"2rem","margin-tablet":"1.5rem","space-md":"0.75rem","space-lg":"1.25rem"},fontFamily:{"headline-md":["Inter"],"headline-lg":["Inter"],"label-md":["Inter"],"label-sm":["Inter"],"body-lg":["Inter"],"body-md":["Inter"],"headline-sm":["Inter"],"display-lg":["Inter"],"metric-val":["Inter"],"body-sm":["Inter"],"headline-xl":["Inter"],"label-lg":["Inter"]},fontSize:{"headline-md":["18px",{"lineHeight":"24px","letterSpacing":"-0.01em","fontWeight":"600"}],"headline-lg":["22px",{"lineHeight":"28px","letterSpacing":"-0.015em","fontWeight":"600"}],"label-md":["12px",{"lineHeight":"16px","letterSpacing":"0.01em","fontWeight":"500"}],"label-sm":["11px",{"lineHeight":"14px","letterSpacing":"0.04em","fontWeight":"600"}],"body-lg":["16px",{"lineHeight":"24px","letterSpacing":"0em","fontWeight":"400"}],"body-md":["14px",{"lineHeight":"20px","letterSpacing":"0em","fontWeight":"400"}],"headline-sm":["15px",{"lineHeight":"20px","letterSpacing":"-0.005em","fontWeight":"600"}],"display-lg":["36px",{"lineHeight":"44px","letterSpacing":"-0.025em","fontWeight":"700"}],"metric-val":["30px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"700"}],"body-sm":["12px",{"lineHeight":"16px","letterSpacing":"0.005em","fontWeight":"400"}],"headline-xl":["28px",{"lineHeight":"36px","letterSpacing":"-0.02em","fontWeight":"600"}],"label-lg":["14px",{"lineHeight":"20px","letterSpacing":"0.005em","fontWeight":"500"}]}}}};</script><script id="stitch-theme-init">(function(){try{if(localStorage.getItem("summit-theme")==="dark"){document.documentElement.classList.add("dark");document.documentElement.style.colorScheme="dark";}}catch(e){}})();</script>
+</head><body class="bg-surface font-body-md text-on-surface antialiased"><aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Summit Healthcare Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIUSceXT4JgT_RjOJHH1_5Ja2X8b8cCgcu9wUSzwk0VNSjfhMq1sA1WT7_ydpQbxwnUeV-CXrpwwwkfohub5ZmF90LAoo9J_xRAfBcsphpdDnANBlLUFQE1x8Cwg5PNJcrUI0KnJfafoPYwmbAQSPU0-KujPvedr8bA-85WLgQkq--x_kTit3_bZTDYSo8eZRspVxZMCBWMn-Ll67g4Ffr_FP3s8naTY2AnLTRvvQJ"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-primary truncate leading-tight">Summit</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider truncate">Healthcare</span></div></div></div><div class="px-space-lg pb-space-md"><div class="inline-flex items-center px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container"><span class="font-label-sm text-label-sm tracking-wide uppercase font-semibold">Service Manager</span></div></div><nav class="flex flex-col gap-1 px-space-md" data-active-classes="bg-primary text-on-primary font-headline-sm rounded-lg"><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-colors bg-primary text-on-primary font-headline-sm rounded-lg" data-path="dashboard" href="operations-dashboard.html"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-lg text-label-lg">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="equipment" href="equipment-database.html"><span class="material-symbols-outlined text-[20px]">precision_manufacturing</span><span class="font-label-lg text-label-lg">Equipment Database</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="calls" href="service-calls-register.html"><span class="material-symbols-outlined text-[20px]">support_agent</span><span class="font-label-lg text-label-lg">Service Calls</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="contracts" href="contracts-pms-spares.html"><span class="material-symbols-outlined text-[20px]">verified</span><span class="font-label-lg text-label-lg">AMC/CMC & PMS</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="inventory" href="spares-inventory.html"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-label-lg text-label-lg">Spares Inventory</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="reports" title="Reports hub is Phase 5 - not exported from Stitch yet" href="reports-hub.html"><span class="material-symbols-outlined text-[20px]">analytics</span><span class="font-label-lg text-label-lg">Reports Hub</span></a><style>#master-nav-toggle .master-chev{transition:transform .2s ease}#master-nav-toggle.master-open .master-chev{transform:rotate(180deg)}</style><div class="flex flex-col"><button id="master-nav-toggle" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors w-full text-left" aria-expanded="false" aria-controls="master-nav-submenu"><span class="material-symbols-outlined text-[20px]">schema</span><span class="font-label-lg text-label-lg flex-1 text-left">Master Data</span><span class="material-symbols-outlined text-[18px] master-chev">expand_more</span></button><div id="master-nav-submenu" class="flex-col gap-0.5 pl-10 pt-0.5 hidden"><a href="masters.html" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">apps</span><span>All Masters Hub</span></a><a href="masters.html?tab=hospitals" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">local_hospital</span><span>Hospitals</span></a><a href="masters.html?tab=brands" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">branding_watermark</span><span>Brands</span></a><a href="masters.html?tab=types" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">category</span><span>Equipment Types</span></a><a href="masters.html?tab=models" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">precision_manufacturing</span><span>Equipment Models</span></a><a href="masters.html?tab=suppliers" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">local_shipping</span><span>Suppliers</span></a><a href="masters.html?tab=stores" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">warehouse</span><span>Stores &amp; Van Depots</span></a><a href="masters.html?tab=sla" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">timer</span><span>SLA Settings</span></a><a href="masters.html?tab=checklists" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">checklist</span><span>Checklist Templates</span></a></div></div><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="settings" title="Settings screen not exported from Stitch yet" href="admin-console.html"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-label-lg text-label-lg">Settings</span></a></nav></div><div class="p-space-lg bg-surface-container-low m-space-md rounded-lg flex items-center justify-between"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">System SLA</span><span class="font-headline-sm text-headline-sm text-primary">99.8%</span></div><div class="w-2.5 h-2.5 rounded-full bg-secondary ring-4 ring-secondary/20"></div></div></aside><div class="pl-64"><header class="fixed top-0 left-64 right-0 h-16 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-40 px-space-lg flex items-center justify-between gap-space-md"><div class="flex items-center gap-space-md flex-1 max-w-xl"><div class="relative w-full"><span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[20px]">search</span><input class="w-full h-10 pl-10 pr-4 bg-surface-container-lowest text-on-surface placeholder:text-outline rounded-lg text-body-md font-body-md focus:outline-none focus:ring-2 focus:ring-secondary/30 transition-all shadow-[0_1px_3px_rgba(11,60,93,0.05)]" placeholder="Search serial no, call no, hospital, part no..." type="search"/></div></div><div class="flex items-center gap-space-md"><div class="hidden xl:flex items-center p-0.5 bg-surface-container rounded-full"><button class="px-3 py-1 rounded-full bg-primary text-on-primary font-label-sm text-label-sm shadow-[0_1px_3px_rgba(11,60,93,0.05)]" type="button">Manager</button><button class="px-3 py-1 rounded-full text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors" type="button">Engineer</button><button class="px-3 py-1 rounded-full text-on-surface-variant hover:text-on-surface font-label-sm text-label-sm transition-colors" type="button">Admin</button></div><button class="h-10 px-4 bg-primary text-on-primary rounded-lg font-label-lg text-label-lg flex items-center gap-space-xs hover:bg-primary-container transition-colors shadow-[0_1px_3px_rgba(11,60,93,0.05)]" type="button"><span class="material-symbols-outlined text-[18px]">add</span><span>Register Call</span></button><button class="relative w-10 h-10 rounded-lg flex items-center justify-center text-on-surface-variant hover:bg-surface-container hover:text-on-surface transition-colors" type="button"><span class="material-symbols-outlined text-[22px]">notifications</span><span class="absolute top-1.5 right-1.5 flex h-4 min-w-4 px-1 items-center justify-center rounded-full bg-error text-on-error font-label-sm text-[10px] font-bold leading-none">10</span></button><div class="flex items-center gap-space-sm pl-space-sm"><div class="flex flex-col text-right hidden md:flex"><span class="font-label-lg text-label-lg text-on-surface font-semibold">Rahul Sharma</span><span class="font-label-sm text-label-sm text-on-surface-variant">Service Ops Manager</span></div><div class="w-8 h-8 rounded-full bg-primary flex items-center justify-center"><span class="material-symbols-outlined text-on-primary text-[18px]">person</span></div></div></div></header><main class="w-full pt-16 bg-surface min-h-screen"><div class="flex flex-col w-full">
+<div class="p-space-lg max-w-[1600px] mx-auto w-full space-y-space-xl">
+<!-- Top Utility & Mode Bar -->
+<div class="flex flex-col md:flex-row items-start md:items-center justify-between gap-space-md bg-surface-container-low p-space-md rounded-xl shadow-sm">
+<div class="flex items-center gap-space-md">
+<div class="w-10 h-10 rounded-lg bg-primary-container text-on-primary-container flex items-center justify-center shadow-sm">
+<span class="material-symbols-outlined text-[24px]">verified_user</span>
+</div>
+<div>
+<div class="flex items-center gap-space-xs">
+<span class="font-headline-sm text-headline-sm text-primary">Viewing as Service Manager</span>
+<span class="px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold uppercase">Full Ops Access</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Western Hub Biomedical Fleet —————— — Live Telemetry Feed Synchronized (12:48 IST)</p>
+</div>
+</div>
+<div class="flex items-center gap-space-sm w-full md:w-auto justify-end">
+<button class="px-space-md py-1.5 rounded-lg bg-surface-container-lowest text-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm hover:bg-surface-container-high transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px] text-secondary">tune</span>
+<span>Shift: Day Rotation Alpha</span>
+</button>
+<button class="px-space-md py-1.5 rounded-lg bg-primary text-on-primary font-label-md text-label-md flex items-center gap-1.5 shadow-sm hover:bg-primary-container transition-colors" type="button">
+<span class="material-symbols-outlined text-[16px]">file_download</span>
+<span>Export Summary</span>
+</button>
+</div>
+</div>
+<!-- KPI Metrics Grid (4 Cards with Sparklines & Micro-data) -->
+<div class="grid grid-cols-1 sm:grid-cols-2 xl:grid-cols-4 gap-space-lg">
+<!-- Metric 1: Active Breakdown Calls -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase font-semibold">Active Breakdown Calls</span>
+<span class="p-1 rounded-lg bg-surface-container-low text-primary">
+<span class="material-symbols-outlined text-[20px]">medical_services</span>
+</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-md">
+<span class="font-metric-val text-metric-val text-primary tracking-tight">14</span>
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span> 3 Critical
+</span>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-on-surface-variant">
+<div class="font-body-sm text-body-sm flex items-center gap-1.5">
+<span class="font-semibold text-primary">8 Open</span>
+<span> ———— </span>
+<span class="text-secondary font-medium">6 In Progress</span>
+</div>
+<div class="font-label-sm text-label-sm font-semibold text-on-surface">Avg 42m</div>
+</div>
+<!-- Sparkline Trendline SVG -->
+<div class="mt-space-sm h-8 w-full">
+<svg class="w-full h-full text-secondary" fill="none" preserveaspectratio="none" viewbox="0 0 100 24">
+<path d="M0 18 Q 15 22, 30 12 T 60 16 T 85 6 T 100 10" stroke="currentColor" stroke-linecap="round" stroke-width="2"></path>
+<path d="M0 18 Q 15 22, 30 12 T 60 16 T 85 6 T 100 10 L 100 24 L 0 24 Z" fill="currentColor" fill-opacity="0.08"></path>
+</svg>
+</div>
+</div>
+<!-- Metric 2: Overdue & Upcoming PMS -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase font-semibold">Overdue & Upcoming PMS</span>
+<span class="p-1 rounded-lg bg-surface-container-low text-secondary">
+<span class="material-symbols-outlined text-[20px]">event_repeat</span>
+</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-xs">
+<span class="font-metric-val text-metric-val text-primary tracking-tight">10</span>
+<span class="font-headline-sm text-headline-sm text-error">Overdue</span>
+<span class="font-body-md text-body-md text-on-surface-variant ml-1">/ 15 Due in 14d</span>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between">
+<span class="inline-flex items-center gap-1 px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold"> Compliance 92.4%
+</span>
+<span class="font-label-sm text-label-sm text-outline-variant font-medium">Q1 Benchmark</span>
+</div>
+<!-- Micro Bar Indicator SVG -->
+<div class="mt-space-sm h-8 w-full flex items-end gap-1.5 pt-2">
+<div class="w-1/6 bg-error rounded-t h-[80%]"></div>
+<div class="w-1/6 bg-secondary rounded-t h-[60%]"></div>
+<div class="w-1/6 bg-secondary rounded-t h-[95%]"></div>
+<div class="w-1/6 bg-secondary rounded-t h-[70%]"></div>
+<div class="w-1/6 bg-secondary rounded-t h-[50%]"></div>
+<div class="w-1/6 bg-secondary rounded-t h-[85%]"></div>
+</div>
+</div>
+<!-- Metric 3: Contracts Expiring -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase font-semibold">Contracts Expiring</span>
+<span class="p-1 rounded-lg bg-surface-container-low text-tertiary">
+<span class="material-symbols-outlined text-[20px]">assignment_late</span>
+</span>
+</div>
+<div class="mt-space-sm flex items-baseline gap-space-md">
+<span class="font-metric-val text-metric-val text-primary tracking-tight">8</span>
+<span class="font-label-md text-label-md text-secondary font-semibold"> —————42.8L Pipeline</span>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-on-surface-variant">
+<div class="font-body-sm text-body-sm flex items-center gap-1.5">
+<span class="text-error font-semibold">3 in ——————30d</span>
+<span> ———— </span>
+<span class="text-on-surface font-medium">3 in ——————60d</span>
+</div>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">2 AMC —————— — 6 CMC</span>
+</div>
+<div class="mt-space-sm h-8 w-full">
+<svg class="w-full h-full text-tertiary-fixed-dim" fill="none" preserveaspectratio="none" viewbox="0 0 100 24">
+<path d="M0 20 L25 18 L50 14 L75 9 L100 4" stroke="#00328b" stroke-linecap="round" stroke-width="2"></path>
+<circle cx="100" cy="4" fill="#00328b" r="3"></circle>
+</svg>
+</div>
+</div>
+<!-- Metric 4: Critical Low Stock -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm hover:shadow-md transition-shadow relative overflow-hidden group">
+<div class="flex items-center justify-between">
+<span class="font-label-md text-label-md text-on-surface-variant uppercase font-semibold">Critical Low Stock</span>
+<span class="p-1 rounded-lg bg-error-container text-on-error-container">
+<span class="material-symbols-outlined text-[20px]">inventory_2</span>
+</span>
+</div>
+<div class="mt-space-sm flex items-baseline justify-between">
+<div class="flex items-baseline gap-1.5">
+<span class="font-metric-val text-metric-val text-error tracking-tight">8</span>
+<span class="font-body-sm text-body-sm font-medium text-error">Below Reorder</span>
+</div>
+<button class="px-2.5 py-1 rounded bg-secondary text-on-secondary font-label-sm text-label-sm font-semibold hover:bg-on-secondary-container transition-colors shadow-sm flex items-center gap-1" type="button">
+<span class="material-symbols-outlined text-[14px]">add_shopping_cart</span>
+<span>Create PO</span>
+</button>
+</div>
+<div class="mt-space-md pt-space-xs flex items-center justify-between text-on-surface-variant">
+<span class="font-body-sm text-body-sm">4 Depot —————— — 4 Van Boot</span>
+<span class="font-label-sm text-label-sm text-error font-semibold flex items-center gap-1">
+<span class="material-symbols-outlined text-[14px]">warning</span> Action Req.
+</span>
+</div>
+<div class="mt-space-sm h-8 w-full flex items-center gap-1">
+<div class="h-2 w-full bg-surface-container-highest rounded-full overflow-hidden flex">
+<div class="bg-error h-full" style="width: 32%"></div>
+<div class="bg-secondary-fixed-dim h-full" style="width: 28%"></div>
+<div class="bg-surface-dim h-full" style="width: 40%"></div>
+</div>
+</div>
+</div>
+</div>
+<!-- Main Content Grid Layout: 2/3 and 1/3 Spans -->
+<div class="grid grid-cols-1 lg:grid-cols-12 gap-space-xl">
+<!-- Left Column (8 of 12 columns) -->
+<div class="lg:col-span-8 space-y-space-xl min-w-0">
+<!-- Live Equipment Asset Telemetry Banner -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md shadow-sm relative overflow-hidden">
+<div class="absolute left-0 top-0 bottom-0 w-1.5 bg-secondary"></div>
+<div class="flex flex-wrap items-center justify-between gap-space-md pl-space-xs">
+<div class="flex items-center gap-space-md">
+<div class="w-12 h-12 rounded-lg bg-surface-container-high flex items-center justify-center shrink-0">
+<span class="material-symbols-outlined text-primary text-[28px]">radiology</span>
+</div>
+<div class="min-w-0">
+<div class="flex items-center gap-2">
+<span class="font-headline-sm text-headline-sm text-primary">Siemens Somatom Go.Top 128-Slice CT</span>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-label-sm font-semibold">Down</span>
+</div>
+<p class="font-body-sm text-body-sm text-on-surface-variant truncate">S/N: CT-994208-MH —————— — Radiology Dept, Sahyadri Super Speciality Pune —————— — CMC Active (Exp 14-Aug-2025)</p>
+</div>
+</div>
+<div class="flex items-center gap-2">
+<div class="text-right mr-2 hidden sm:block">
+<div class="font-label-sm text-label-sm text-on-surface-variant uppercase">SLA Window</div>
+<div class="font-headline-sm text-headline-sm text-error">01h 18m Left</div>
+</div>
+<button class="h-9 px-3 rounded-lg bg-secondary text-on-secondary font-label-md text-label-md flex items-center gap-1 shadow-sm hover:bg-on-secondary-container transition-colors">
+<span class="material-symbols-outlined text-[16px]">map</span>
+<span>Dispatch Status</span>
+</button>
+</div>
+</div>
+</div>
+<!-- Pending & Critical Service Calls Table Card -->
+<div class="bg-surface-container-lowest rounded-xl shadow-sm overflow-hidden">
+<!-- Card Header & Filter Nav -->
+<div class="p-space-lg flex flex-col sm:flex-row sm:items-center justify-between gap-space-md bg-surface-container-lowest">
+<div>
+<h2 class="font-headline-md text-headline-md text-primary">Pending & Critical Service Calls</h2>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Real-time triage queue for incoming hospital breakdown tickets</p>
+</div>
+<!-- Quick Filter Tabs -->
+<div class="flex items-center p-1 bg-surface-container-low rounded-lg gap-1">
+<button class="call-filter px-3 py-1 text-label-sm font-label-sm rounded-md bg-surface-container-lowest text-primary font-semibold shadow-sm transition-all" data-filter="all">All (19)</button>
+<button class="call-filter px-3 py-1 text-label-sm font-label-sm rounded-md text-on-surface-variant hover:text-on-surface transition-all" data-filter="open">Open (8)</button>
+<button class="call-filter px-3 py-1 text-label-sm font-label-sm rounded-md text-on-surface-variant hover:text-on-surface transition-all" data-filter="in-progress">In Progress (6)</button>
+<button class="call-filter px-3 py-1 text-label-sm font-label-sm rounded-md text-on-surface-variant hover:text-on-surface transition-all" data-filter="pending">Pending (5)</button>
+</div>
+</div>
+<!-- Table Container -->
+<div class="overflow-x-auto">
+<table class="w-full text-left border-collapse">
+<thead>
+<tr class="bg-surface-container-low text-on-surface-variant font-label-sm text-label-sm uppercase tracking-wider">
+<th class="py-3 px-space-md">Call No / Priority</th>
+<th class="py-3 px-space-md">Equipment & Dept</th>
+<th class="py-3 px-space-md">Hospital Entity</th>
+<th class="py-3 px-space-md">SLA Timer</th>
+<th class="py-3 px-space-md">Engineer</th>
+<th class="py-3 px-space-md">Status</th>
+<th class="py-3 px-space-md text-right">Actions</th>
+</tr>
+</thead>
+<tbody class="divide-y divide-surface-container text-body-sm font-body-sm">
+<!-- Row 1: Critical -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-3.5 px-space-md align-middle">
+<div class="font-headline-sm text-headline-sm text-primary">SC-2025-00142</div>
+<span class="inline-flex items-center gap-1 mt-1 px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-[10px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span> CRITICAL P1
+</span>
+</td>
+<td class="py-3.5 px-space-md align-middle max-w-[200px]">
+<div class="font-headline-sm text-headline-sm text-on-surface truncate">Siemens Somatom Go.Top</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant truncate">Tube Arc Error —————— — CT Dept</div>
+</td>
+<td class="py-3.5 px-space-md align-middle">
+<div class="font-headline-sm text-headline-sm text-on-surface">Sahyadri Hospital</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Pune Central</div>
+</td>
+<td class="py-3.5 px-space-md align-middle whitespace-nowrap">
+<div class="flex items-center gap-1.5 text-error font-semibold font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] animate-pulse">timer</span>
+<span>01h 18m Left</span>
+</div>
+<div class="w-24 bg-surface-container-high h-1.5 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 78%"></div>
+</div>
+</td>
+<td class="py-3.5 px-space-md align-middle whitespace-nowrap">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-[10px] font-bold">RS</div>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Rahul Sharma</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md align-middle">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold"> In Progress
+</span>
+</td>
+<td class="py-3.5 px-space-md align-middle text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 rounded-lg text-primary hover:bg-surface-container transition-colors" title="Dispatch & Track">
+<span class="material-symbols-outlined text-[18px]">location_searching</span>
+</button>
+<button class="p-1 rounded-lg text-secondary hover:bg-surface-container transition-colors" title="Service Log">
+<span class="material-symbols-outlined text-[18px]">history_edu</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 2: Pending Spare -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-3.5 px-space-md align-middle">
+<div class="font-headline-sm text-headline-sm text-primary">SC-2025-00139</div>
+<span class="inline-flex items-center gap-1 mt-1 px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-[10px] font-bold"> HIGH P2
+</span>
+</td>
+<td class="py-3.5 px-space-md align-middle max-w-[200px]">
+<div class="font-headline-sm text-headline-sm text-on-surface truncate">Philips Epiq 7G Ultrasound</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant truncate">Probe X6-1 Transducer Open —————— — OPD</div>
+</td>
+<td class="py-3.5 px-space-md align-middle">
+<div class="font-headline-sm text-headline-sm text-on-surface">Jupiter Hospital</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Thane West</div>
+</td>
+<td class="py-3.5 px-space-md align-middle whitespace-nowrap">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-semibold font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-secondary">hourglass_top</span>
+<span>04h 45m Left</span>
+</div>
+<div class="w-24 bg-surface-container-high h-1.5 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 45%"></div>
+</div>
+</td>
+<td class="py-3.5 px-space-md align-middle whitespace-nowrap">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-sm text-[10px] font-bold">AP</div>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Amit Patil</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md align-middle">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-tertiary-fixed text-on-tertiary-fixed-variant font-label-sm text-label-sm font-semibold"> Pending Spare
+</span>
+</td>
+<td class="py-3.5 px-space-md align-middle text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 rounded-lg text-primary hover:bg-surface-container transition-colors" title="Track Part Dispatch">
+<span class="material-symbols-outlined text-[18px]">inventory_2</span>
+</button>
+<button class="p-1 rounded-lg text-secondary hover:bg-surface-container transition-colors" title="Service Log">
+<span class="material-symbols-outlined text-[18px]">history_edu</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 3: Critical GE Cathlab -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-3.5 px-space-md align-middle">
+<div class="font-headline-sm text-headline-sm text-primary">SC-2025-00137</div>
+<span class="inline-flex items-center gap-1 mt-1 px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-[10px] font-bold">
+<span class="w-1.5 h-1.5 rounded-full bg-error animate-ping"></span> CRITICAL P1
+</span>
+</td>
+<td class="py-3.5 px-space-md align-middle max-w-[200px]">
+<div class="font-headline-sm text-headline-sm text-on-surface truncate">GE Innova IGS 520 CathLab</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant truncate">Gantry Tilt Interlock Fail —————— — OT-2</div>
+</td>
+<td class="py-3.5 px-space-md align-middle">
+<div class="font-headline-sm text-headline-sm text-on-surface">Deenanath Mangeshkar</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Erandwane, Pune</div>
+</td>
+<td class="py-3.5 px-space-md align-middle whitespace-nowrap">
+<div class="flex items-center gap-1.5 text-error font-semibold font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px]">alarm</span>
+<span>00h 42m Left</span>
+</div>
+<div class="w-24 bg-surface-container-high h-1.5 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 90%"></div>
+</div>
+</td>
+<td class="py-3.5 px-space-md align-middle whitespace-nowrap">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-sm text-[10px] font-bold">SK</div>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Sneha Kulkarni</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md align-middle">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-secondary-container text-on-secondary-container font-label-sm text-label-sm font-semibold"> In Progress
+</span>
+</td>
+<td class="py-3.5 px-space-md align-middle text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 rounded-lg text-primary hover:bg-surface-container transition-colors" title="Dispatch & Track">
+<span class="material-symbols-outlined text-[18px]">location_searching</span>
+</button>
+<button class="p-1 rounded-lg text-secondary hover:bg-surface-container transition-colors" title="Service Log">
+<span class="material-symbols-outlined text-[18px]">history_edu</span>
+</button>
+</div>
+</td>
+</tr>
+<!-- Row 4: Open Ticket -->
+<tr class="hover:bg-surface-container-low/60 transition-colors group">
+<td class="py-3.5 px-space-md align-middle">
+<div class="font-headline-sm text-headline-sm text-primary">SC-2025-00135</div>
+<span class="inline-flex items-center gap-1 mt-1 px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-[10px] font-bold"> MEDIUM P3
+</span>
+</td>
+<td class="py-3.5 px-space-md align-middle max-w-[200px]">
+<div class="font-headline-sm text-headline-sm text-on-surface truncate">Mindray BeneView T8 Monitor</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant truncate">IBP Module Communication Loss</div>
+</td>
+<td class="py-3.5 px-space-md align-middle">
+<div class="font-headline-sm text-headline-sm text-on-surface">Ruby Hall Clinic</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">Wanowrie</div>
+</td>
+<td class="py-3.5 px-space-md align-middle whitespace-nowrap">
+<div class="flex items-center gap-1.5 text-on-surface-variant font-semibold font-label-md text-label-md">
+<span class="material-symbols-outlined text-[16px] text-outline">schedule</span>
+<span>07h 10m Left</span>
+</div>
+<div class="w-24 bg-surface-container-high h-1.5 rounded-full mt-1.5 overflow-hidden">
+<div class="bg-secondary-fixed-dim h-full rounded-full" style="width: 25%"></div>
+</div>
+</td>
+<td class="py-3.5 px-space-md align-middle whitespace-nowrap">
+<div class="flex items-center gap-2">
+<div class="w-6 h-6 rounded-full bg-outline-variant text-primary flex items-center justify-center font-label-sm text-[10px] font-bold">VS</div>
+<span class="font-body-sm text-body-sm font-medium text-on-surface">Vikram Singh</span>
+</div>
+</td>
+<td class="py-3.5 px-space-md align-middle">
+<span class="inline-flex items-center px-2 py-0.5 rounded-full bg-surface-container-highest text-on-surface-variant font-label-sm text-label-sm font-semibold"> Open (Assigned)
+</span>
+</td>
+<td class="py-3.5 px-space-md align-middle text-right whitespace-nowrap">
+<div class="inline-flex items-center gap-1">
+<button class="p-1 rounded-lg text-primary hover:bg-surface-container transition-colors" title="Dispatch & Track">
+<span class="material-symbols-outlined text-[18px]">location_searching</span>
+</button>
+<button class="p-1 rounded-lg text-secondary hover:bg-surface-container transition-colors" title="Service Log">
+<span class="material-symbols-outlined text-[18px]">history_edu</span>
+</button>
+</div>
+</td>
+</tr>
+</tbody>
+</table>
+</div>
+<!-- Table Footer Pagination/Status -->
+<div class="p-space-md bg-surface-container-low/40 flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant">
+<span>Showing 4 of 19 Active Call Log Records</span>
+<div class="flex items-center gap-2">
+<button class="px-2.5 py-1 rounded bg-surface-container-lowest text-primary hover:bg-surface-container font-label-sm text-label-sm shadow-sm transition-colors">Previous</button>
+<button class="px-2.5 py-1 rounded bg-primary text-on-primary font-label-sm text-label-sm shadow-sm transition-colors">Next</button>
+</div>
+</div>
+</div>
+<!-- Monthly Call Trends & Equipment Breakdown Frequency (Charts Bento) -->
+<div class="grid grid-cols-1 md:grid-cols-12 gap-space-lg">
+<!-- Breakdowns vs PMS Chart (7 of 12) -->
+<div class="md:col-span-7 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<div>
+<h3 class="font-headline-sm text-headline-sm text-primary">Monthly Call Trends (6 Months)</h3>
+<p class="font-body-sm text-body-sm text-on-surface-variant">Breakdowns logged vs Planned Maintenance completed</p>
+</div>
+<div class="flex items-center gap-3">
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="w-2.5 h-2.5 rounded-sm bg-error"></span> Breakdowns
+</div>
+<div class="flex items-center gap-1.5 font-label-sm text-label-sm text-on-surface-variant">
+<span class="w-2.5 h-2.5 rounded-sm bg-secondary"></span> PMS Visits
+</div>
+</div>
+</div>
+<!-- SVG Dual Bar / Trend Visualization -->
+<div class="mt-space-lg h-48 w-full relative">
+<svg class="w-full h-full" preserveaspectratio="none" viewbox="0 0 400 160">
+<!-- Horizontal Grid lines -->
+<line stroke="#f1f4f6" stroke-dasharray="3 3" x1="0" x2="400" y1="30" y2="30"></line>
+<line stroke="#f1f4f6" stroke-dasharray="3 3" x1="0" x2="400" y1="75" y2="75"></line>
+<line stroke="#f1f4f6" stroke-dasharray="3 3" x1="0" x2="400" y1="120" y2="120"></line>
+<!-- Month 1: Nov -->
+<rect fill="#ba1a1a" height="60" rx="3" width="16" x="25" y="80"></rect>
+<rect fill="#006972" height="95" rx="3" width="16" x="45" y="45"></rect>
+<!-- Month 2: Dec -->
+<rect fill="#ba1a1a" height="50" rx="3" width="16" x="85" y="90"></rect>
+<rect fill="#006972" height="100" rx="3" width="16" x="105" y="40"></rect>
+<!-- Month 3: Jan -->
+<rect fill="#ba1a1a" height="75" rx="3" width="16" x="145" y="65"></rect>
+<rect fill="#006972" height="85" rx="3" width="16" x="165" y="55"></rect>
+<!-- Month 4: Feb -->
+<rect fill="#ba1a1a" height="70" rx="3" width="16" x="205" y="70"></rect>
+<rect fill="#006972" height="105" rx="3" width="16" x="225" y="35"></rect>
+<!-- Month 5: Mar -->
+<rect fill="#ba1a1a" height="90" rx="3" width="16" x="265" y="50"></rect>
+<rect fill="#006972" height="110" rx="3" width="16" x="285" y="30"></rect>
+<!-- Month 6: Apr (Current) -->
+<rect fill="#ba1a1a" height="80" rx="3" width="16" x="325" y="60"></rect>
+<rect fill="#006972" height="115" rx="3" width="16" x="345" y="25"></rect>
+</svg>
+</div>
+<div class="flex justify-between text-on-surface-variant font-label-sm text-label-sm px-4 pt-1">
+<span>Nov</span>
+<span>Dec</span>
+<span>Jan</span>
+<span>Feb</span>
+<span>Mar</span>
+<span>Apr</span>
+</div>
+</div>
+<div class="mt-space-md pt-space-sm bg-surface-container-low/50 p-2.5 rounded-lg flex items-center justify-between">
+<span class="font-body-sm text-body-sm text-on-surface-variant">Preventive coverage trending +14% vs breakdown calls.</span>
+<span class="font-label-sm text-label-sm text-secondary font-semibold">MTBF: 620 hrs</span>
+</div>
+</div>
+<!-- Breakdown Frequency by OEM Brand (5 of 12) -->
+<div class="md:col-span-5 bg-surface-container-lowest p-space-lg rounded-xl shadow-sm flex flex-col justify-between">
+<div>
+<div class="flex items-center justify-between">
+<h3 class="font-headline-sm text-headline-sm text-primary">OEM Breakdown Split</h3>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Total: 48 Calls</span>
+</div>
+<!-- Brand Share Donut & Breakdown Bars -->
+<div class="mt-space-md flex items-center gap-space-lg">
+<!-- Donut Chart inline SVG -->
+<div class="w-24 h-24 shrink-0 relative flex items-center justify-center">
+<svg class="w-full h-full -rotate-90" viewbox="0 0 36 36">
+<!-- Base ring -->
+<circle cx="18" cy="18" fill="transparent" r="14" stroke="#ebeef0" stroke-width="4.5"></circle>
+<!-- Siemens 34% -->
+<circle cx="18" cy="18" fill="transparent" r="14" stroke="#00263f" stroke-dasharray="29.9 88" stroke-dashoffset="0" stroke-width="4.5"></circle>
+<!-- Philips 28% -->
+<circle cx="18" cy="18" fill="transparent" r="14" stroke="#006972" stroke-dasharray="24.6 88" stroke-dashoffset="-29.9" stroke-width="4.5"></circle>
+<!-- GE 22% -->
+<circle cx="18" cy="18" fill="transparent" r="14" stroke="#7fa7cd" stroke-dasharray="19.3 88" stroke-dashoffset="-54.5" stroke-width="4.5"></circle>
+<!-- Mindray 16% -->
+<circle cx="18" cy="18" fill="transparent" r="14" stroke="#00328b" stroke-dasharray="14.2 88" stroke-dashoffset="-73.8" stroke-width="4.5"></circle>
+</svg>
+<div class="absolute inset-0 flex flex-col items-center justify-center text-center">
+<span class="font-headline-sm text-headline-sm text-primary leading-none">34%</span>
+<span class="font-label-sm text-[10px] text-on-surface-variant">Siemens</span>
+</div>
+</div>
+<!-- Percent breakdown list -->
+<div class="flex-1 space-y-2">
+<div>
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-primary font-semibold">Siemens Healthineers</span>
+<span class="text-primary font-bold">34%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden mt-0.5">
+<div class="bg-primary h-full rounded-full" style="width: 34%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-secondary font-semibold">Philips Healthcare</span>
+<span class="text-secondary font-bold">28%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden mt-0.5">
+<div class="bg-secondary h-full rounded-full" style="width: 28%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-on-primary-container font-semibold">GE HealthCare</span>
+<span class="text-on-surface font-bold">22%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden mt-0.5">
+<div class="bg-on-primary-container h-full rounded-full" style="width: 22%"></div>
+</div>
+</div>
+<div>
+<div class="flex justify-between font-label-sm text-label-sm">
+<span class="text-tertiary-container font-semibold">Mindray Medical</span>
+<span class="text-tertiary-container font-bold">16%</span>
+</div>
+<div class="w-full bg-surface-container h-1.5 rounded-full overflow-hidden mt-0.5">
+<div class="bg-tertiary-container h-full rounded-full" style="width: 16%"></div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<div class="mt-space-md pt-space-xs text-on-surface-variant font-body-sm text-[11px] leading-tight"> Imaging systems (CT/CathLab) account for 62% of critical escalation triggers this calendar quarter.
+</div>
+</div>
+</div>
+</div>
+<!-- Right Column (4 of 12 columns) -->
+<div class="lg:col-span-4 space-y-space-xl">
+<!-- Urgent PMS Schedule (Next 7 Days) Card -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-secondary text-[22px]">calendar_month</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Urgent PMS Schedule</h3>
+</div>
+<span class="px-2 py-0.5 rounded-full bg-surface-container-high text-on-surface-variant font-label-sm text-label-sm font-semibold">7 Days</span>
+</div>
+<div class="space-y-space-sm">
+<!-- Visit Item 1 -->
+<div class="p-space-sm bg-surface-container-low rounded-lg hover:bg-surface-container transition-colors space-y-2">
+<div class="flex items-start justify-between gap-2">
+<div class="min-w-0">
+<div class="font-headline-sm text-headline-sm text-on-surface truncate">Ruby Hall Clinic (Kalyani Nagar)</div>
+<div class="font-body-sm text-body-sm text-secondary font-medium truncate">Siemens Magnetom Aera 1.5T MRI</div>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-error-container text-on-error-container font-label-sm text-[10px] font-bold shrink-0">Tomorrow</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant pt-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">person</span>
+<span>Rahul Sharma</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-2 py-1 rounded text-outline hover:text-on-surface hover:bg-surface-container-lowest font-label-sm text-label-sm transition-colors">Reschedule</button>
+<button class="px-2.5 py-1 rounded bg-secondary text-on-secondary font-label-sm text-label-sm font-medium hover:bg-on-secondary-container transition-colors shadow-sm">Complete</button>
+</div>
+</div>
+</div>
+<!-- Visit Item 2 -->
+<div class="p-space-sm bg-surface-container-low rounded-lg hover:bg-surface-container transition-colors space-y-2">
+<div class="flex items-start justify-between gap-2">
+<div class="min-w-0">
+<div class="font-headline-sm text-headline-sm text-on-surface truncate">Noble Hospital Hadapsar</div>
+<div class="font-body-sm text-body-sm text-secondary font-medium truncate">Philips Allura Centron CathLab</div>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-[10px] font-semibold shrink-0">18 Apr</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant pt-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">person</span>
+<span>Amit Patil</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-2 py-1 rounded text-outline hover:text-on-surface hover:bg-surface-container-lowest font-label-sm text-label-sm transition-colors">Reschedule</button>
+<button class="px-2.5 py-1 rounded bg-secondary text-on-secondary font-label-sm text-label-sm font-medium hover:bg-on-secondary-container transition-colors shadow-sm">Complete</button>
+</div>
+</div>
+</div>
+<!-- Visit Item 3 -->
+<div class="p-space-sm bg-surface-container-low rounded-lg hover:bg-surface-container transition-colors space-y-2">
+<div class="flex items-start justify-between gap-2">
+<div class="min-w-0">
+<div class="font-headline-sm text-headline-sm text-on-surface truncate">Poona Hospital Research Centre</div>
+<div class="font-body-sm text-body-sm text-secondary font-medium truncate">Mindray WATO EX-65 Anesthesia</div>
+</div>
+<span class="px-1.5 py-0.5 rounded bg-surface-container-high text-on-surface-variant font-label-sm text-[10px] font-semibold shrink-0">20 Apr</span>
+</div>
+<div class="flex items-center justify-between text-body-sm font-body-sm text-on-surface-variant pt-1">
+<div class="flex items-center gap-1.5">
+<span class="material-symbols-outlined text-[16px] text-primary">person</span>
+<span>Sneha Kulkarni</span>
+</div>
+<div class="flex items-center gap-2">
+<button class="px-2 py-1 rounded text-outline hover:text-on-surface hover:bg-surface-container-lowest font-label-sm text-label-sm transition-colors">Reschedule</button>
+<button class="px-2.5 py-1 rounded bg-secondary text-on-secondary font-label-sm text-label-sm font-medium hover:bg-on-secondary-container transition-colors shadow-sm">Complete</button>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- Live Spares Van Stock & Reorder Alert Widget -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error text-[22px]">local_shipping</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Van & Hub Low Stock</h3>
+</div>
+<button class="font-label-sm text-label-sm text-secondary hover:underline font-semibold">View Depot</button>
+</div>
+<!-- Stock Items List -->
+<div class="space-y-space-sm">
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between gap-space-sm">
+<div class="min-w-0">
+<div class="font-headline-sm text-headline-sm text-on-surface truncate">X-Ray Tube Heat Exchanger Hose</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">P/N: XTH-8821 —————— — Van MH-12-BF-4411</div>
+</div>
+<div class="text-right shrink-0">
+<div class="font-label-md text-label-md text-error font-bold">1 left <span class="text-on-surface-variant font-normal">/ Min 4</span></div>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-[10px] font-semibold">Order Sent</span>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between gap-space-sm">
+<div class="min-w-0">
+<div class="font-headline-sm text-headline-sm text-on-surface truncate">ECG Trunk Cable 5-Lead Snap</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">P/N: CAB-MND-091 —————— — Pune Central Hub</div>
+</div>
+<div class="text-right shrink-0">
+<div class="font-label-md text-label-md text-error font-bold">2 left <span class="text-on-surface-variant font-normal">/ Min 8</span></div>
+<button class="px-2 py-0.5 rounded bg-primary text-on-primary font-label-sm text-[10px] font-semibold hover:bg-primary-container">Reorder</button>
+</div>
+</div>
+<div class="p-space-sm rounded-lg bg-surface-container-low flex items-center justify-between gap-space-sm">
+<div class="min-w-0">
+<div class="font-headline-sm text-headline-sm text-on-surface truncate">Ultrasound Acoustic Gel Bulk Pack (5L)</div>
+<div class="font-body-sm text-body-sm text-on-surface-variant">P/N: CON-GEL-500 —————— — Van MH-14-GH-9022</div>
+</div>
+<div class="text-right shrink-0">
+<div class="font-label-md text-label-md text-on-surface font-bold">0 left <span class="text-on-surface-variant font-normal">/ Min 3</span></div>
+<span class="px-2 py-0.5 rounded-full bg-error-container text-on-error-container font-label-sm text-[10px] font-bold">Stock Out</span>
+</div>
+</div>
+</div>
+</div>
+<!-- Engineer Workload Tracker Card -->
+<div class="bg-surface-container-lowest p-space-lg rounded-xl shadow-sm space-y-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-primary text-[22px]">engineering</span>
+<h3 class="font-headline-sm text-headline-sm text-primary">Field Team Workload</h3>
+</div>
+<span class="font-label-sm text-label-sm text-on-surface-variant">Active Load: 14 Calls</span>
+</div>
+<div class="space-y-space-md">
+<!-- Engineer 1: Rahul Sharma -->
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary text-on-primary flex items-center justify-center font-label-sm text-[11px] font-semibold">RS</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Rahul Sharma</span>
+<span class="ml-1 text-[11px] text-secondary font-medium"> ————— — On-site Pune</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-primary">5 calls</span>
+<span class="w-2 h-2 rounded-full bg-error"></span>
+</div>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 100%"></div>
+</div>
+<div class="flex justify-between font-label-sm text-[11px] text-on-surface-variant">
+<span>Max Capacity reached</span>
+<span class="text-error font-semibold">Over-allocated</span>
+</div>
+</div>
+<!-- Engineer 2: Amit Patil -->
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-secondary text-on-secondary flex items-center justify-center font-label-sm text-[11px] font-semibold">AP</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Amit Patil</span>
+<span class="ml-1 text-[11px] text-secondary font-medium"> ————— — In Transit</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-primary">4 calls</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 80%"></div>
+</div>
+<div class="flex justify-between font-label-sm text-[11px] text-on-surface-variant">
+<span>Optimal load (80%)</span>
+<span class="text-secondary font-medium">1 slot left</span>
+</div>
+</div>
+<!-- Engineer 3: Sneha Kulkarni -->
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-primary-container text-on-primary-container flex items-center justify-center font-label-sm text-[11px] font-semibold">SK</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Sneha Kulkarni</span>
+<span class="ml-1 text-[11px] text-secondary font-medium"> ————— — On-site Erandwane</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-primary">3 calls</span>
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+</div>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-secondary h-full rounded-full" style="width: 60%"></div>
+</div>
+<div class="flex justify-between font-label-sm text-[11px] text-on-surface-variant">
+<span>Moderate load (60%)</span>
+<span class="text-secondary font-medium">2 slots left</span>
+</div>
+</div>
+<!-- Engineer 4: Vikram Singh -->
+<div class="space-y-1">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<div class="w-7 h-7 rounded-full bg-outline-variant text-primary flex items-center justify-center font-label-sm text-[11px] font-semibold">VS</div>
+<div>
+<span class="font-headline-sm text-headline-sm text-on-surface">Vikram Singh</span>
+<span class="ml-1 text-[11px] text-on-surface-variant font-medium"> ————— — Available Standby</span>
+</div>
+</div>
+<div class="flex items-center gap-1.5">
+<span class="font-headline-sm text-headline-sm text-primary">2 calls</span>
+<span class="w-2 h-2 rounded-full bg-secondary-fixed"></span>
+</div>
+</div>
+<div class="w-full bg-surface-container h-2 rounded-full overflow-hidden">
+<div class="bg-secondary-fixed h-full rounded-full" style="width: 40%"></div>
+</div>
+<div class="flex justify-between font-label-sm text-[11px] text-on-surface-variant">
+<span>Ready for P1 assignment</span>
+<span class="text-primary font-semibold">Dispatch Ready</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+</div>
+<script>
+ // Simple micro-interaction for call filtering buttons — document.querySelectorAll('.call-filter').forEach(btn => {btn.addEventListener('click', () => {document.querySelectorAll('.call-filter').forEach(b => {b.classList.remove('bg-surface-container-lowest', 'text-primary', 'font-semibold', 'shadow-sm'); b.classList.add('text-on-surface-variant');
+ }); btn.classList.add('bg-surface-container-lowest', 'text-primary', 'font-semibold', 'shadow-sm'); btn.classList.remove('text-on-surface-variant');
+ });
+ });
+</script></main></div><style id="stitch-dark">
+html.dark body{background-color:#12161c !important}
+html.dark .bg-background,html.dark .bg-surface,html.dark .bg-surface-bright{background-color:#12161c !important}
+html.dark .bg-surface-container-lowest{background-color:#1b2129 !important}
+html.dark .bg-surface-container-low{background-color:#171d25 !important}
+html.dark .bg-surface-container{background-color:#222933 !important}
+html.dark .bg-surface-container-high{background-color:#283038 !important}
+html.dark .bg-surface-container-highest{background-color:#303945 !important}
+html.dark .bg-surface-dim{background-color:#252d36 !important}
+html.dark .bg-primary{background-color:#0b3c5d !important}
+html.dark .bg-primary-container{background-color:#164e74 !important}
+html.dark .hover\:bg-surface-container-high:hover{background-color:#283038 !important}
+html.dark .hover\:bg-surface-container-low:hover{background-color:#171d25 !important}
+html.dark .hover\:bg-surface-container:hover{background-color:#222933 !important}
+html.dark .text-on-surface{color:#e6ebf0 !important}
+html.dark .text-on-background{color:#e6ebf0 !important}
+html.dark .text-on-surface-variant{color:#a8b3bc !important}
+html.dark .text-primary{color:#a3cbf2 !important}
+html.dark .text-outline{color:#8a949d !important}
+html.dark .text-secondary{color:#67d6e4 !important}
+html.dark .text-on-secondary-container{color:#a5f3fc !important}
+html.dark .text-white{color:#ffffff !important}
+html.dark .border-outline-variant{border-color:#2e3841 !important}
+html.dark .border-outline{border-color:#39434d !important}
+html.dark .divide-outline-variant > :not([hidden]) ~ :not([hidden]){border-color:#2e3841 !important}
+html.dark .placeholder\:text-outline::placeholder{color:#6f7a84 !important}
+html.dark input,html.dark select,html.dark textarea{color-scheme:dark}
+html.dark .shadow-sm,html.dark .shadow-md{box-shadow:0 1px 3px rgba(0,0,0,0.35) !important}
+html.dark kbd{background:#222933 !important;color:#a3cbf2 !important}
+:focus-visible{outline:2px solid #0e9aa7 !important;outline-offset:2px;border-radius:4px}
+</style><button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark / light theme" style="position:fixed;right:1rem;bottom:1rem;z-index:70;width:46px;height:46px;border-radius:9999px;background:#0b3c5d;color:#8df2ff;border:1px solid #0e9aa7;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(11,60,93,0.35)"><span class="material-symbols-outlined" id="theme-toggle-icon">dark_mode</span></button>
+<script id="stitch-extras">
+(function(){
+  var btn=document.getElementById('theme-toggle');
+  var icon=document.getElementById('theme-toggle-icon');
+  function sync(){if(icon)icon.textContent=document.documentElement.classList.contains('dark')?'light_mode':'dark_mode';}
+  if(btn)btn.addEventListener('click',function(){
+    var next=!document.documentElement.classList.contains('dark');
+    document.documentElement.classList.toggle('dark',next);
+    document.documentElement.style.colorScheme=next?'dark':'light';
+    try{localStorage.setItem('summit-theme',next?'dark':'light');}catch(e){}
+    sync();
+  });
+  sync();
+  document.querySelectorAll('input[type="search"]').forEach(function(el){
+    el.addEventListener('keydown',function(e){if(e.key==='Enter'){var q=el.value.trim();window.location.href='search-results.html?q='+encodeURIComponent(q||'SG-CT-20451');}});
+  });
+  document.querySelectorAll('button').forEach(function(b){
+    var h=(b.innerHTML||'').toLowerCase();var t=(b.textContent||'').toLowerCase();
+    if(h.indexOf('qr_code_2')!==-1){b.addEventListener('click',function(){window.location.href='qr-sticker.html';});}
+    else if(t.indexOf('print qr sticker')!==-1){b.addEventListener('click',function(){window.location.href='qr-sticker.html';});}
+    else if(t.indexOf('assign engineer')!==-1){b.addEventListener('click',function(){window.location.href='assign-engineer.html';});}
+  });
+})();
+</script><script id="stitch-wire">
+(function(){
+  var routes=[['register call','register-service-call.html'],['submit & assign','service-calls-fsr.html'],['submit','service-calls-fsr.html'],['save equipment','equipment-database.html'],['save & generate pms','contracts-pms-spares.html']];
+  document.querySelectorAll('button').forEach(function(b){
+    var t=(b.textContent||'').trim().toLowerCase();
+    for(var i=0;i<routes.length;i++){if(t.indexOf(routes[i][0])!==-1){b.style.cursor='pointer';b.addEventListener('click',(function(u){return function(){window.location.href=u;};})(routes[i][1]));break;}}
+  });
+})();
+</script><script id="stitch-bell">
+document.querySelectorAll('button').forEach(function(b){if(/notifications/i.test(b.textContent||'')){b.style.cursor='pointer';b.addEventListener('click',function(){window.location.href='notifications.html';});}});
+</script>
+<script id="master-nav">(function(){var b=document.getElementById("master-nav-toggle");if(!b)return;var s=document.getElementById("master-nav-submenu");var onMasters=/masters\.html/.test(location.pathname);function setOpen(v){if(!s)return;b.classList.toggle("master-open",v);s.classList.toggle("hidden",!v);b.setAttribute("aria-expanded",v?"true":"false");}b.addEventListener("click",function(){setOpen(!(b.classList.contains("master-open")));});setOpen(onMasters);if(onMasters){var m=location.search.match(/tab=([a-z]+)/);var q=m?m[1]:null;document.querySelectorAll("#master-nav-submenu a").forEach(function(a){var href=a.getAttribute("href")||"";var hit=q?href.indexOf("tab="+q)!==-1:href==="masters.html";if(hit)a.className="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg bg-primary text-on-primary transition-colors font-label-md text-label-md font-semibold";});}})();</script>
+</body></html>

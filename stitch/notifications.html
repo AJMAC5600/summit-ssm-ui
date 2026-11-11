@@ -1,0 +1,752 @@
+<!DOCTYPE html> <html lang="en"><head>
+<meta charset="utf-8"/>
+<meta content="width=device-width, initial-scale=1.0" name="viewport"/>
+<title>Notification Center —— — Summit Service &amp; Spares</title>
+<!-- Material Symbols Outlined font -->
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Inter font -->
+<link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&amp;display=swap" rel="stylesheet"/>
+<link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:wght,FILL@100..700,0..1&amp;display=swap" rel="stylesheet"/>
+<!-- Tailwind CSS CDN -->
+<script src="https://cdn.tailwindcss.com?plugins=forms,container-queries"></script>
+<script id="tailwind-config"> tailwind.config = {darkMode: "class", theme: {extend: {
+ "colors": {
+ "surface-container-lowest": "#ffffff",
+ "inverse-primary": "#a3cbf2",
+ "secondary-fixed": "#8df2ff",
+ "on-tertiary-container": "#7f9fff",
+ "on-surface-variant": "#42474e",
+ "tertiary-container": "#00328b",
+ "on-tertiary": "#ffffff",
+ "surface-bright": "#f7fafc",
+ "surface-container-highest": "#e0e3e5",
+ "primary": "#00263f",
+ "on-error": "#ffffff",
+ "on-primary-fixed": "#001d32",
+ "on-primary-container": "#7fa7cd",
+ "on-background": "#181c1e",
+ "surface-container-high": "#e5e9eb",
+ "on-error-container": "#93000a",
+ "surface-container": "#ebeef0",
+ "tertiary-fixed-dim": "#b4c5ff",
+ "error-container": "#ffdad6",
+ "primary-container": "#0b3c5d",
+ "surface": "#f7fafc",
+ "surface-variant": "#e0e3e5",
+ "on-tertiary-fixed-variant": "#003ea8",
+ "on-secondary-fixed-variant": "#004f56",
+ "on-primary": "#ffffff",
+ "inverse-surface": "#2d3133",
+ "on-tertiary-fixed": "#00174b",
+ "tertiary": "#001f5d",
+ "on-primary-fixed-variant": "#1f4a6c",
+ "primary-fixed-dim": "#a3cbf2",
+ "secondary-container": "#82f0fe",
+ "on-surface": "#181c1e",
+ "surface-tint": "#396285",
+ "surface-dim": "#d7dadc",
+ "outline-variant": "#c2c7ce",
+ "on-secondary": "#ffffff",
+ "error": "#ba1a1a",
+ "tertiary-fixed": "#dbe1ff",
+ "secondary": "#006972",
+ "inverse-on-surface": "#eef1f3",
+ "surface-container-low": "#f1f4f6",
+ "outline": "#72777e",
+ "secondary-fixed-dim": "#67d6e4",
+ "primary-fixed": "#cee5ff",
+ "on-secondary-fixed": "#001f23",
+ "background": "#f7fafc",
+ "on-secondary-container": "#006d77"
+ },
+ "borderRadius": {
+ "DEFAULT": "0.25rem",
+ "lg": "0.5rem",
+ "xl": "0.75rem",
+ "full": "9999px"
+ },
+ "spacing": {
+ "gutter": "1rem",
+ "space-sm": "0.5rem",
+ "margin-tablet": "1.5rem",
+ "gutter-desktop": "1.5rem",
+ "margin-desktop": "2rem",
+ "margin": "1rem",
+ "space-md": "0.75rem",
+ "space-xs": "0.25rem",
+ "space-lg": "1.25rem",
+ "space-xl": "2rem"
+ },
+ "fontFamily": {
+ "headline-xl": ["Inter"],
+ "body-lg": ["Inter"],
+ "headline-md": ["Inter"],
+ "label-sm": ["Inter"],
+ "headline-sm": ["Inter"],
+ "body-md": ["Inter"],
+ "label-md": ["Inter"],
+ "display-lg": ["Inter"],
+ "metric-val": ["Inter"],
+ "body-sm": ["Inter"],
+ "headline-lg": ["Inter"],
+ "label-lg": ["Inter"]
+ },
+ "fontSize": {
+ "headline-xl": ["28px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "600" }],
+ "body-lg": ["16px", { "lineHeight": "24px", "letterSpacing": "0em", "fontWeight": "400" }],
+ "headline-md": ["18px", { "lineHeight": "24px", "letterSpacing": "-0.01em", "fontWeight": "600" }],
+ "label-sm": ["11px", { "lineHeight": "14px", "letterSpacing": "0.04em", "fontWeight": "600" }],
+ "headline-sm": ["15px", { "lineHeight": "20px", "letterSpacing": "-0.005em", "fontWeight": "600" }],
+ "body-md": ["14px", { "lineHeight": "20px", "letterSpacing": "0em", "fontWeight": "400" }],
+ "label-md": ["12px", { "lineHeight": "16px", "letterSpacing": "0.01em", "fontWeight": "500" }],
+ "display-lg": ["36px", { "lineHeight": "44px", "letterSpacing": "-0.025em", "fontWeight": "700" }],
+ "metric-val": ["30px", { "lineHeight": "36px", "letterSpacing": "-0.02em", "fontWeight": "700" }],
+ "body-sm": ["12px", { "lineHeight": "16px", "letterSpacing": "0.005em", "fontWeight": "400" }],
+ "headline-lg": ["22px", { "lineHeight": "28px", "letterSpacing": "-0.015em", "fontWeight": "600" }],
+ "label-lg": ["14px", { "lineHeight": "20px", "letterSpacing": "0.005em", "fontWeight": "500" }]
+ }
+ }
+ }
+ } </script>
+<style>
+.material-symbols-outlined {font-family: 'Material Symbols Outlined'; font-weight: normal; font-style: normal; font-size: 20px; line-height: 1; letter-spacing: normal; text-transform: none; display: inline-block; white-space: nowrap; word-wrap: normal; direction: ltr;
+ -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility;
+ -moz-osx-font-smoothing: grayscale; font-feature-settings: 'liga';
+ }
+.elevation-card {border: 1px solid #E2E8F0; box-shadow: 0px 1px 3px rgba(11, 60, 93, 0.05), 0px 4px 8px -2px rgba(11, 60, 93, 0.03);
+ }
+.elevation-pop {border: 1px solid #CBD5E1; box-shadow: 0px 4px 6px -1px rgba(11, 60, 93, 0.08), 0px 10px 15px -3px rgba(11, 60, 93, 0.06);
+ }
+ @keyframes pulse-subtle {0%, 100% { opacity: 1; transform: scale(1); } — 50% { opacity: 0.4; transform: scale(1.15); }
+ }
+.live-pulse {animation: pulse-subtle 1.8s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+ } </style>
+<script id="stitch-theme-init">(function(){try{if(localStorage.getItem("summit-theme")==="dark"){document.documentElement.classList.add("dark");document.documentElement.style.colorScheme="dark";}}catch(e){}})();</script>
+</head>
+<body class="bg-background text-on-surface antialiased overflow-x-hidden min-h-screen flex">
+<!-- ========================================================================= -->
+<!-- LEFT PERSISTENT NAVIGATION SIDEBAR (Shared Component: SideNavBar) -->
+<!-- ========================================================================= -->
+<aside class="fixed left-0 top-0 h-full w-64 bg-surface-container-lowest shadow-[0_1px_8px_rgba(0,0,0,0.04)] z-50 flex flex-col justify-between"><div class="flex flex-col"><div class="h-16 px-space-lg flex items-center justify-between gap-space-sm"><div class="flex items-center gap-space-sm min-w-0"><img alt="Summit Healthcare Logo" class="h-8 w-auto object-contain" src="https://lh3.googleusercontent.com/aida-public/AB6AXuCIUSceXT4JgT_RjOJHH1_5Ja2X8b8cCgcu9wUSzwk0VNSjfhMq1sA1WT7_ydpQbxwnUeV-CXrpwwwkfohub5ZmF90LAoo9J_xRAfBcsphpdDnANBlLUFQE1x8Cwg5PNJcrUI0KnJfafoPYwmbAQSPU0-KujPvedr8bA-85WLgQkq--x_kTit3_bZTDYSo8eZRspVxZMCBWMn-Ll67g4Ffr_FP3s8naTY2AnLTRvvQJ"/><div class="flex flex-col min-w-0"><span class="font-headline-sm text-headline-sm text-primary truncate leading-tight">Summit</span><span class="font-label-sm text-label-sm text-on-surface-variant uppercase tracking-wider truncate">Healthcare</span></div></div></div><div class="px-space-lg pb-space-md"><div class="inline-flex items-center px-space-sm py-0.5 rounded-full bg-secondary-container text-on-secondary-container"><span class="font-label-sm text-label-sm tracking-wide uppercase font-semibold">Service Manager</span></div></div><nav class="flex flex-col gap-1 px-space-md" data-active-classes="bg-primary text-on-primary font-headline-sm rounded-lg"><a aria-current="page" class="flex items-center gap-space-sm px-space-md py-space-sm transition-colors bg-primary text-on-primary font-headline-sm rounded-lg" data-path="dashboard" href="operations-dashboard.html"><span class="material-symbols-outlined text-[20px]">grid_view</span><span class="font-label-lg text-label-lg">Dashboard</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="equipment" href="equipment-database.html"><span class="material-symbols-outlined text-[20px]">precision_manufacturing</span><span class="font-label-lg text-label-lg">Equipment Database</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="calls" href="service-calls-register.html"><span class="material-symbols-outlined text-[20px]">support_agent</span><span class="font-label-lg text-label-lg">Service Calls</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="contracts" href="contracts-pms-spares.html"><span class="material-symbols-outlined text-[20px]">verified</span><span class="font-label-lg text-label-lg">AMC/CMC & PMS</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="inventory" href="spares-inventory.html"><span class="material-symbols-outlined text-[20px]">inventory_2</span><span class="font-label-lg text-label-lg">Spares Inventory</span></a><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="reports" title="Reports hub is Phase 5 - not exported from Stitch yet" href="reports-hub.html"><span class="material-symbols-outlined text-[20px]">analytics</span><span class="font-label-lg text-label-lg">Reports Hub</span></a><style>#master-nav-toggle .master-chev{transition:transform .2s ease}#master-nav-toggle.master-open .master-chev{transform:rotate(180deg)}</style><div class="flex flex-col"><button id="master-nav-toggle" class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors w-full text-left" aria-expanded="false" aria-controls="master-nav-submenu"><span class="material-symbols-outlined text-[20px]">schema</span><span class="font-label-lg text-label-lg flex-1 text-left">Master Data</span><span class="material-symbols-outlined text-[18px] master-chev">expand_more</span></button><div id="master-nav-submenu" class="flex-col gap-0.5 pl-10 pt-0.5 hidden"><a href="masters.html" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">apps</span><span>All Masters Hub</span></a><a href="masters.html?tab=hospitals" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">local_hospital</span><span>Hospitals</span></a><a href="masters.html?tab=brands" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">branding_watermark</span><span>Brands</span></a><a href="masters.html?tab=types" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">category</span><span>Equipment Types</span></a><a href="masters.html?tab=models" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">precision_manufacturing</span><span>Equipment Models</span></a><a href="masters.html?tab=suppliers" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">local_shipping</span><span>Suppliers</span></a><a href="masters.html?tab=stores" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">warehouse</span><span>Stores &amp; Van Depots</span></a><a href="masters.html?tab=sla" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">timer</span><span>SLA Settings</span></a><a href="masters.html?tab=checklists" class="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors font-label-md text-label-md"><span class="material-symbols-outlined text-[16px]">checklist</span><span>Checklist Templates</span></a></div></div><a class="flex items-center gap-space-sm px-space-md py-space-sm rounded-lg text-on-surface-variant hover:bg-surface-container-high hover:text-on-surface transition-colors" data-path="settings" title="Settings screen not exported from Stitch yet" href="admin-console.html"><span class="material-symbols-outlined text-[20px]">settings</span><span class="font-label-lg text-label-lg">Settings</span></a></nav></div><div class="p-space-lg bg-surface-container-low m-space-md rounded-lg flex items-center justify-between"><div class="flex flex-col"><span class="font-label-sm text-label-sm text-on-surface-variant uppercase">System SLA</span><span class="font-headline-sm text-headline-sm text-primary">99.8%</span></div><div class="w-2.5 h-2.5 rounded-full bg-secondary ring-4 ring-secondary/20"></div></div></aside>
+<!-- ========================================================================= -->
+<!-- MAIN WORKSPACE CONTAINER (Desktop Offset: w-[calc(100%-16rem)] ml-64) -->
+<!-- ========================================================================= -->
+<div class="ml-64 flex-1 flex flex-col min-h-screen bg-background">
+<!-- TOP NAVIGATION BAR (Shared Component: TopNavBar) -->
+<header class="flex justify-between items-center h-16 px-space-lg w-full shrink-0 bg-surface/90 backdrop-blur-xl shadow-[0_1px_8px_rgba(0,0,0,0.04)]">
+<!-- Search Input (Left) -->
+<div class="flex items-center gap-3 w-96">
+<div class="relative w-full">
+<span class="material-symbols-outlined absolute left-3 top-1/2 -translate-y-1/2 text-outline text-[18px]" data-icon="search">search</span>
+<input class="w-full h-9 pl-9 pr-4 bg-surface-container-low border border-outline-variant/50 rounded-lg text-body-sm font-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-secondary focus:ring-1 focus:ring-secondary/30 transition-all" placeholder="Search serial no, call no, hospital, part no..." type="text"/>
+</div>
+</div>
+<!-- Center & Right Controls -->
+<div class="flex items-center gap-space-md">
+<!-- Role Switcher Pill -->
+<div class="bg-surface-container-low p-1 rounded-full border border-outline-variant/40 flex items-center">
+<button class="bg-secondary-container text-on-secondary-container px-3 py-1 rounded-full text-label-sm font-label-sm font-semibold transition-all shadow-xs">Manager</button>
+<button class="text-on-surface-variant hover:text-on-surface px-3 py-1 text-label-sm font-label-sm font-medium transition-colors">Engineer</button>
+<button class="text-on-surface-variant hover:text-on-surface px-3 py-1 text-label-sm font-label-sm font-medium transition-colors">Admin</button>
+</div>
+<div class="h-5 w-[1px] bg-outline-variant/40"></div>
+<!-- + Register Call Button -->
+<button class="h-9 px-space-md bg-primary-container hover:bg-primary text-on-primary rounded-lg text-label-md font-label-md font-semibold flex items-center gap-1.5 transition-all active:scale-[0.98] shadow-sm">
+<span class="material-symbols-outlined text-[18px]" data-icon="add">add</span>
+<span>+ Register Call</span>
+</button>
+<!-- Notification Bell (ACTIVE STATE FOR NOTIFICATION CENTER) -->
+<div class="relative">
+<button aria-label="Notifications" class="w-9 h-9 rounded-lg bg-secondary/10 border-2 border-secondary text-secondary flex items-center justify-center transition-all shadow-xs" title="Notification Center (Active)">
+<span class="material-symbols-outlined text-[20px]" data-icon="notifications" data-weight="fill" style="font-variation-settings: 'FILL' 1;">notifications</span>
+</button>
+<span class="absolute -top-1.5 -right-1.5 px-1.5 py-0.2 bg-error text-on-error rounded-full text-[10px] font-bold tracking-tight shadow-sm border-2 border-surface-container-lowest"> 10
+</span>
+</div>
+<!-- User Profile Avatar Pill -->
+<div class="flex items-center gap-2.5 pl-2 py-1 pr-3 rounded-lg hover:bg-surface-container-low transition-colors cursor-pointer border border-transparent hover:border-outline-variant/30">
+<div class="w-8 h-8 rounded-full bg-primary-container text-secondary-fixed flex items-center justify-center font-bold text-label-md"> RS
+</div>
+<div class="flex flex-col text-left">
+<span class="text-label-md font-label-md font-semibold text-on-surface leading-tight">Rahul Sharma</span>
+<span class="text-[11px] font-body-sm text-outline leading-tight">Service Ops Manager</span>
+</div>
+<span class="material-symbols-outlined text-outline text-[16px]" data-icon="expand_more">expand_more</span>
+</div>
+</div>
+</header>
+<!-- CONTENT WRAPPER -->
+<main class="flex-1 px-space-xl py-space-lg flex flex-col gap-space-lg max-w-[1520px] w-full mx-auto">
+<!-- BREADCRUMB & HEADER SECTION -->
+<div class="flex flex-col gap-2">
+<!-- Breadcrumb -->
+<nav class="flex items-center gap-2 text-label-sm font-label-sm text-outline">
+<a class="hover:text-primary transition-colors" href="javascript:void(0)">Overview</a>
+<span>/</span>
+<a class="hover:text-primary transition-colors" href="javascript:void(0)">Notifications</a>
+<span>/</span>
+<span class="text-on-surface font-semibold">Notification Center</span>
+</nav>
+<!-- Main Title & Operational Actions Bar -->
+<div class="flex items-start justify-between gap-4 mt-1">
+<div>
+<div class="flex items-center gap-3">
+<h1 class="text-headline-xl font-headline-xl text-primary tracking-tight">Notification Center</h1>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-label-sm font-label-sm bg-error-container text-on-error-container border border-error/20 font-semibold">
+<span class="w-1.5 h-1.5 rounded-full bg-error live-pulse"></span> 10 Unread
+</span>
+<span class="inline-flex items-center gap-1.5 px-2.5 py-0.5 rounded-full text-[11px] font-label-sm bg-surface-container border border-outline-variant/40 text-outline">
+<span class="w-1.5 h-1.5 rounded-full bg-secondary"></span> Live Feed —— — SignalR Active
+</span>
+</div>
+<p class="text-body-md font-body-md text-outline mt-1 max-w-3xl"> Centralized operational alerts, SLA tracking, preventive maintenance schedules, and inventory threshold events.
+</p>
+</div>
+<!-- Header Right Actions -->
+<div class="flex items-center gap-2.5 pt-1">
+<button class="h-9 px-3.5 border border-outline-variant/60 hover:bg-surface-container text-on-surface-variant rounded-lg text-label-md font-label-md font-medium flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[18px]" data-icon="done_all">done_all</span>
+<span>Mark all as read</span>
+</button>
+<button class="h-9 px-3 border border-outline-variant/60 hover:bg-surface-container text-on-surface-variant rounded-lg text-label-md font-label-md font-medium flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[18px]" data-icon="tune">tune</span>
+<span>Alert Preferences</span>
+</button>
+</div>
+</div>
+</div>
+<!-- FILTER CHIPS & TOOLBAR ROW -->
+<section class="flex items-center justify-between gap-4 bg-surface-container-lowest p-2.5 rounded-xl border border-outline-variant/40 shadow-xs">
+<!-- Filter Chips Group -->
+<div class="flex items-center gap-1.5 flex-wrap">
+<!-- All Chip (Active) -->
+<button class="h-8 px-3.5 rounded-lg bg-primary-container text-on-primary text-label-sm font-label-sm font-semibold flex items-center gap-2 shadow-xs transition-all">
+<span>All</span>
+<span class="bg-surface-container-lowest/20 px-1.5 py-0.2 rounded text-[10px] text-on-primary">10 unread / 24 total</span>
+</button>
+<!-- Unread Chip -->
+<button class="h-8 px-3 rounded-lg hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface text-label-sm font-label-sm font-medium flex items-center gap-1.5 transition-colors border border-transparent hover:border-outline-variant/30">
+<span>Unread</span>
+<span class="bg-error-container text-on-error-container font-semibold px-1.5 py-0.2 rounded text-[10px]">10</span>
+</button>
+<!-- Calls Chip -->
+<button class="h-8 px-3 rounded-lg hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface text-label-sm font-label-sm font-medium flex items-center gap-1.5 transition-colors border border-transparent hover:border-outline-variant/30">
+<span>Calls</span>
+<span class="bg-surface-container text-outline px-1.5 py-0.2 rounded text-[10px]">3</span>
+</button>
+<!-- PMS Chip -->
+<button class="h-8 px-3 rounded-lg hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface text-label-sm font-label-sm font-medium flex items-center gap-1.5 transition-colors border border-transparent hover:border-outline-variant/30">
+<span>PMS</span>
+<span class="bg-surface-container text-outline px-1.5 py-0.2 rounded text-[10px]">2</span>
+</button>
+<!-- Contracts Chip -->
+<button class="h-8 px-3 rounded-lg hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface text-label-sm font-label-sm font-medium flex items-center gap-1.5 transition-colors border border-transparent hover:border-outline-variant/30">
+<span>Contracts</span>
+<span class="bg-surface-container text-outline px-1.5 py-0.2 rounded text-[10px]">2</span>
+</button>
+<!-- Stock Chip -->
+<button class="h-8 px-3 rounded-lg hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface text-label-sm font-label-sm font-medium flex items-center gap-1.5 transition-colors border border-transparent hover:border-outline-variant/30">
+<span>Stock</span>
+<span class="bg-surface-container text-outline px-1.5 py-0.2 rounded text-[10px]">2</span>
+</button>
+<!-- SLA Chip -->
+<button class="h-8 px-3 rounded-lg hover:bg-surface-container-low text-on-surface-variant hover:text-on-surface text-label-sm font-label-sm font-medium flex items-center gap-1.5 transition-colors border border-transparent hover:border-outline-variant/30">
+<span>SLA</span>
+<span class="bg-surface-container text-outline px-1.5 py-0.2 rounded text-[10px]">1</span>
+</button>
+</div>
+<!-- Search alerts and Clear read -->
+<div class="flex items-center gap-3">
+<div class="relative w-60">
+<span class="material-symbols-outlined absolute left-2.5 top-1/2 -translate-y-1/2 text-outline text-[16px]" data-icon="filter_list">filter_list</span>
+<input class="w-full h-8 pl-8 pr-3 bg-surface-bright border border-outline-variant/50 rounded-lg text-body-sm font-body-sm text-on-surface placeholder:text-outline focus:outline-none focus:border-secondary transition-all" placeholder="Filter alerts..." type="text"/>
+</div>
+<button class="text-label-sm font-label-sm font-medium text-outline hover:text-error transition-colors flex items-center gap-1 px-2 py-1">
+<span class="material-symbols-outlined text-[16px]" data-icon="delete_sweep">delete_sweep</span>
+<span>Clear read</span>
+</button>
+</div>
+</section>
+<!-- TWO-COLUMN WORKBOARD: FEED + CONTEXT DRAWER -->
+<div class="grid grid-cols-12 gap-space-lg items-start">
+<!-- LEFT / MAIN FEED COLUMN (8 Cols) -->
+<div class="col-span-8 flex flex-col gap-space-xl">
+<!-- ========================================== -->
+<!-- GROUP 1: TODAY (5 ITEMS) -->
+<!-- ========================================== -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-1 border-b border-outline-variant/30">
+<div class="flex items-center gap-2">
+<span class="text-headline-sm font-headline-sm text-primary uppercase tracking-wide">Today</span>
+<span class="bg-error/10 text-error font-semibold text-label-sm px-2 py-0.5 rounded-full">5 alerts</span>
+</div>
+<span class="text-body-sm font-body-sm text-outline">Wednesday, 23 Oct 2025</span>
+</div>
+<!-- Item 1: SLA breach risk (Red Pulse Theme) -->
+<div class="elevation-card bg-surface-container-lowest rounded-xl p-space-md border-l-4 border-l-error flex gap-space-md items-start transition-all hover:shadow-md">
+<div class="w-10 h-10 rounded-full bg-error-container/60 border border-error/30 text-error flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[22px] live-pulse" data-icon="timer">timer</span>
+</div>
+<div class="flex-1 flex flex-col gap-1">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="text-headline-sm font-headline-sm text-primary">SLA breach risk —— — SC-2026-00158 Critical</span>
+<span class="w-2 h-2 rounded-full bg-error live-pulse" title="Unread alert"></span>
+<span class="bg-error-container text-on-error-container text-[10px] font-bold uppercase px-2 py-0.5 rounded">18m Left</span>
+</div>
+<span class="text-body-sm font-body-sm text-outline whitespace-nowrap">10 mins ago</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant leading-relaxed"> Sahyadri Hospital CT Scanner breakdown response window expires in 18 minutes. Automatic escalation to Regional Service Director queued.
+</p>
+<div class="flex items-center gap-3 pt-2">
+<button class="h-8 px-3.5 bg-error text-on-error hover:bg-error/90 rounded-lg text-label-sm font-label-sm font-semibold flex items-center gap-1.5 transition-all shadow-xs">
+<span class="material-symbols-outlined text-[16px]" data-icon="open_in_new">open_in_new</span>
+<span>Open Call Ticket</span>
+</button>
+<span class="text-label-sm font-label-sm text-outline">Modality: Siemens Somatom Definition AS</span>
+</div>
+</div>
+</div>
+<!-- Item 2: PMS overdue (Amber Theme) -->
+<div class="elevation-card bg-surface-container-lowest rounded-xl p-space-md border-l-4 border-l-amber-500 flex gap-space-md items-start transition-all hover:shadow-md">
+<div class="w-10 h-10 rounded-full bg-amber-50 border border-amber-300 text-amber-700 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[22px]" data-icon="event_busy">event_busy</span>
+</div>
+<div class="flex-1 flex flex-col gap-1">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="text-headline-sm font-headline-sm text-primary">PMS overdue —— — Ruby Hall CT scanner</span>
+<span class="w-2 h-2 rounded-full bg-secondary" title="Unread alert"></span>
+<span class="bg-amber-100 text-amber-800 text-[10px] font-bold uppercase px-2 py-0.5 rounded">Schedule Delay</span>
+</div>
+<span class="text-body-sm font-body-sm text-outline whitespace-nowrap">42 mins ago</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant leading-relaxed"> Quarterly Maintenance (Q4) for Siemens Somatom was scheduled for yesterday. Technician visit pending dispatch.
+</p>
+<div class="flex items-center gap-3 pt-2">
+<button class="h-8 px-3.5 bg-secondary text-on-secondary hover:bg-secondary/90 rounded-lg text-label-sm font-label-sm font-semibold flex items-center gap-1.5 transition-all shadow-xs">
+<span class="material-symbols-outlined text-[16px]" data-icon="schedule_send">schedule_send</span>
+<span>Reschedule / Dispatch</span>
+</button>
+<span class="text-label-sm font-label-sm text-outline">Contract #CMC-2023-019 —— — Asset #EQ-8812</span>
+</div>
+</div>
+</div>
+<!-- Item 3: Call assigned to you (Blue Theme - HOVER/PRESSED DEMO STATE) -->
+<div class="bg-surface-container-lowest rounded-xl p-space-md border-l-4 border-l-primary-container ring-2 ring-secondary/30 shadow-md transform scale-[1.005] flex gap-space-md items-start transition-all">
+<div class="w-10 h-10 rounded-full bg-primary-container/10 border border-primary-container/20 text-primary-container flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[22px]" data-icon="assignment_ind">assignment_ind</span>
+</div>
+<div class="flex-1 flex flex-col gap-1">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="text-headline-sm font-headline-sm text-primary">Call assigned to you —— — SC-2026-00158</span>
+<span class="w-2 h-2 rounded-full bg-secondary" title="Unread alert"></span>
+<span class="bg-primary-container text-on-primary text-[10px] font-bold uppercase px-2 py-0.5 rounded">Priority P1</span>
+</div>
+<span class="text-body-sm font-body-sm text-outline whitespace-nowrap">1 hr ago</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant leading-relaxed"> Breakdown ticket at Sahyadri Hospital (Tube arc trip during helical scan) assigned to Rahul Sharma as Lead Escalation.
+</p>
+<div class="flex items-center gap-3 pt-2">
+<button class="h-8 px-3.5 bg-primary-container text-on-primary hover:bg-primary rounded-lg text-label-sm font-label-sm font-semibold flex items-center gap-1.5 transition-all">
+<span class="material-symbols-outlined text-[16px]" data-icon="quick_reference">quick_reference</span>
+<span>Acknowledge &amp; Review Telemetry</span>
+</button>
+<span class="text-label-sm font-label-sm text-outline">Lead Engineer: Rahul Sharma</span>
+</div>
+</div>
+</div>
+<!-- Item 4: Low stock (Orange Theme) -->
+<div class="elevation-card bg-surface-container-lowest rounded-xl p-space-md border-l-4 border-l-orange-500 flex gap-space-md items-start transition-all hover:shadow-md">
+<div class="w-10 h-10 rounded-full bg-orange-50 border border-orange-200 text-orange-700 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[22px]" data-icon="inventory_2">inventory_2</span>
+</div>
+<div class="flex-1 flex flex-col gap-1">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="text-headline-sm font-headline-sm text-primary">Low stock —— — X-Ray Tube 96240008 below reorder level</span>
+<span class="w-2 h-2 rounded-full bg-secondary" title="Unread alert"></span>
+<span class="bg-orange-100 text-orange-800 text-[10px] font-bold uppercase px-2 py-0.5 rounded">1 Unit Left</span>
+</div>
+<span class="text-body-sm font-body-sm text-outline whitespace-nowrap">2 hrs ago</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant leading-relaxed"> Central Depot Bin B-14 has 1 unit remaining (Minimum Reorder Level: 2). High breakdown probability modality.
+</p>
+<div class="flex items-center gap-3 pt-2">
+<button class="h-8 px-3.5 border border-outline-variant/60 hover:bg-surface-container text-primary font-semibold rounded-lg text-label-sm font-label-sm flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]" data-icon="shopping_cart">shopping_cart</span>
+<span>Create Purchase Requisition</span>
+</button>
+<span class="text-label-sm font-label-sm text-outline">Part #96240008 —— — Vendor: Varex Imaging</span>
+</div>
+</div>
+</div>
+<!-- Item 5: Part request approved (Green Theme) -->
+<div class="elevation-card bg-surface-container-lowest rounded-xl p-space-md border-l-4 border-l-emerald-600 flex gap-space-md items-start transition-all hover:shadow-md">
+<div class="w-10 h-10 rounded-full bg-emerald-50 border border-emerald-200 text-emerald-700 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[22px]" data-icon="check_circle">check_circle</span>
+</div>
+<div class="flex-1 flex flex-col gap-1">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="text-headline-sm font-headline-sm text-primary">Part request PR-2026-0009 approved</span>
+<span class="w-2 h-2 rounded-full bg-secondary" title="Unread alert"></span>
+<span class="bg-emerald-100 text-emerald-800 text-[10px] font-bold uppercase px-2 py-0.5 rounded">Dispatched</span>
+</div>
+<span class="text-body-sm font-body-sm text-outline whitespace-nowrap">3 hrs ago</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant leading-relaxed"> Requisition for Siemens Straton MX P 128 X-Ray Tube approved for transfer to Field Van MH-12-BF-4411.
+</p>
+<div class="flex items-center gap-3 pt-2">
+<button class="h-8 px-3.5 border border-outline-variant/60 hover:bg-surface-container text-primary font-semibold rounded-lg text-label-sm font-label-sm flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]" data-icon="local_shipping">local_shipping</span>
+<span>View Dispatch Note</span>
+</button>
+<span class="text-label-sm font-label-sm text-outline">Driver: Santosh Jadhav —— — ETA: 45m</span>
+</div>
+</div>
+</div>
+</div>
+<!-- ========================================== -->
+<!-- GROUP 2: YESTERDAY (3 ITEMS) -->
+<!-- ========================================== -->
+<div class="flex flex-col gap-space-sm">
+<div class="flex items-center justify-between pb-1 border-b border-outline-variant/30">
+<div class="flex items-center gap-2">
+<span class="text-headline-sm font-headline-sm text-primary uppercase tracking-wide">Yesterday</span>
+<span class="bg-surface-container text-outline font-semibold text-label-sm px-2 py-0.5 rounded-full">3 alerts</span>
+</div>
+<span class="text-body-sm font-body-sm text-outline">Tuesday, 22 Oct 2025</span>
+</div>
+<!-- Item 6: Contract expiring (Red Theme) -->
+<div class="elevation-card bg-surface-container-lowest rounded-xl p-space-md border-l-4 border-l-error flex gap-space-md items-start transition-all hover:shadow-md">
+<div class="w-10 h-10 rounded-full bg-error-container/50 border border-error/20 text-error flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[22px]" data-icon="pending_actions">pending_actions</span>
+</div>
+<div class="flex-1 flex flex-col gap-1">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="text-headline-sm font-headline-sm text-primary">Contract expiring in 15 days —— — Jehangir CMC</span>
+<span class="w-2 h-2 rounded-full bg-secondary" title="Unread alert"></span>
+<span class="bg-error-container text-on-error-container text-[10px] font-bold uppercase px-2 py-0.5 rounded">Expiring Nov 07</span>
+</div>
+<span class="text-body-sm font-body-sm text-outline whitespace-nowrap">Yesterday, 04:30 PM</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant leading-relaxed"> Comprehensive Contract #CMC-2024-0089 covers Cath Lab &amp; C-Arm (Annual Value:₹ 12,40,000). Renewal quote awaiting client sign-off.
+</p>
+<div class="flex items-center gap-3 pt-2">
+<button class="h-8 px-3.5 bg-primary-container text-on-primary hover:bg-primary rounded-lg text-label-sm font-label-sm font-semibold flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]" data-icon="description">description</span>
+<span>Review Renewal Draft</span>
+</button>
+<span class="text-label-sm font-label-sm text-outline">Client Account: Dr. A. Godbole (Procurement)</span>
+</div>
+</div>
+</div>
+<!-- Item 7: Warranty expiring (Amber Theme) -->
+<div class="elevation-card bg-surface-container-lowest rounded-xl p-space-md border-l-4 border-l-amber-500 flex gap-space-md items-start transition-all hover:shadow-md">
+<div class="w-10 h-10 rounded-full bg-amber-50 border border-amber-300 text-amber-700 flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[22px]" data-icon="verified_user">verified_user</span>
+</div>
+<div class="flex-1 flex flex-col gap-1">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="text-headline-sm font-headline-sm text-primary">Warranty expiring in 30 days —— — Mindray monitor</span>
+<span class="w-2 h-2 rounded-full bg-secondary" title="Unread alert"></span>
+<span class="bg-amber-100 text-amber-800 text-[10px] font-bold uppercase px-2 py-0.5 rounded">6 Assets</span>
+</div>
+<span class="text-body-sm font-body-sm text-outline whitespace-nowrap">Yesterday, 11:15 AM</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant leading-relaxed"> OEM warranty expiring on 14 Nov 2025 across 6x BeneView T8 Patient Monitors at Ruby Hall Clinic. Upsell AMC proposal ready.
+</p>
+<div class="flex items-center gap-3 pt-2">
+<button class="h-8 px-3.5 border border-outline-variant/60 hover:bg-surface-container text-primary font-semibold rounded-lg text-label-sm font-label-sm flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]" data-icon="post_add">post_add</span>
+<span>Generate AMC Offer</span>
+</button>
+<span class="text-label-sm font-label-sm text-outline">ICU Block 3 —— — BeneView T8 Series</span>
+</div>
+</div>
+</div>
+<!-- Item 8: PMS due within 7 days (Blue Theme) -->
+<div class="elevation-card bg-surface-container-lowest rounded-xl p-space-md border-l-4 border-l-secondary flex gap-space-md items-start transition-all hover:shadow-md">
+<div class="w-10 h-10 rounded-full bg-secondary/10 border border-secondary/20 text-secondary flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[22px]" data-icon="calendar_clock">calendar_clock</span>
+</div>
+<div class="flex-1 flex flex-col gap-1">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="text-headline-sm font-headline-sm text-primary">PMS due within 7 days —— — Sahyadri MRI 3T</span>
+<span class="w-2 h-2 rounded-full bg-secondary" title="Unread alert"></span>
+<span class="bg-secondary/10 text-secondary text-[10px] font-bold uppercase px-2 py-0.5 rounded">Upcoming Calibration</span>
+</div>
+<span class="text-body-sm font-body-sm text-outline whitespace-nowrap">Yesterday, 09:00 AM</span>
+</div>
+<p class="text-body-md font-body-md text-on-surface-variant leading-relaxed"> Biannual cryogenic and RF coil safety calibration due on 28 Oct 2025. Assigned to Sneha Kulkarni.
+</p>
+<div class="flex items-center gap-3 pt-2">
+<button class="h-8 px-3.5 border border-outline-variant/60 hover:bg-surface-container text-on-surface-variant rounded-lg text-label-sm font-label-sm font-medium flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]" data-icon="person_check">person_check</span>
+<span>Confirm Technician Dispatch</span>
+</button>
+<span class="text-label-sm font-label-sm text-outline">Lead Engineer: Sneha Kulkarni (Biomedical Lead)</span>
+</div>
+</div>
+</div>
+</div>
+<!-- ========================================== -->
+<!-- GROUP 3: EARLIER THIS WEEK (MARKED READ) -->
+<!-- ========================================== -->
+<div class="flex flex-col gap-space-sm opacity-85">
+<div class="flex items-center justify-between pb-1 border-b border-outline-variant/30">
+<div class="flex items-center gap-2">
+<span class="text-headline-sm font-headline-sm text-outline uppercase tracking-wide">Earlier this week</span>
+<span class="bg-surface-container text-outline text-label-sm px-2 py-0.5 rounded-full">2 read items</span>
+</div>
+<span class="text-body-sm font-body-sm text-outline">19———21 Oct 2025</span>
+</div>
+<!-- Item 9: Contract renewed (Green Theme - READ STATE) -->
+<div class="elevation-card bg-surface-bright rounded-xl p-space-md border-l-4 border-l-outline-variant/50 flex gap-space-md items-start transition-all">
+<div class="w-10 h-10 rounded-full bg-surface-container border border-outline-variant/50 text-outline flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[22px]" data-icon="handshake">handshake</span>
+</div>
+<div class="flex-1 flex flex-col gap-1">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="text-headline-sm font-headline-sm text-on-surface-variant">Contract renewed —— — KEM Hospital FY27</span>
+<!-- No unread dot -->
+<span class="bg-surface-container text-outline text-[10px] font-semibold uppercase px-2 py-0.5 rounded">Executed</span>
+</div>
+<span class="text-body-sm font-body-sm text-outline whitespace-nowrap">21 Oct 2025</span>
+</div>
+<p class="text-body-md font-body-md text-outline leading-relaxed"> CMC Agreement #CMC-2025-0001 for Canon Aquilion One CT executed for 12 months (₹ 28,00,000 received with P.O. #88392).
+</p>
+<div class="flex items-center gap-3 pt-2">
+<button class="h-8 px-3 border border-outline-variant/50 hover:bg-surface-container-high text-outline rounded-lg text-label-sm font-label-sm font-medium flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]" data-icon="visibility">visibility</span>
+<span>View Master Agreement</span>
+</button>
+<span class="text-body-sm font-body-sm text-outline">Status: Active until 31 Oct 2026</span>
+</div>
+</div>
+</div>
+<!-- Item 10: Stock adjusted (Gray Theme - READ STATE) -->
+<div class="elevation-card bg-surface-bright rounded-xl p-space-md border-l-4 border-l-outline-variant/50 flex gap-space-md items-start transition-all">
+<div class="w-10 h-10 rounded-full bg-surface-container border border-outline-variant/50 text-outline flex items-center justify-center shrink-0 mt-0.5">
+<span class="material-symbols-outlined text-[22px]" data-icon="fact_check">fact_check</span>
+</div>
+<div class="flex-1 flex flex-col gap-1">
+<div class="flex items-start justify-between gap-2">
+<div class="flex items-center gap-2">
+<span class="text-headline-sm font-headline-sm text-on-surface-variant">Stock adjusted —— — inventory count variance +2 ECG cables</span>
+<!-- No unread dot -->
+<span class="bg-surface-container text-outline text-[10px] font-semibold uppercase px-2 py-0.5 rounded">Reconciled</span>
+</div>
+<span class="text-body-sm font-body-sm text-outline whitespace-nowrap">20 Oct 2025</span>
+</div>
+<p class="text-body-md font-body-md text-outline leading-relaxed"> Physical audit of Central Depot Bin C-02 reconciled: 5-Lead Shielded ECG Trunk Cables adjusted from 6 to 8 units.
+</p>
+<div class="flex items-center gap-3 pt-2">
+<button class="h-8 px-3 border border-outline-variant/50 hover:bg-surface-container-high text-outline rounded-lg text-label-sm font-label-sm font-medium flex items-center gap-1.5 transition-colors">
+<span class="material-symbols-outlined text-[16px]" data-icon="receipt_long">receipt_long</span>
+<span>View Audit Ledger</span>
+</button>
+<span class="text-body-sm font-body-sm text-outline">Auditor: Logistics Unit 2</span>
+</div>
+</div>
+</div>
+</div>
+</div>
+<!-- ========================================================================= -->
+<!-- RIGHT CONTEXT DRAWER / SUMMARY PANEL (4 Cols) -->
+<!-- ========================================================================= -->
+<aside class="col-span-4 flex flex-col gap-space-md sticky top-20">
+<!-- Urgent SLA Watch Card -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg elevation-card border-t-4 border-t-error flex flex-col gap-space-md">
+<div class="flex items-center justify-between">
+<div class="flex items-center gap-2">
+<span class="material-symbols-outlined text-error" data-icon="crisis_alert">crisis_alert</span>
+<span class="text-headline-sm font-headline-sm text-primary">Critical SLA Watch</span>
+</div>
+<span class="text-[10px] font-bold uppercase tracking-wider text-error bg-error-container px-2 py-0.5 rounded">1 Active Breach</span>
+</div>
+<!-- Countdown Box -->
+<div class="bg-surface-container-low p-space-md rounded-lg border border-outline-variant/40 flex flex-col gap-2">
+<div class="flex justify-between items-center text-label-sm font-label-sm">
+<span class="text-outline font-semibold">TICKET SC-2026-00158</span>
+<span class="text-error font-bold flex items-center gap-1">
+<span class="w-2 h-2 rounded-full bg-error live-pulse"></span> 18m 24s REMAINING
+</span>
+</div>
+<div class="w-full bg-surface-container-high rounded-full h-2 overflow-hidden">
+<div class="bg-error h-full rounded-full" style="width: 88%"></div>
+</div>
+<p class="text-body-sm font-body-sm text-on-surface-variant pt-1"> Sahyadri CT Scanner (Definition AS). Initial engineer en route (ETA 12m). Director alert queued at T-5m.
+</p>
+</div>
+<!-- Emergency Quick Action Button -->
+<button class="w-full h-10 bg-error hover:bg-error/90 text-on-error rounded-lg text-label-md font-label-md font-semibold flex items-center justify-center gap-2 transition-all shadow-sm active:scale-[0.99]">
+<span class="material-symbols-outlined text-[18px]" data-icon="phone_in_talk">phone_in_talk</span>
+<span>Emergency Dispatch Center</span>
+</button>
+</div>
+<!-- Notification Delivery Status -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg elevation-card flex flex-col gap-space-md">
+<div class="flex items-center justify-between pb-2 border-b border-outline-variant/30">
+<span class="text-headline-sm font-headline-sm text-primary">Channel Dispatch</span>
+<span class="text-label-sm font-label-sm text-secondary font-semibold">Configuration</span>
+</div>
+<div class="flex flex-col gap-3">
+<!-- In-App -->
+<div class="flex items-center justify-between py-1">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-md bg-secondary/10 text-secondary flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]" data-icon="web">web</span>
+</div>
+<div class="flex flex-col">
+<span class="text-label-md font-label-md font-semibold text-on-surface">In-App Alerts</span>
+<span class="text-[11px] text-outline">Real-time WebSocket active</span>
+</div>
+</div>
+<span class="text-label-sm font-label-sm font-bold text-primary bg-surface-container px-2 py-0.5 rounded">10 Unread</span>
+</div>
+<!-- SMS/WhatsApp -->
+<div class="flex items-center justify-between py-1">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-md bg-emerald-50 text-emerald-700 flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]" data-icon="chat">chat</span>
+</div>
+<div class="flex flex-col">
+<span class="text-label-md font-label-md font-semibold text-on-surface">SMS / WhatsApp</span>
+<span class="text-[11px] text-outline">P1 Escalations enabled</span>
+</div>
+</div>
+<span class="text-label-sm font-label-sm font-semibold text-emerald-700 bg-emerald-50 border border-emerald-200 px-2 py-0.5 rounded">Active</span>
+</div>
+<!-- Email Digest -->
+<div class="flex items-center justify-between py-1">
+<div class="flex items-center gap-2.5">
+<div class="w-7 h-7 rounded-md bg-primary-container/10 text-primary-container flex items-center justify-center">
+<span class="material-symbols-outlined text-[16px]" data-icon="mail">mail</span>
+</div>
+<div class="flex flex-col">
+<span class="text-label-md font-label-md font-semibold text-on-surface">Daily Summary Digest</span>
+<span class="text-[11px] text-outline">Triggered daily at 07:00 AM</span>
+</div>
+</div>
+<span class="text-label-sm font-label-sm text-outline bg-surface-container px-2 py-0.5 rounded">Scheduled</span>
+</div>
+</div>
+</div>
+<!-- Quick Filters by Modality & Severity -->
+<div class="bg-surface-container-lowest rounded-xl p-space-lg elevation-card flex flex-col gap-space-sm">
+<span class="text-label-sm font-label-sm uppercase font-bold text-outline tracking-wider">Fast Focus Filters</span>
+<div class="flex flex-col gap-1.5 pt-1">
+<button class="flex items-center justify-between p-2 rounded-lg hover:bg-surface-container transition-colors text-left group">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-error"></span>
+<span class="text-label-md font-label-md font-medium text-on-surface group-hover:text-primary">Critical Priority (P1)</span>
+</div>
+<span class="text-label-sm font-label-sm text-outline group-hover:text-primary font-semibold">2</span>
+</button>
+<button class="flex items-center justify-between p-2 rounded-lg hover:bg-surface-container transition-colors text-left group">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-amber-500"></span>
+<span class="text-label-md font-label-md font-medium text-on-surface group-hover:text-primary">PMS &amp; Calibrations Due</span>
+</div>
+<span class="text-label-sm font-label-sm text-outline group-hover:text-primary font-semibold">2</span>
+</button>
+<button class="flex items-center justify-between p-2 rounded-lg hover:bg-surface-container transition-colors text-left group">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-secondary"></span>
+<span class="text-label-md font-label-md font-medium text-on-surface group-hover:text-primary">Expiring Contracts &amp; AMC</span>
+</div>
+<span class="text-label-sm font-label-sm text-outline group-hover:text-primary font-semibold">2</span>
+</button>
+<button class="flex items-center justify-between p-2 rounded-lg hover:bg-surface-container transition-colors text-left group">
+<div class="flex items-center gap-2">
+<span class="w-2 h-2 rounded-full bg-orange-500"></span>
+<span class="text-label-md font-label-md font-medium text-on-surface group-hover:text-primary">Depot Stock Reorders</span>
+</div>
+<span class="text-label-sm font-label-sm text-outline group-hover:text-primary font-semibold">2</span>
+</button>
+</div>
+<!-- Escalation Guide Note -->
+<div class="mt-2 p-space-sm bg-surface-bright rounded-lg border border-outline-variant/40 flex items-start gap-2">
+<span class="material-symbols-outlined text-[16px] text-secondary mt-0.5" data-icon="info">info</span>
+<p class="text-[11px] text-outline leading-tight"> Alerts are retained for 30 days. P1 tickets require engineer acknowledgement within 15 minutes of SMS dispatch.
+</p>
+</div>
+</div>
+</aside>
+</div>
+</main>
+</div>
+<style id="stitch-dark">
+html.dark body{background-color:#12161c !important}
+html.dark .bg-background,html.dark .bg-surface,html.dark .bg-surface-bright{background-color:#12161c !important}
+html.dark .bg-surface-container-lowest{background-color:#1b2129 !important}
+html.dark .bg-surface-container-low{background-color:#171d25 !important}
+html.dark .bg-surface-container{background-color:#222933 !important}
+html.dark .bg-surface-container-high{background-color:#283038 !important}
+html.dark .bg-surface-container-highest{background-color:#303945 !important}
+html.dark .bg-surface-dim{background-color:#252d36 !important}
+html.dark .bg-primary{background-color:#0b3c5d !important}
+html.dark .bg-primary-container{background-color:#164e74 !important}
+html.dark .hover\:bg-surface-container-high:hover{background-color:#283038 !important}
+html.dark .hover\:bg-surface-container-low:hover{background-color:#171d25 !important}
+html.dark .hover\:bg-surface-container:hover{background-color:#222933 !important}
+html.dark .text-on-surface{color:#e6ebf0 !important}
+html.dark .text-on-background{color:#e6ebf0 !important}
+html.dark .text-on-surface-variant{color:#a8b3bc !important}
+html.dark .text-primary{color:#a3cbf2 !important}
+html.dark .text-outline{color:#8a949d !important}
+html.dark .text-secondary{color:#67d6e4 !important}
+html.dark .text-on-secondary-container{color:#a5f3fc !important}
+html.dark .text-white{color:#ffffff !important}
+html.dark .border-outline-variant{border-color:#2e3841 !important}
+html.dark .border-outline{border-color:#39434d !important}
+html.dark .divide-outline-variant > :not([hidden]) ~ :not([hidden]){border-color:#2e3841 !important}
+html.dark .placeholder\:text-outline::placeholder{color:#6f7a84 !important}
+html.dark input,html.dark select,html.dark textarea{color-scheme:dark}
+html.dark .shadow-sm,html.dark .shadow-md{box-shadow:0 1px 3px rgba(0,0,0,0.35) !important}
+html.dark kbd{background:#222933 !important;color:#a3cbf2 !important}
+:focus-visible{outline:2px solid #0e9aa7 !important;outline-offset:2px;border-radius:4px}
+</style><button id="theme-toggle" aria-label="Toggle dark mode" title="Toggle dark / light theme" style="position:fixed;right:1rem;bottom:1rem;z-index:70;width:46px;height:46px;border-radius:9999px;background:#0b3c5d;color:#8df2ff;border:1px solid #0e9aa7;cursor:pointer;display:flex;align-items:center;justify-content:center;box-shadow:0 4px 10px rgba(11,60,93,0.35)"><span class="material-symbols-outlined" id="theme-toggle-icon">dark_mode</span></button>
+<script id="stitch-extras">
+(function(){
+  var btn=document.getElementById('theme-toggle');
+  var icon=document.getElementById('theme-toggle-icon');
+  function sync(){if(icon)icon.textContent=document.documentElement.classList.contains('dark')?'light_mode':'dark_mode';}
+  if(btn)btn.addEventListener('click',function(){
+    var next=!document.documentElement.classList.contains('dark');
+    document.documentElement.classList.toggle('dark',next);
+    document.documentElement.style.colorScheme=next?'dark':'light';
+    try{localStorage.setItem('summit-theme',next?'dark':'light');}catch(e){}
+    sync();
+  });
+  sync();
+  document.querySelectorAll('input[type="search"]').forEach(function(el){
+    el.addEventListener('keydown',function(e){if(e.key==='Enter'){var q=el.value.trim();window.location.href='search-results.html?q='+encodeURIComponent(q||'SG-CT-20451');}});
+  });
+  document.querySelectorAll('button').forEach(function(b){
+    var h=(b.innerHTML||'').toLowerCase();var t=(b.textContent||'').toLowerCase();
+    if(h.indexOf('qr_code_2')!==-1){b.addEventListener('click',function(){window.location.href='qr-sticker.html';});}
+    else if(t.indexOf('print qr sticker')!==-1){b.addEventListener('click',function(){window.location.href='qr-sticker.html';});}
+    else if(t.indexOf('assign engineer')!==-1){b.addEventListener('click',function(){window.location.href='assign-engineer.html';});}
+  });
+})();
+</script><script id="stitch-wire">
+(function(){
+  var routes=[['register call','register-service-call.html'],['submit & assign','service-calls-fsr.html'],['submit','service-calls-fsr.html'],['save equipment','equipment-database.html'],['save & generate pms','contracts-pms-spares.html']];
+  document.querySelectorAll('button').forEach(function(b){
+    var t=(b.textContent||'').trim().toLowerCase();
+    for(var i=0;i<routes.length;i++){if(t.indexOf(routes[i][0])!==-1){b.style.cursor='pointer';b.addEventListener('click',(function(u){return function(){window.location.href=u;};})(routes[i][1]));break;}}
+  });
+})();
+</script><script id="stitch-bell">
+document.querySelectorAll('button').forEach(function(b){if(/notifications/i.test(b.textContent||'')){b.style.cursor='pointer';b.addEventListener('click',function(){window.location.href='notifications.html';});}});
+</script>
+<script id="master-nav">(function(){var b=document.getElementById("master-nav-toggle");if(!b)return;var s=document.getElementById("master-nav-submenu");var onMasters=/masters\.html/.test(location.pathname);function setOpen(v){if(!s)return;b.classList.toggle("master-open",v);s.classList.toggle("hidden",!v);b.setAttribute("aria-expanded",v?"true":"false");}b.addEventListener("click",function(){setOpen(!(b.classList.contains("master-open")));});setOpen(onMasters);if(onMasters){var m=location.search.match(/tab=([a-z]+)/);var q=m?m[1]:null;document.querySelectorAll("#master-nav-submenu a").forEach(function(a){var href=a.getAttribute("href")||"";var hit=q?href.indexOf("tab="+q)!==-1:href==="masters.html";if(hit)a.className="flex items-center gap-space-sm px-space-md py-1.5 rounded-lg bg-primary text-on-primary transition-colors font-label-md text-label-md font-semibold";});}})();</script>
+</body></html>
